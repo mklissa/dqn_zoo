@@ -59,10 +59,9 @@ do
         JOBID=555
         echo "Submitted job $JOBID"
 
-        folder=${base_folder}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}_${rand_id}
+        folder=${base_folder}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}
         mkdir -p $folder
-        echo $JOBID >> $folder/jobinfo.txt
-        echo "Description (if any): $1" >> $folder/jobinfo.txt
+        echo $JOBID $k >> $folder/jobinfo.txt
 
         jobids+=("$(echo $JOBID)")
         jobids+=("$(echo $k)")
@@ -70,6 +69,7 @@ do
         count=$((count + 1))
     done
 done
+echo "Description (if any): $1" >> $folder/jobinfo.txt
 
 if [ "$1" != "test" ]; then
 

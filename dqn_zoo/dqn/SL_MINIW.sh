@@ -50,7 +50,7 @@ do
         --min_replay_capacity_fraction 0.05 --target_network_update_period 40_000 \
         --num_iterations 200 --num_train_frames 25_000 --num_eval_frames 5_000 \
         --num_options 5 --lap_dim 20 --option_prob ${option_prob} \
-        --results_csv_path ${base_folder}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}_${rand_id}/seed${seed}.csv \
+        --results_csv_path ${base_folder}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}/seed${seed}.csv \
         --plot=${plot} --plot_path plots/${envname}/${algo}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}/seed${seed}/ "
         echo $k >> temprun.sh
         echo $k

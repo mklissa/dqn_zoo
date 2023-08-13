@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-jobids=()
-port=($(seq 4500 1 5126))
+
 seeds=($(seq 1 1 4))
 option_probs=(0.9)
 envname="MiniWorld-FourRooms-v0"
 algo='dceo'
-
 base_folder="results/${envname}/${algo}"
-rand_id=$((10000 + RANDOM % 90000))
 
+rand_id=$((10000 + RANDOM % 90000))
 if [ "$1" != "test" ]; then
     output_folder=$PWD/slurm_outputs/${envname}/${algo}/$(date +"%m-%d-%H:%M")_${rand_id}//
     mkdir -p $output_folder
@@ -17,6 +15,7 @@ if [ "$1" != "test" ]; then
 fi
 
 count=0
+port=($(seq 4500 1 5126))
 for option_prob in ${option_probs[@]}
 do
     for seed in ${seeds[@]}
@@ -52,12 +51,12 @@ do
         --num_iterations 200 --num_train_frames 25_000 --num_eval_frames 5_000 \
         --num_options 5 --lap_dim 20 --option_prob ${option_prob} \
         --results_csv_path ${base_folder}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}_${rand_id}/seed${seed}.csv \
-        --plot=${plot} --plot_path plots/${envname}/${algo}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}_${rand_id}/seed${seed}/ "
+        --plot=${plot} --plot_path plots/${envname}/${algo}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}/seed${seed}/ "
         echo $k >> temprun.sh
         echo $k
 
-        # JOBID=$(eval "sbatch --parsable temprun.sh")
-        JOBID=555
+        JOBID=$(eval "sbatch --parsable temprun.sh")
+        # JOBID=555
         echo "Submitted job $JOBID"
 
         folder=${base_folder}/weight_${option_prob}/$(date +"%m-%d-%H:%M")_${rand_id}

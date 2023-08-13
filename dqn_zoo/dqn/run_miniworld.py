@@ -259,7 +259,6 @@ def main(argv):
     checkpoint.save()
 
     if FLAGS.plot:
-      import pdb;pdb.set_trace()
       rep = train_agent.get_rep(plotter.cover)
       plotter.plot(
           rep,
@@ -271,6 +270,8 @@ def main(argv):
           [agent_pos_track.bin_counts],
           state.iteration,
           name='pos')
+
+      # This code plots state visitation for each option
       # if FLAGS.num_options:
       #   plotter.plot_pos(
       #       agent_pos_track.opt_counts[:FLAGS.num_options],

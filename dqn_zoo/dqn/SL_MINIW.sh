@@ -2,20 +2,23 @@
 
 jobids=()
 port=($(seq 4500 1 5126))
-seeds=($(seq 1 1 3))
-# option_probs=(0.0 0.1 1.0)
+seeds=($(seq 1 1 4))
 option_probs=(0.9)
 envname="MiniWorld-FourRooms-v0"
-plot=False
 algo='dceo'
 
-rand_id=$((100000 + RANDOM % 900000))
-output_folder=$PWD/results/${envname}/${algo}/${rand_id}/outputs
-mkdir -p $output_folder
-echo 'tracing' > $output_folder/place_holder.txt
-echo $output_folder
-count=0
+base_folder="results/${envname}/${algo}"
 
+if [ "$1" != "test" ]; then
+    rand_id=$((100000 + RANDOM % 900000))
+    output_folder=$PWD/${base_folder}/${rand_id}/outputs
+    mkdir -p $output_folder
+    echo 'github place holder' > $output_folder/place_holder.txt
+    echo $output_folder
+fi
+
+count=0
+plot=False
 for option_prob in ${option_probs[@]}
 do
     for seed in ${seeds[@]}
@@ -37,35 +40,34 @@ do
         echo "#SBATCH --ntasks=1" >> temprun.sh
         echo "#SBATCH --cpus-per-task=10" >> temprun.sh
         echo "#SBATCH --mem=50G" >> temprun.sh
-        echo "#SBATCH --time=48:00:00" >> temprun.sh
+        echo "#SBATCH --time=12:00:00" >> temprun.sh
         echo "source $HOME/DCEO/bin/activate" >> temprun.sh
         echo "module load cuda/11.4" >> temprun.sh
         echo "module load cudnn/8.2" >> temprun.sh
         echo "cd $HOME/scratch/dqn_zoo/dqn_zoo/dqn/" >> temprun.sh
         k="xvfb-run -n "${port[$count]}" -s \"-screen 0 1024x768x24 -ac +extension GLX +render -noreset\" \
-        python run_miniw.py --plot=${plot} --environment_name ${envname} --algo ${algo}
+        python run_miniw.py --environment_name ${envname} --algo ${algo}
         --min_replay_capacity_fraction 0.05 --target_network_update_period 40_000 \
         --num_iterations 200 --num_train_frames 25_000 --num_eval_frames 5_000 \
-        --option_prob ${option_prob} --num_options 5 --lap_dim 20 \
-        --results_csv_path results/${envname}/${algo}/weight${option_prob}/${rand_id}/seed${seed}.csv \
-        --plot_path plots/${envname}/${algo}/weight${option_prob}/${rand_id}/seed${seed}/ "
+        --num_options 5 --lap_dim 20 --option_prob ${option_prob} \
+        --results_csv_path ${base_folder}/weight_${option_prob}/${rand_id}/seed${seed}.csv \
+        --plot=${plot} --plot_path plots/${envname}/${algo}/weight_${option_prob}/${rand_id}/seed${seed}/ "
         echo $k >> temprun.sh
         echo $k
 
-        JOBID=$(eval "sbatch --parsable temprun.sh")
-        # JOBID=555
+        # JOBID=$(eval "sbatch --parsable temprun.sh")
+        JOBID=555
         echo "Submitted job $JOBID"
 
         jobids+=("$(echo $JOBID)")
         jobids+=("$(echo $k)")
 
-        rm temprun.sh
         count=$((count + 1))
     done
 done
 
-folder="results/${envname}/${algo}/jobids/"
-filename="${folder}$(TZ=Asia/Shanghai date +"%m-%d-%H:%M")_jobids_${rand_id}.txt"
+folder="${base_folder}/job_info/"
+filename="${folder}$(TZ=America/New_York date +"%m-%d-%H:%M")_${rand_id}.txt"
 echo "Info in $filename"
 mkdir -p $folder
 touch $filename
@@ -74,7 +76,9 @@ echo "The current date and time is $(date +"%m/%d/%Y %H:%M")" >> $filename
 echo "The randomly generated ID is ${rand_id}" >> $filename
 echo "Description (if any): $1" >> $filename
 
-message="${rand_id} $1 ${algo} ${envname}"
-echo $message
-git add .
-git commit -m "$message"
+if [ "$1" != "test" ]; then
+    message="${rand_id} $1 ${algo} ${envname}"
+    echo $message
+    git add .
+    git commit -m "$message"
+fi

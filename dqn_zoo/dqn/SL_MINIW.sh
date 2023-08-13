@@ -9,7 +9,7 @@ base_folder="results/${envname}/${algo}"
 
 rand_id=$((10000 + RANDOM % 90000))
 if [ "$1" != "test" ]; then
-    output_folder=$PWD/slurm_outputs/${envname}/${algo}/$(date +"%m-%d-%H:%M")_${rand_id}//
+    output_folder=$PWD/slurm_outputs/${envname}/${algo}/$(date +"%m-%d-%H:%M")_${rand_id}
     mkdir -p $output_folder
     echo $output_folder
 fi

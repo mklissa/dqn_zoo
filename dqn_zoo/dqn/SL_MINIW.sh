@@ -8,29 +8,30 @@ envname="MiniWorld-FourRooms-v0"
 algo='dceo'
 
 base_folder="results/${envname}/${algo}"
-rand_id=$((1000 + RANDOM % 9000))
+rand_id=$((10000 + RANDOM % 90000))
 
 if [ "$1" != "test" ]; then
     output_folder=$PWD/slurm_outputs/${envname}/${algo}/$(date +"%m-%d-%H:%M")_${rand_id}//
     mkdir -p $output_folder
-    echo 'github place holder' > $output_folder/place_holder.txt
     echo $output_folder
 fi
 
 count=0
-plot=False
 for option_prob in ${option_probs[@]}
 do
     for seed in ${seeds[@]}
     do
+
         if [ -f temprun.sh ] ; then
             rm temprun.sh
         fi
+
         if (($seed % 2 == 1)); then
             plot=True
         else
             plot=False
         fi
+
         echo "#!/bin/bash" >> temprun.sh
         echo "#SBATCH --account=rrg-bengioy-ad_gpu" >> temprun.sh
         echo "#SBATCH --output=\"${output_folder}/seed${seed}_%j.out\"" >> temprun.sh
@@ -63,29 +64,14 @@ do
         mkdir -p $folder
         echo $JOBID $k >> $folder/jobinfo.txt
 
-        jobids+=("$(echo $JOBID)")
-        jobids+=("$(echo $k)")
-
         count=$((count + 1))
     done
 done
 echo "Description (if any): $1" >> $folder/jobinfo.txt
 
 if [ "$1" != "test" ]; then
-
-    folder="${base_folder}/$(date +"%m-%d-%H:%M")_${rand_id}"
-    filename="${folder}/job_info.txt"
-    echo "Info in $filename"
-    mkdir -p $folder
-    touch $filename
-    printf "%s\n" "${jobids[@]}" > $filename
-    echo "The current date and time is $(date +"%m/%d/%Y %H:%M")" >> $filename
-    echo "The randomly generated ID is ${rand_id}" >> $filename
-    echo "Description (if any): $1" >> $filename
-
     message="${rand_id} $1 ${algo} ${envname}"
     echo $message
     git add .
     git commit -m "$message"
-
 fi

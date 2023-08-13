@@ -259,13 +259,14 @@ def main(argv):
     checkpoint.save()
 
     if FLAGS.plot:
-      # rep = train_agent.get_rep(plotter.cover)
-      # plotter.plot(
-      #     rep,
-      #     state.iteration,
-      #     min(min(10, FLAGS.lap_dim),
-      #     len(rep[0])),
-      #     name='rep')
+      import pdb;pdb.set_trace()
+      rep = train_agent.get_rep(plotter.cover)
+      plotter.plot(
+          rep,
+          state.iteration,
+          min(min(10, FLAGS.lap_dim),
+          len(rep[0])),
+          name='rep')
       plotter.plot_pos(
           [agent_pos_track.bin_counts],
           state.iteration,

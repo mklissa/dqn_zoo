@@ -11,13 +11,14 @@ class Plot():
     os.makedirs(os.path.dirname(self.directory), exist_ok=True)
 
     with open(dataset_file, 'rb') as f:
-      clean_data = np.array(pickle.load(f))      
+      clean_data = np.array(pickle.load(f))
       bad_pos = clean_data.item()['bad_pos']
       self.cover = clean_data.item()['images']
       self.width = self.height = int(np.sqrt(len(self.cover)))
 
       indices = np.arange(len(self.cover)).reshape((self.width, self.height))
       self.wall_pos = np.where(np.isin(indices, bad_pos))
+    import pdb;pdb.set_trace()
 
   def plot(self, rep, it, dim, name='plot'):
     nrows = (dim - 1) // 5 + 1

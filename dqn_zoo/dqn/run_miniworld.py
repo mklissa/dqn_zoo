@@ -46,6 +46,7 @@ from dqn_zoo import parts
 from dqn_zoo import processors
 from dqn_zoo import replay as replay_lib
 from dqn_zoo.dqn import plot_miniw
+from dqn_zoo.dqn import plot_mwh
 
 # Relevant flag values are expressed in terms of environment frames.
 FLAGS = flags.FLAGS
@@ -220,8 +221,12 @@ def main(argv):
     checkpoint.restore()
 
   if FLAGS.plot:
-    plotter = plot_miniw.Plot(
-      'datasets/4r_textures_plotting_clean.pkl', FLAGS.plot_path)
+    if 'MyWayHome' in FLAGS.environment_name:
+      plotter = plot_mwh.Plot(
+        'datasets/mwh_plotting_1st_person.pkl', FLAGS.plot_path)
+    else:
+      plotter = plot_miniw.Plot(
+        'datasets/4r_textures_plotting_clean.pkl', FLAGS.plot_path)
   agent_pos_track = None
   eval_pos_track = None
 
@@ -270,13 +275,6 @@ def main(argv):
           [agent_pos_track.bin_counts],
           state.iteration,
           name='pos')
-
-      # This code plots state visitation for each option
-      # if FLAGS.num_options:
-      #   plotter.plot_pos(
-      #       agent_pos_track.opt_counts[:FLAGS.num_options],
-      #       state.iteration,
-      #       name='option_pos')
 
 
 if __name__ == '__main__':

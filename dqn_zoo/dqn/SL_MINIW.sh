@@ -9,7 +9,7 @@ algo='dceo'
 base_folder="results/${envname}/${algo}"
 
 rand_id=$((10000 + RANDOM % 90000))
-date=(date +"%m-%d-%H:%M")
+date=$(date +"%m-%d-%H:%M")
 if [ "$1" != "test" ]; then
     output_folder=$PWD/slurm_outputs/${envname}/${algo}/${date}_${rand_id}
     mkdir -p $output_folder

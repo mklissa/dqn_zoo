@@ -46,11 +46,12 @@ from dqn_zoo import parts
 from dqn_zoo import processors
 from dqn_zoo import replay as replay_lib
 from dqn_zoo.dqn import plot_miniw
+from dqn_zoo.dqn import plot_miniw_actions
 from dqn_zoo.dqn import plot_mwh
 
 # Relevant flag values are expressed in terms of environment frames.
 FLAGS = flags.FLAGS
-flags.DEFINE_string('environment_name', 'MiniWorld-MyWayHomeSparse-v0', '')
+flags.DEFINE_string('environment_name', 'MiniWorld-FourRooms-v0', '')
 flags.DEFINE_string('algo', 'dceo', '')
 flags.DEFINE_integer('replay_capacity', int(1e6), '')
 flags.DEFINE_bool('compress_state', True, '')
@@ -225,8 +226,9 @@ def main(argv):
       plotter = plot_mwh.Plot(
         'datasets/mwh_plotting_1st_person.pkl', FLAGS.plot_path)
     else:
-      plotter = plot_miniw.Plot(
-        'datasets/4r_textures_plotting_clean.pkl', FLAGS.plot_path)
+      plotter = plot_miniw_actions.Plot(
+        # 'datasets/4r_textures_plotting_clean.pkl', FLAGS.plot_path)
+        'datasets/4r_actions_1st_person.pkl', FLAGS.plot_path)
   agent_pos_track = None
   eval_pos_track = None
 
@@ -264,18 +266,32 @@ def main(argv):
     checkpoint.save()
 
     if FLAGS.plot:
-      rep = train_agent.get_rep(plotter.cover)
-      plotter.plot(
-          rep,
-          state.iteration,
-          min(min(10, FLAGS.lap_dim),
-          len(rep[0])),
-          name='rep')
+      if 'Actions' in FLAGS.environment_name:
+        orient_dict = {0: 'front',
+                       1: 'left',
+                       2: 'back',
+                       3: 'right',}
+        for orientation in range(4):
+          rep = train_agent.get_rep(plotter.cover[orientation])
+          plotter.plot(
+              rep,
+              state.iteration,
+              min(min(10, FLAGS.lap_dim),
+              len(rep[0])),
+              name=f'rep_{orient_dict[orientation]}')
+      else:
+        rep = train_agent.get_rep(plotter.cover[orientation])
+        plotter.plot(
+            rep,
+            state.iteration,
+            min(min(10, FLAGS.lap_dim),
+            len(rep[0])),
+            name='rep')
+
       plotter.plot_pos(
           [agent_pos_track.bin_counts],
           state.iteration,
           name='pos')
-
 
 if __name__ == '__main__':
   config.config_with_absl()

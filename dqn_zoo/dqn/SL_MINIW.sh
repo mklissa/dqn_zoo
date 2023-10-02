@@ -2,9 +2,9 @@
 
 
 seeds=($(seq 1 1 10))
-num_options=(5 10)
+num_options=(5)
 option_probs=(0.9)
-envname="MiniWorld-MyWayHomeSparse-v0"
+envname="MiniWorld-FourRoomsActions-v0"
 algo='dceo'
 base_folder="results/${envname}/${algo}"
 
@@ -44,7 +44,7 @@ do
             echo "#SBATCH --ntasks=1" >> temprun.sh
             echo "#SBATCH --cpus-per-task=10" >> temprun.sh
             echo "#SBATCH --mem=50G" >> temprun.sh
-            echo "#SBATCH --time=54:00:00" >> temprun.sh
+            echo "#SBATCH --time=48:00:00" >> temprun.sh
             echo "source $HOME/DCEO/bin/activate" >> temprun.sh
             echo "module load cuda/11.4" >> temprun.sh
             echo "module load cudnn/8.2" >> temprun.sh
@@ -52,7 +52,7 @@ do
             k="xvfb-run -n "${port[$count]}" -s \"-screen 0 1024x768x24 -ac +extension GLX +render -noreset\" \
             python run_miniworld.py --environment_name ${envname} --algo ${algo}
             --min_replay_capacity_fraction 0.05 --target_network_update_period 40_000 \
-            --num_iterations 400 --num_train_frames 50_000 --num_eval_frames 10_000 \
+            --num_iterations 200 --num_train_frames 25_000 --num_eval_frames 5_000 \
             --num_options ${num_option} --lap_dim 20 --option_prob ${option_prob} --plot=${plot} \
             --results_csv_path ${base_folder}/weight_${option_prob}/num_options${num_option}/${date}_${rand_id}/seed${seed}.csv \
             --plot_path plots/${envname}/${algo}/weight_${option_prob}/${date}_${rand_id}/seed${seed}/ "

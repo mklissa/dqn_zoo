@@ -302,7 +302,7 @@ class MiniWorldAgentPositionTracker:
     self.y_range = y_range = [-15, 15]
 
     # Define the bin size
-    self.bin_size = bin_size = 0.5
+    self.bin_size = bin_size = 0.25
 
     # Calculate the number of bins in each dimension
     self.num_bins_x = num_bins_x = int((x_range[1] - x_range[0]) / bin_size)

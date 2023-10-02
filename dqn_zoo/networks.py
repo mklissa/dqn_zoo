@@ -382,6 +382,7 @@ def minigrid_network(num_outputs: int) -> NetworkFn:
     ])
     return QNetworkOutputs(q_values=network(inputs))
   return net_fn
+
 # def minigrid_network(num_outputs: int) -> NetworkFn:
 #   """Minigrid DCEO network, expects `uint8` input."""
 

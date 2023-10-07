@@ -73,7 +73,7 @@ flags.DEFINE_integer('n_steps', 5, '')
 flags.DEFINE_integer('num_iterations', 200, '')
 flags.DEFINE_integer('num_train_frames', int(1e3), '')  # Per iteration.
 flags.DEFINE_integer('num_eval_frames', int(0e0), '')  # Per iteration.
-flags.DEFINE_integer('lap_dim', 512, '')
+flags.DEFINE_integer('lap_dim', 20, '')
 flags.DEFINE_integer('num_options', 0, '')
 flags.DEFINE_integer('avg_option_dur', 10, '')
 flags.DEFINE_integer('option_learning_steps', 0, '')
@@ -82,6 +82,8 @@ flags.DEFINE_float('rnd_w', 0., '')
 flags.DEFINE_integer('learn_period', 4, '')
 flags.DEFINE_string('results_csv_path', '/tmp/results.csv', '')
 flags.DEFINE_string('plot_path', 'plots/miniw/', '')
+flags.DEFINE_bool('uniform_restarts', False, '')
+flags.DEFINE_bool('stop_lap_gradient', False, '')
 
 
 def main(argv):
@@ -111,13 +113,13 @@ def main(argv):
 
   def environment_builder():
     """Creates MiniWorld environment."""
-    gym_env = gym.make(FLAGS.environment_name)
+    gym_env = gym.make(FLAGS.environment_name, uniform_restarts=FLAGS.uniform_restarts)
     gym_env.seed(FLAGS.seed)
     return env_wrapper.GymWrapper(gym_env)
 
   env = environment_builder()
   num_actions = env.action_spec().num_values
-  network_fn = networks.dqn_atari_network(FLAGS.lap_dim)
+  network_fn = networks.dqn_atari_network(FLAGS.lap_dim, stop_gradient=FLAGS.stop_lap_gradient)
   lap_network = hk.transform(network_fn)
   network_fn = networks.dqn_atari_network(num_actions)
   action_network = hk.transform(network_fn)
@@ -225,10 +227,12 @@ def main(argv):
     if 'MyWayHome' in FLAGS.environment_name:
       plotter = plot_mwh.Plot(
         'datasets/mwh_plotting_1st_person.pkl', FLAGS.plot_path)
-    else:
+    elif 'Actions' in FLAGS.environment_name:
       plotter = plot_miniw_actions.Plot(
-        # 'datasets/4r_textures_plotting_clean.pkl', FLAGS.plot_path)
         'datasets/4r_actions_1st_person.pkl', FLAGS.plot_path)
+    else:
+      plotter = plot_mwh.Plot(
+        'datasets/4r_again_plotting_1st_person.pkl', FLAGS.plot_path)
   agent_pos_track = None
   eval_pos_track = None
 
@@ -280,7 +284,7 @@ def main(argv):
               len(rep[0])),
               name=f'rep_{orient_dict[orientation]}')
       else:
-        rep = train_agent.get_rep(plotter.cover[orientation])
+        rep = train_agent.get_rep(plotter.cover)
         plotter.plot(
             rep,
             state.iteration,

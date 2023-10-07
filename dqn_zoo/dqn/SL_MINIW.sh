@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 
-seeds=($(seq 1 1 10))
+seeds=($(seq 1 1 6))
 num_options=(5)
 option_probs=(0.9)
-envname="MiniWorld-FourRoomsActions-v0"
+envname="MiniWorld-FourRooms-v0"
 algo='dceo'
 base_folder="results/${envname}/${algo}"
 
@@ -55,7 +55,8 @@ do
             --num_iterations 200 --num_train_frames 25_000 --num_eval_frames 5_000 \
             --num_options ${num_option} --lap_dim 20 --option_prob ${option_prob} --plot=${plot} \
             --results_csv_path ${base_folder}/weight_${option_prob}/num_options${num_option}/${date}_${rand_id}/seed${seed}.csv \
-            --plot_path plots/${envname}/${algo}/weight_${option_prob}/${date}_${rand_id}/seed${seed}/ "
+            --plot_path plots/${envname}/${algo}/weight_${option_prob}/${date}_${rand_id}/seed${seed}/ \
+            --uniform_restarts=True --stop_lap_gradient=True"
             echo $k >> temprun.sh
             echo $k
 

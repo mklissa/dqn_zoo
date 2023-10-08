@@ -172,6 +172,7 @@ class Agent(parts.Agent):
     coeff_vector = jnp.arange(lap_dim, 0, -1)
     coeff_vector = np.concatenate((coeff_vector, np.zeros(1)))
     def neg_loss_fn(phi_u, phi_v):
+      rep_dim = phi_u.size
       loss = 0
       for dim in range(lap_dim, 0, -1):
         coeff = coeff_vector[dim-1] - coeff_vector[dim]
@@ -179,7 +180,8 @@ class Agent(parts.Agent):
         y_norm = jnp.sqrt(jnp.dot(phi_v[:dim], phi_v[:dim]))
         dot_product = jnp.dot(phi_u[:dim], phi_v[:dim])
         loss += coeff * (
-          dot_product ** 2 - jnp.log(1 + x_norm)  - jnp.log(1 + y_norm)  )
+            dot_product ** 2 - x_norm ** 2 / rep_dim  - y_norm ** 2 / rep_dim  )
+          # dot_product ** 2 - jnp.log(1 + x_norm)  - jnp.log(1 + y_norm)  )
       return loss
     neg_loss_vmap = jax.vmap(neg_loss_fn)
 

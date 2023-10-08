@@ -1,0 +1,43 @@
+I1008 16:39:14.827425 47619044267840 xla_bridge.py:355] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+I1008 16:39:14.946058 47619044267840 xla_bridge.py:355] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Host CUDA Interpreter
+I1008 16:39:14.946560 47619044267840 xla_bridge.py:355] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I1008 16:39:14.946688 47619044267840 xla_bridge.py:355] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I1008 16:39:14.946802 47619044267840 run_miniworld.py:102] Collecting data on MiniWorld on gpu.
+I1008 16:39:20.522471 47619044267840 run_miniworld.py:138] Observation shape: (60, 80, 3)
+I1008 16:39:32.438475 47619044267840 run_miniworld.py:243] Data collection iteration 0.
+I1008 16:40:09.870749 47619044267840 run_miniworld.py:250] Evaluation iteration 0.
+/home/mklissa/DCEO/lib/python3.8/site-packages/distrax/_src/distributions/categorical.py:96: UserWarning: Explicitly requested dtype <class 'jax.numpy.int64'> requested in astype is not available, and will be truncated to dtype int32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/google/jax#current-gotchas for more.
+  return draws.astype(self._dtype)
+I1008 16:40:20.078190 47619044267840 run_miniworld.py:267] iteration:   0
+ frame:     0
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  668
+I1008 16:40:24.270146 47619044267840 run_miniworld.py:243] Data collection iteration 1.
+I1008 16:41:02.024268 47619044267840 run_miniworld.py:250] Evaluation iteration 1.
+I1008 16:41:11.714538 47619044267840 run_miniworld.py:267] iteration:   1
+ frame: 25000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  662
+I1008 16:41:14.647860 47619044267840 run_miniworld.py:243] Data collection iteration 2.
+I1008 16:41:15.127361 47619044267840 dceo_agent.py:298] Begin learning
+I1008 16:43:38.782059 47619044267840 run_miniworld.py:250] Evaluation iteration 2.
+I1008 16:43:48.645788 47619044267840 run_miniworld.py:267] iteration:   2
+ frame: 50000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.955
+ train_frame_rate:  173
+I1008 16:43:51.631536 47619044267840 run_miniworld.py:243] Data collection iteration 3.
+I1008 16:46:10.572128 47619044267840 run_miniworld.py:250] Evaluation iteration 3.
+I1008 16:46:20.273359 47619044267840 run_miniworld.py:267] iteration:   3
+ frame: 75000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.910
+ train_frame_rate:  180
+I1008 16:46:23.313299 47619044267840 run_miniworld.py:243] Data collection iteration 4.
+slurmstepd: error: *** JOB 41464814 ON bg12308 CANCELLED AT 2023-10-08T20:47:29 ***

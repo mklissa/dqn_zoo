@@ -1,0 +1,42 @@
+I1008 16:37:52.095360 47796989458240 xla_bridge.py:355] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+I1008 16:37:52.231764 47796989458240 xla_bridge.py:355] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I1008 16:37:52.232269 47796989458240 xla_bridge.py:355] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I1008 16:37:52.232400 47796989458240 xla_bridge.py:355] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I1008 16:37:52.232517 47796989458240 run_miniworld.py:102] Collecting data on MiniWorld on gpu.
+I1008 16:37:59.024513 47796989458240 run_miniworld.py:138] Observation shape: (60, 80, 3)
+I1008 16:38:09.721204 47796989458240 run_miniworld.py:243] Data collection iteration 0.
+I1008 16:38:47.016058 47796989458240 run_miniworld.py:250] Evaluation iteration 0.
+/home/mklissa/DCEO/lib/python3.8/site-packages/distrax/_src/distributions/categorical.py:96: UserWarning: Explicitly requested dtype <class 'jax.numpy.int64'> requested in astype is not available, and will be truncated to dtype int32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/google/jax#current-gotchas for more.
+  return draws.astype(self._dtype)
+I1008 16:38:57.340023 47796989458240 run_miniworld.py:267] iteration:   0
+ frame:     0
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  670
+I1008 16:39:02.742767 47796989458240 run_miniworld.py:243] Data collection iteration 1.
+I1008 16:39:40.564439 47796989458240 run_miniworld.py:250] Evaluation iteration 1.
+I1008 16:39:50.417645 47796989458240 run_miniworld.py:267] iteration:   1
+ frame: 25000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  661
+I1008 16:39:53.585752 47796989458240 run_miniworld.py:243] Data collection iteration 2.
+I1008 16:39:54.091592 47796989458240 dceo_agent.py:298] Begin learning
+I1008 16:42:45.674227 47796989458240 run_miniworld.py:250] Evaluation iteration 2.
+I1008 16:42:55.614534 47796989458240 run_miniworld.py:267] iteration:   2
+ frame: 50000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.955
+ train_frame_rate:  145
+I1008 16:42:58.952760 47796989458240 run_miniworld.py:243] Data collection iteration 3.
+I1008 16:45:44.774010 47796989458240 run_miniworld.py:250] Evaluation iteration 3.
+I1008 16:45:54.284970 47796989458240 run_miniworld.py:267] iteration:   3
+ frame: 75000
+ eval_episode_return:  0.00
+ train_episode_return:  0.08
+ train_exploration_epsilon: 0.910
+ train_frame_rate:  151
+I1008 16:45:57.516782 47796989458240 run_miniworld.py:243] Data collection iteration 4.

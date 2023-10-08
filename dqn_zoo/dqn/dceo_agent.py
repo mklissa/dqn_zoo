@@ -180,8 +180,8 @@ class Agent(parts.Agent):
         y_norm = jnp.sqrt(jnp.dot(phi_v[:dim], phi_v[:dim]))
         dot_product = jnp.dot(phi_u[:dim], phi_v[:dim])
         loss += coeff * (
-            dot_product ** 2 - x_norm ** 2 / rep_dim  - y_norm ** 2 / rep_dim  )
-          # dot_product ** 2 - jnp.log(1 + x_norm)  - jnp.log(1 + y_norm)  )
+            # dot_product ** 2 - x_norm ** 2 / rep_dim  - y_norm ** 2 / rep_dim  )
+          dot_product ** 2 - jnp.log(1 + x_norm)  - jnp.log(1 + y_norm)  )
       return loss
     neg_loss_vmap = jax.vmap(neg_loss_fn)
 

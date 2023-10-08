@@ -350,14 +350,38 @@ def double_dqn_atari_network(num_actions: int) -> NetworkFn:
   return net_fn
 
 
-def dqn_atari_network(num_actions: int) -> NetworkFn:
+def normalize(
+    p: float = 2.0,
+    dim: int = 1,
+    eps: float = 1e-12,
+):
+    def net_fn(inputs):
+        denominator = jnp.clip(
+            jnp.linalg.norm(inputs, ord=p, axis=dim, keepdims=True), a_min=eps
+        )
+        return inputs / denominator
+    return net_fn
+
+
+def dqn_atari_network(num_actions: int, stop_gradient: bool = False):
   """DQN network, expects `uint8` input."""
 
   def net_fn(inputs):
     """Function representing DQN Q-network."""
+    if stop_gradient:
+      gradient_flow = lambda x: x
+      # gradient_flow = jax.lax.stop_gradient
+      norm_fn = normalize()
+    else:
+      gradient_flow = lambda x: x
+      norm_fn = lambda x: x
+    
+
     network = hk.Sequential([
         dqn_torso(),
+        gradient_flow,
         dqn_value_head(num_actions),
+        norm_fn,
     ])
     return QNetworkOutputs(q_values=network(inputs))
 

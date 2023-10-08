@@ -1,0 +1,19 @@
+I1007 13:06:35.491122 47063423625024 xla_bridge.py:355] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+I1007 13:06:35.752039 47063423625024 xla_bridge.py:355] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter CUDA Host
+I1007 13:06:35.752535 47063423625024 xla_bridge.py:355] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I1007 13:06:35.752679 47063423625024 xla_bridge.py:355] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I1007 13:06:35.752800 47063423625024 run_miniworld.py:102] Collecting data on MiniWorld on gpu.
+Traceback (most recent call last):
+  File "run_miniworld.py", line 302, in <module>
+    app.run(main)
+  File "/home/mklissa/DCEO/lib/python3.8/site-packages/absl/app.py", line 308, in run
+    _run_main(main, args)
+  File "/home/mklissa/DCEO/lib/python3.8/site-packages/absl/app.py", line 254, in _run_main
+    sys.exit(main(argv))
+  File "run_miniworld.py", line 110, in main
+    writer = parts.CsvWriter(FLAGS.results_csv_path)
+  File "/lustre04/scratch/mklissa/dqn_zoo/dqn_zoo/parts.py", line 567, in __init__
+    os.makedirs(dirname)
+  File "/cvmfs/soft.computecanada.ca/easybuild/software/2020/avx512/Core/python/3.8.2/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'results/MiniWorld-FourRooms-v0/dceo/weight_0.9/num_options5/10-07-13:00_35870'

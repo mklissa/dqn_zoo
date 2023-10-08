@@ -3,3 +3,14 @@ I1008 16:52:28.767632 47600486750016 xla_bridge.py:355] Unable to initialize bac
 I1008 16:52:28.768106 47600486750016 xla_bridge.py:355] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
 I1008 16:52:28.768239 47600486750016 xla_bridge.py:355] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
 I1008 16:52:28.768348 47600486750016 run_miniworld.py:102] Collecting data on MiniWorld on gpu.
+I1008 16:52:35.240864 47600486750016 run_miniworld.py:138] Observation shape: (60, 80, 3)
+I1008 16:52:47.444227 47600486750016 run_miniworld.py:243] Data collection iteration 0.
+I1008 16:53:23.781984 47600486750016 run_miniworld.py:250] Evaluation iteration 0.
+/home/mklissa/DCEO/lib/python3.8/site-packages/distrax/_src/distributions/categorical.py:96: UserWarning: Explicitly requested dtype <class 'jax.numpy.int64'> requested in astype is not available, and will be truncated to dtype int32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/google/jax#current-gotchas for more.
+  return draws.astype(self._dtype)
+I1008 16:53:33.694016 47600486750016 run_miniworld.py:267] iteration:   0
+ frame:     0
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  688

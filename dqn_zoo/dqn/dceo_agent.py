@@ -185,6 +185,38 @@ class Agent(parts.Agent):
       return loss
     neg_loss_vmap = jax.vmap(neg_loss_fn)
 
+    def loss_fn_on_sample(phi_tm1, phi_t, phi_u, phi_v):
+      chex.assert_rank([phi_tm1, phi_t, phi_u, phi_v], 1)
+      chex.assert_equal_shape([phi_tm1, phi_t, phi_u, phi_v])
+      dim = phi_tm1.size
+
+      # Attractive term
+      coeffs = jnp.arange(dim, 0, -1)
+      attractive = jnp.einsum("i,i->", (phi_tm1 - phi_t) ** 2, coeffs)
+
+      # Repulsive term
+      tril = jnp.tri(dim)
+
+      phi_u_sg = jax.lax.stop_gradient(phi_u)
+      phi_v_sg = jax.lax.stop_gradient(phi_v)
+
+      u_norms = jnp.einsum("ij,j->i", tril, phi_u * phi_u_sg)
+      v_norms = jnp.einsum("ij,j->i", tril, phi_v * phi_v_sg)
+
+      u_norms = jnp.log1p(u_norms)
+      v_norms = jnp.log1p(v_norms)
+
+      phi_u_sg_matrix = jnp.einsum("ij,j->ij", tril, phi_u_sg)
+      phi_v_sg_matrix = jnp.einsum("ij,j->ij", tril, phi_v_sg)
+
+      dot_product_sg = jnp.einsum("i,ij,i,ij->i", phi_u, phi_u_sg_matrix, phi_v, phi_v_sg_matrix)
+
+      repulsive = jnp.sum(dot_product_sg - u_norms - v_norms)
+
+      # Both should be scalars
+      chex.assert_rank([attractive, repulsive], 0)
+      return (attractive + repulsive) / 2, attractive, repulsive
+
     def _update_lap(
       rng_key, opt_state, params, transitions):#, transitions_u, transitions_v):
       """Computes learning update from batch of replay transitions."""
@@ -192,27 +224,36 @@ class Agent(parts.Agent):
 
       def lap_loss_fn(params, update_key):
         """Calculates loss given network parameters and transitions."""
-        phis = lap_network.apply(params, update_key,
-                              transitions).q_values
+        phis = lap_network.apply(params, update_key, transitions).q_values
         phis = jnp.split(phis, 4, axis=0)
         phi_tm1 = phis[0]
         phi_t = phis[1]
         phi_u = phis[2]
         phi_v = phis[3]
-        pos_loss = ((phi_tm1 - phi_t)**2).dot(coeff_vector[:lap_dim])
-        neg_loss  = neg_loss_vmap(phi_u, phi_v)
-        loss = pos_loss + neg_loss
-        loss = rlax.clip_gradient(loss, -grad_error_bound, grad_error_bound)
+
+        loss, pos_loss, neg_loss = jax.vmap(loss_fn_on_sample)(
+            phi_tm1, phi_t, phi_u, phi_v)
+
+        # loss, pos_loss, neg_loss = loss_fn_on_sample(phi_tm1[0], phi_t[0], phi_u[0], phi_v[0])
+
+        # pos_loss = ((phi_tm1 - phi_t)**2).dot(coeff_vector[:lap_dim])
+        # neg_loss  = neg_loss_vmap(phi_u, phi_v)
+        # loss = pos_loss + neg_loss
+        # loss = rlax.clip_gradient(loss, -grad_error_bound, grad_error_bound)
+
         chex.assert_shape(loss, (self._batch_size,))
         loss = jnp.mean(loss)
+
         return loss, (jnp.mean(pos_loss), jnp.mean(neg_loss))
 
+      # lap_loss_fn(params, update_key)
       grads, (pos_loss, neg_loss) = jax.grad(
           lap_loss_fn, has_aux=True)(params, update_key)
       updates, new_opt_state = rep_optimizer.update(grads, opt_state)
       new_params = optax.apply_updates(params, updates)
       return rng_key, new_opt_state, new_params, pos_loss, neg_loss
 
+    # self.update_lap = _update_lap
     self.update_lap = jax.jit(_update_lap)
 
     def _get_lap(rng_key, network_params, obs):
@@ -220,7 +261,6 @@ class Agent(parts.Agent):
       return rng_key, lap_network.apply(network_params, apply_key, obs).q_values
 
     self.get_lap = jax.jit(_get_lap)
-
 
   def step(self, timestep: dm_env.TimeStep) -> parts.Action:
     """Selects action given timestep and potentially learns."""

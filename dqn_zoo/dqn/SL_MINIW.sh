@@ -81,7 +81,7 @@ echo "Description (if any): $1" >> $folder/jobinfo.txt
 if [ "$1" != "test" ]; then
     message="${rand_id} $1 ${algo} ${envname}"
     echo $message
-    git add .
+    git add ..
     git commit -m "$message"
 fi
 

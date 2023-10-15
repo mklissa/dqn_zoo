@@ -362,7 +362,7 @@ def normalize(
         return inputs / denominator
     return net_fn
 
-#testing
+
 def dqn_atari_network(num_actions: int, stop_gradient: bool = False):
   """DQN network, expects `uint8` input."""
 

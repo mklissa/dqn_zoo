@@ -191,27 +191,26 @@ class Agent(parts.Agent):
       dim = phi_tm1.size
 
       # Attractive term
-      coeffs = jnp.arange(dim, 0, -1)
-      attractive = jnp.einsum("i,i->", (phi_tm1 - phi_t) ** 2, coeffs)
+      attractive = jnp.einsum("i->", (phi_tm1 - phi_t) ** 2)
 
       # Repulsive term
-      tril = jnp.tri(dim)
-
       phi_u_sg = jax.lax.stop_gradient(phi_u)
       phi_v_sg = jax.lax.stop_gradient(phi_v)
 
-      u_norms = jnp.einsum("ij,j->i", tril, phi_u * phi_u_sg)
-      v_norms = jnp.einsum("ij,j->i", tril, phi_v * phi_v_sg)
+      u_norm_squared_sg = phi_u * phi_u_sg
+      v_norm_squared_sg = phi_v * phi_v_sg
+    
+      u_norm_squared_sg = u_norm_squared_sg / dim
+      v_norm_squared_sg = v_norm_squared_sg / dim
 
-      u_norms = jnp.log1p(u_norms)
-      v_norms = jnp.log1p(v_norms)
+      tril_mat = jnp.tri(dim)
 
-      phi_u_sg_matrix = jnp.einsum("ij,j->ij", tril, phi_u_sg)
-      phi_v_sg_matrix = jnp.einsum("ij,j->ij", tril, phi_v_sg)
+      phi_u_sg_matrix = jnp.einsum("ij,j->ij", tril_mat, phi_u_sg)
+      phi_v_sg_matrix = jnp.einsum("ij,j->ij", tril_mat, phi_v_sg)
 
       dot_product_sg = jnp.einsum("i,ij,i,ij->i", phi_u, phi_u_sg_matrix, phi_v, phi_v_sg_matrix)
 
-      repulsive = jnp.sum(dot_product_sg - u_norms - v_norms)
+      repulsive = jnp.sum(dot_product_sg - u_norm_squared_sg - v_norm_squared_sg)
 
       # Both should be scalars
       chex.assert_rank([attractive, repulsive], 0)
@@ -234,26 +233,17 @@ class Agent(parts.Agent):
         loss, pos_loss, neg_loss = jax.vmap(loss_fn_on_sample)(
             phi_tm1, phi_t, phi_u, phi_v)
 
-        # loss, pos_loss, neg_loss = loss_fn_on_sample(phi_tm1[0], phi_t[0], phi_u[0], phi_v[0])
-
-        # pos_loss = ((phi_tm1 - phi_t)**2).dot(coeff_vector[:lap_dim])
-        # neg_loss  = neg_loss_vmap(phi_u, phi_v)
-        # loss = pos_loss + neg_loss
-        # loss = rlax.clip_gradient(loss, -grad_error_bound, grad_error_bound)
-
         chex.assert_shape(loss, (self._batch_size,))
         loss = jnp.mean(loss)
-
         return loss, (jnp.mean(pos_loss), jnp.mean(neg_loss))
 
-      # lap_loss_fn(params, update_key)
       grads, (pos_loss, neg_loss) = jax.grad(
           lap_loss_fn, has_aux=True)(params, update_key)
       updates, new_opt_state = rep_optimizer.update(grads, opt_state)
       new_params = optax.apply_updates(params, updates)
+
       return rng_key, new_opt_state, new_params, pos_loss, neg_loss
 
-    # self.update_lap = _update_lap
     self.update_lap = jax.jit(_update_lap)
 
     def _get_lap(rng_key, network_params, obs):

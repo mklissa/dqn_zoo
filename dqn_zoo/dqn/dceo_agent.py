@@ -203,8 +203,8 @@ class Agent(parts.Agent):
       # u_norm = u_norm_squared_sg / dim
       # v_norm = v_norm_squared_sg / dim
 
-      u_norm = jnp.log1p(jnp.sqrt(u_norm_squared_sg))
-      v_norm = jnp.log1p(jnp.sqrt(v_norm_squared_sg))
+      u_norm = jnp.log1p(u_norm_squared_sg)
+      v_norm = jnp.log1p(v_norm_squared_sg)
 
       tril_mat = jnp.tri(dim)
 

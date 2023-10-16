@@ -1,0 +1,2021 @@
+I1015 22:22:30.030054 46953292101440 xla_bridge.py:355] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+I1015 22:22:30.154937 46953292101440 xla_bridge.py:355] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter Host CUDA
+I1015 22:22:30.155426 46953292101440 xla_bridge.py:355] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I1015 22:22:30.155564 46953292101440 xla_bridge.py:355] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I1015 22:22:30.155681 46953292101440 run_miniworld.py:102] Collecting data on MiniWorld on gpu.
+I1015 22:22:35.712190 46953292101440 run_miniworld.py:138] Observation shape: (60, 80, 3)
+I1015 22:22:43.523675 46953292101440 run_miniworld.py:243] Data collection iteration 0.
+I1015 22:23:19.693263 46953292101440 run_miniworld.py:250] Evaluation iteration 0.
+/home/mklissa/DCEO/lib/python3.8/site-packages/distrax/_src/distributions/categorical.py:96: UserWarning: Explicitly requested dtype <class 'jax.numpy.int64'> requested in astype is not available, and will be truncated to dtype int32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/google/jax#current-gotchas for more.
+  return draws.astype(self._dtype)
+I1015 22:23:29.592745 46953292101440 run_miniworld.py:267] iteration:   0
+ frame:     0
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  691
+I1015 22:23:34.259884 46953292101440 run_miniworld.py:243] Data collection iteration 1.
+I1015 22:24:10.866611 46953292101440 run_miniworld.py:250] Evaluation iteration 1.
+I1015 22:24:20.387115 46953292101440 run_miniworld.py:267] iteration:   1
+ frame: 25000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  683
+I1015 22:24:24.102776 46953292101440 run_miniworld.py:243] Data collection iteration 2.
+I1015 22:24:24.585809 46953292101440 dceo_agent.py:331] Begin learning
+I1015 22:26:43.354719 46953292101440 run_miniworld.py:250] Evaluation iteration 2.
+I1015 22:26:52.545093 46953292101440 run_miniworld.py:267] iteration:   2
+ frame: 50000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.955
+ train_frame_rate:  180
+I1015 22:26:55.335820 46953292101440 run_miniworld.py:243] Data collection iteration 3.
+I1015 22:29:13.298829 46953292101440 run_miniworld.py:250] Evaluation iteration 3.
+I1015 22:29:22.472037 46953292101440 run_miniworld.py:267] iteration:   3
+ frame: 75000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.910
+ train_frame_rate:  181
+I1015 22:29:25.534219 46953292101440 run_miniworld.py:243] Data collection iteration 4.
+I1015 22:31:45.318903 46953292101440 run_miniworld.py:250] Evaluation iteration 4.
+I1015 22:31:54.695925 46953292101440 run_miniworld.py:267] iteration:   4
+ frame: 100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.865
+ train_frame_rate:  179
+I1015 22:31:58.021777 46953292101440 run_miniworld.py:243] Data collection iteration 5.
+I1015 22:34:17.382926 46953292101440 run_miniworld.py:250] Evaluation iteration 5.
+I1015 22:34:26.868315 46953292101440 run_miniworld.py:267] iteration:   5
+ frame: 125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.820
+ train_frame_rate:  179
+I1015 22:34:29.753029 46953292101440 run_miniworld.py:243] Data collection iteration 6.
+I1015 22:36:48.423871 46953292101440 run_miniworld.py:250] Evaluation iteration 6.
+I1015 22:36:57.880393 46953292101440 run_miniworld.py:267] iteration:   6
+ frame: 150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.775
+ train_frame_rate:  180
+I1015 22:37:01.011755 46953292101440 run_miniworld.py:243] Data collection iteration 7.
+I1015 22:39:22.066287 46953292101440 run_miniworld.py:250] Evaluation iteration 7.
+I1015 22:39:31.541348 46953292101440 run_miniworld.py:267] iteration:   7
+ frame: 175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.730
+ train_frame_rate:  177
+I1015 22:39:34.334918 46953292101440 run_miniworld.py:243] Data collection iteration 8.
+I1015 22:41:55.251804 46953292101440 run_miniworld.py:250] Evaluation iteration 8.
+I1015 22:42:04.451846 46953292101440 run_miniworld.py:267] iteration:   8
+ frame: 200000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.685
+ train_frame_rate:  177
+I1015 22:42:07.603844 46953292101440 run_miniworld.py:243] Data collection iteration 9.
+I1015 22:44:29.867766 46953292101440 run_miniworld.py:250] Evaluation iteration 9.
+I1015 22:44:39.422418 46953292101440 run_miniworld.py:267] iteration:   9
+ frame: 225000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.640
+ train_frame_rate:  176
+I1015 22:44:42.650273 46953292101440 run_miniworld.py:243] Data collection iteration 10.
+I1015 22:47:04.979609 46953292101440 run_miniworld.py:250] Evaluation iteration 10.
+I1015 22:47:14.178240 46953292101440 run_miniworld.py:267] iteration:  10
+ frame: 250000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.595
+ train_frame_rate:  176
+I1015 22:47:17.647302 46953292101440 run_miniworld.py:243] Data collection iteration 11.
+I1015 22:49:41.087222 46953292101440 run_miniworld.py:250] Evaluation iteration 11.
+I1015 22:49:50.675843 46953292101440 run_miniworld.py:267] iteration:  11
+ frame: 275000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.550
+ train_frame_rate:  174
+I1015 22:49:53.696769 46953292101440 run_miniworld.py:243] Data collection iteration 12.
+I1015 22:52:16.837392 46953292101440 run_miniworld.py:250] Evaluation iteration 12.
+I1015 22:52:26.133849 46953292101440 run_miniworld.py:267] iteration:  12
+ frame: 300000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.505
+ train_frame_rate:  175
+I1015 22:52:29.413474 46953292101440 run_miniworld.py:243] Data collection iteration 13.
+I1015 22:54:53.065378 46953292101440 run_miniworld.py:250] Evaluation iteration 13.
+I1015 22:55:02.538981 46953292101440 run_miniworld.py:267] iteration:  13
+ frame: 325000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.460
+ train_frame_rate:  174
+I1015 22:55:06.183492 46953292101440 run_miniworld.py:243] Data collection iteration 14.
+I1015 22:57:30.070790 46953292101440 run_miniworld.py:250] Evaluation iteration 14.
+I1015 22:57:39.472052 46953292101440 run_miniworld.py:267] iteration:  14
+ frame: 350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.415
+ train_frame_rate:  174
+I1015 22:57:42.793344 46953292101440 run_miniworld.py:243] Data collection iteration 15.
+I1015 23:00:07.885223 46953292101440 run_miniworld.py:250] Evaluation iteration 15.
+I1015 23:00:17.210818 46953292101440 run_miniworld.py:267] iteration:  15
+ frame: 375000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.370
+ train_frame_rate:  172
+I1015 23:00:20.019751 46953292101440 run_miniworld.py:243] Data collection iteration 16.
+I1015 23:02:44.688440 46953292101440 run_miniworld.py:250] Evaluation iteration 16.
+I1015 23:02:53.934534 46953292101440 run_miniworld.py:267] iteration:  16
+ frame: 400000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.325
+ train_frame_rate:  173
+I1015 23:02:57.518589 46953292101440 run_miniworld.py:243] Data collection iteration 17.
+I1015 23:05:23.389257 46953292101440 run_miniworld.py:250] Evaluation iteration 17.
+I1015 23:05:32.692902 46953292101440 run_miniworld.py:267] iteration:  17
+ frame: 425000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.280
+ train_frame_rate:  171
+I1015 23:05:36.157111 46953292101440 run_miniworld.py:243] Data collection iteration 18.
+I1015 23:08:01.681715 46953292101440 run_miniworld.py:250] Evaluation iteration 18.
+I1015 23:08:11.128672 46953292101440 run_miniworld.py:267] iteration:  18
+ frame: 450000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.235
+ train_frame_rate:  172
+I1015 23:08:14.015445 46953292101440 run_miniworld.py:243] Data collection iteration 19.
+I1015 23:10:40.627803 46953292101440 run_miniworld.py:250] Evaluation iteration 19.
+I1015 23:10:50.055197 46953292101440 run_miniworld.py:267] iteration:  19
+ frame: 475000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.190
+ train_frame_rate:  171
+I1015 23:10:53.529250 46953292101440 run_miniworld.py:243] Data collection iteration 20.
+I1015 23:13:21.281194 46953292101440 run_miniworld.py:250] Evaluation iteration 20.
+I1015 23:13:30.920370 46953292101440 run_miniworld.py:267] iteration:  20
+ frame: 500000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.145
+ train_frame_rate:  169
+I1015 23:13:33.726805 46953292101440 run_miniworld.py:243] Data collection iteration 21.
+I1015 23:16:01.960258 46953292101440 run_miniworld.py:250] Evaluation iteration 21.
+I1015 23:16:11.276492 46953292101440 run_miniworld.py:267] iteration:  21
+ frame: 525000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  169
+I1015 23:16:14.067565 46953292101440 run_miniworld.py:243] Data collection iteration 22.
+I1015 23:18:41.137380 46953292101440 run_miniworld.py:250] Evaluation iteration 22.
+I1015 23:18:50.716118 46953292101440 run_miniworld.py:267] iteration:  22
+ frame: 550000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  170
+I1015 23:18:54.151175 46953292101440 run_miniworld.py:243] Data collection iteration 23.
+I1015 23:21:22.081418 46953292101440 run_miniworld.py:250] Evaluation iteration 23.
+I1015 23:21:31.339922 46953292101440 run_miniworld.py:267] iteration:  23
+ frame: 575000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  169
+I1015 23:21:34.167986 46953292101440 run_miniworld.py:243] Data collection iteration 24.
+I1015 23:24:03.085465 46953292101440 run_miniworld.py:250] Evaluation iteration 24.
+I1015 23:24:12.422867 46953292101440 run_miniworld.py:267] iteration:  24
+ frame: 600000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  168
+I1015 23:24:16.019144 46953292101440 run_miniworld.py:243] Data collection iteration 25.
+I1015 23:26:44.220943 46953292101440 run_miniworld.py:250] Evaluation iteration 25.
+I1015 23:26:53.545625 46953292101440 run_miniworld.py:267] iteration:  25
+ frame: 625000
+ eval_episode_return:  0.00
+ train_episode_return:  0.08
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  169
+I1015 23:26:56.775260 46953292101440 run_miniworld.py:243] Data collection iteration 26.
+I1015 23:29:26.004006 46953292101440 run_miniworld.py:250] Evaluation iteration 26.
+I1015 23:29:35.439546 46953292101440 run_miniworld.py:267] iteration:  26
+ frame: 650000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  168
+I1015 23:29:39.324937 46953292101440 run_miniworld.py:243] Data collection iteration 27.
+I1015 23:32:08.670300 46953292101440 run_miniworld.py:250] Evaluation iteration 27.
+I1015 23:32:18.108221 46953292101440 run_miniworld.py:267] iteration:  27
+ frame: 675000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  167
+I1015 23:32:21.042795 46953292101440 run_miniworld.py:243] Data collection iteration 28.
+I1015 23:34:51.619224 46953292101440 run_miniworld.py:250] Evaluation iteration 28.
+I1015 23:35:01.267290 46953292101440 run_miniworld.py:267] iteration:  28
+ frame: 700000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  166
+I1015 23:35:05.617830 46953292101440 run_miniworld.py:243] Data collection iteration 29.
+I1015 23:37:36.053990 46953292101440 run_miniworld.py:250] Evaluation iteration 29.
+I1015 23:37:45.553874 46953292101440 run_miniworld.py:267] iteration:  29
+ frame: 725000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  166
+I1015 23:37:49.299764 46953292101440 run_miniworld.py:243] Data collection iteration 30.
+I1015 23:40:19.628868 46953292101440 run_miniworld.py:250] Evaluation iteration 30.
+I1015 23:40:29.178113 46953292101440 run_miniworld.py:267] iteration:  30
+ frame: 750000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  166
+I1015 23:40:32.889985 46953292101440 run_miniworld.py:243] Data collection iteration 31.
+I1015 23:43:03.860475 46953292101440 run_miniworld.py:250] Evaluation iteration 31.
+I1015 23:43:13.440720 46953292101440 run_miniworld.py:267] iteration:  31
+ frame: 775000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  166
+I1015 23:43:16.379011 46953292101440 run_miniworld.py:243] Data collection iteration 32.
+I1015 23:45:47.796964 46953292101440 run_miniworld.py:250] Evaluation iteration 32.
+I1015 23:45:57.222963 46953292101440 run_miniworld.py:267] iteration:  32
+ frame: 800000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1015 23:46:00.931387 46953292101440 run_miniworld.py:243] Data collection iteration 33.
+I1015 23:48:32.788113 46953292101440 run_miniworld.py:250] Evaluation iteration 33.
+I1015 23:48:42.513535 46953292101440 run_miniworld.py:267] iteration:  33
+ frame: 825000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1015 23:48:45.460196 46953292101440 run_miniworld.py:243] Data collection iteration 34.
+I1015 23:51:16.843716 46953292101440 run_miniworld.py:250] Evaluation iteration 34.
+I1015 23:51:26.405647 46953292101440 run_miniworld.py:267] iteration:  34
+ frame: 850000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1015 23:51:30.283661 46953292101440 run_miniworld.py:243] Data collection iteration 35.
+I1015 23:54:02.391246 46953292101440 run_miniworld.py:250] Evaluation iteration 35.
+I1015 23:54:11.793732 46953292101440 run_miniworld.py:267] iteration:  35
+ frame: 875000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1015 23:54:14.736836 46953292101440 run_miniworld.py:243] Data collection iteration 36.
+I1015 23:56:46.762755 46953292101440 run_miniworld.py:250] Evaluation iteration 36.
+I1015 23:56:56.110040 46953292101440 run_miniworld.py:267] iteration:  36
+ frame: 900000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1015 23:56:59.038331 46953292101440 run_miniworld.py:243] Data collection iteration 37.
+I1015 23:59:32.087285 46953292101440 run_miniworld.py:250] Evaluation iteration 37.
+I1015 23:59:41.572476 46953292101440 run_miniworld.py:267] iteration:  37
+ frame: 925000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1015 23:59:45.562266 46953292101440 run_miniworld.py:243] Data collection iteration 38.
+I1016 00:02:18.267694 46953292101440 run_miniworld.py:250] Evaluation iteration 38.
+I1016 00:02:27.744131 46953292101440 run_miniworld.py:267] iteration:  38
+ frame: 950000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 00:02:30.701716 46953292101440 run_miniworld.py:243] Data collection iteration 39.
+I1016 00:05:04.073212 46953292101440 run_miniworld.py:250] Evaluation iteration 39.
+I1016 00:05:13.630520 46953292101440 run_miniworld.py:267] iteration:  39
+ frame: 975000
+ eval_episode_return:  0.00
+ train_episode_return:  0.08
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:05:17.488335 46953292101440 run_miniworld.py:243] Data collection iteration 40.
+I1016 00:07:50.738058 46953292101440 run_miniworld.py:250] Evaluation iteration 40.
+I1016 00:08:00.388468 46953292101440 run_miniworld.py:267] iteration:  40
+ frame: 1000000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:08:03.529140 46953292101440 run_miniworld.py:243] Data collection iteration 41.
+I1016 00:10:36.811830 46953292101440 run_miniworld.py:250] Evaluation iteration 41.
+I1016 00:10:46.356263 46953292101440 run_miniworld.py:267] iteration:  41
+ frame: 1025000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:10:49.340296 46953292101440 run_miniworld.py:243] Data collection iteration 42.
+I1016 00:13:23.964701 46953292101440 run_miniworld.py:250] Evaluation iteration 42.
+I1016 00:13:33.368681 46953292101440 run_miniworld.py:267] iteration:  42
+ frame: 1050000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:13:36.235450 46953292101440 run_miniworld.py:243] Data collection iteration 43.
+I1016 00:16:09.739374 46953292101440 run_miniworld.py:250] Evaluation iteration 43.
+I1016 00:16:19.178867 46953292101440 run_miniworld.py:267] iteration:  43
+ frame: 1075000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:16:22.143944 46953292101440 run_miniworld.py:243] Data collection iteration 44.
+I1016 00:18:55.342616 46953292101440 run_miniworld.py:250] Evaluation iteration 44.
+I1016 00:19:04.902417 46953292101440 run_miniworld.py:267] iteration:  44
+ frame: 1100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:19:09.151674 46953292101440 run_miniworld.py:243] Data collection iteration 45.
+I1016 00:21:42.915334 46953292101440 run_miniworld.py:250] Evaluation iteration 45.
+I1016 00:21:52.298586 46953292101440 run_miniworld.py:267] iteration:  45
+ frame: 1125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:21:55.892393 46953292101440 run_miniworld.py:243] Data collection iteration 46.
+I1016 00:24:29.813227 46953292101440 run_miniworld.py:250] Evaluation iteration 46.
+I1016 00:24:39.381873 46953292101440 run_miniworld.py:267] iteration:  46
+ frame: 1150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:24:43.480319 46953292101440 run_miniworld.py:243] Data collection iteration 47.
+I1016 00:27:16.480779 46953292101440 run_miniworld.py:250] Evaluation iteration 47.
+I1016 00:27:25.864991 46953292101440 run_miniworld.py:267] iteration:  47
+ frame: 1175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:27:28.805552 46953292101440 run_miniworld.py:243] Data collection iteration 48.
+I1016 00:30:02.366661 46953292101440 run_miniworld.py:250] Evaluation iteration 48.
+I1016 00:30:12.019728 46953292101440 run_miniworld.py:267] iteration:  48
+ frame: 1200000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:30:15.109968 46953292101440 run_miniworld.py:243] Data collection iteration 49.
+I1016 00:32:49.634835 46953292101440 run_miniworld.py:250] Evaluation iteration 49.
+I1016 00:32:59.322939 46953292101440 run_miniworld.py:267] iteration:  49
+ frame: 1225000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:33:03.264922 46953292101440 run_miniworld.py:243] Data collection iteration 50.
+I1016 00:35:38.199697 46953292101440 run_miniworld.py:250] Evaluation iteration 50.
+I1016 00:35:47.821466 46953292101440 run_miniworld.py:267] iteration:  50
+ frame: 1250000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 00:35:50.828838 46953292101440 run_miniworld.py:243] Data collection iteration 51.
+I1016 00:38:24.917823 46953292101440 run_miniworld.py:250] Evaluation iteration 51.
+I1016 00:38:34.407375 46953292101440 run_miniworld.py:267] iteration:  51
+ frame: 1275000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:38:38.389370 46953292101440 run_miniworld.py:243] Data collection iteration 52.
+I1016 00:41:12.414730 46953292101440 run_miniworld.py:250] Evaluation iteration 52.
+I1016 00:41:21.905667 46953292101440 run_miniworld.py:267] iteration:  52
+ frame: 1300000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:41:24.841450 46953292101440 run_miniworld.py:243] Data collection iteration 53.
+I1016 00:43:58.687005 46953292101440 run_miniworld.py:250] Evaluation iteration 53.
+I1016 00:44:08.049739 46953292101440 run_miniworld.py:267] iteration:  53
+ frame: 1325000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:44:11.128569 46953292101440 run_miniworld.py:243] Data collection iteration 54.
+I1016 00:46:45.249533 46953292101440 run_miniworld.py:250] Evaluation iteration 54.
+I1016 00:46:54.815571 46953292101440 run_miniworld.py:267] iteration:  54
+ frame: 1350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:46:59.467394 46953292101440 run_miniworld.py:243] Data collection iteration 55.
+I1016 00:49:34.410224 46953292101440 run_miniworld.py:250] Evaluation iteration 55.
+I1016 00:49:44.097099 46953292101440 run_miniworld.py:267] iteration:  55
+ frame: 1375000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 00:49:47.000137 46953292101440 run_miniworld.py:243] Data collection iteration 56.
+I1016 00:52:20.221336 46953292101440 run_miniworld.py:250] Evaluation iteration 56.
+I1016 00:52:29.547159 46953292101440 run_miniworld.py:267] iteration:  56
+ frame: 1400000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 00:52:33.384567 46953292101440 run_miniworld.py:243] Data collection iteration 57.
+I1016 00:55:07.989687 46953292101440 run_miniworld.py:250] Evaluation iteration 57.
+I1016 00:55:17.554404 46953292101440 run_miniworld.py:267] iteration:  57
+ frame: 1425000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 00:55:20.429360 46953292101440 run_miniworld.py:243] Data collection iteration 58.
+I1016 00:57:55.624253 46953292101440 run_miniworld.py:250] Evaluation iteration 58.
+I1016 00:58:05.204687 46953292101440 run_miniworld.py:267] iteration:  58
+ frame: 1450000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 00:58:09.008940 46953292101440 run_miniworld.py:243] Data collection iteration 59.
+I1016 01:00:44.291352 46953292101440 run_miniworld.py:250] Evaluation iteration 59.
+I1016 01:00:53.967753 46953292101440 run_miniworld.py:267] iteration:  59
+ frame: 1475000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:00:57.977566 46953292101440 run_miniworld.py:243] Data collection iteration 60.
+I1016 01:03:33.365085 46953292101440 run_miniworld.py:250] Evaluation iteration 60.
+I1016 01:03:42.967601 46953292101440 run_miniworld.py:267] iteration:  60
+ frame: 1500000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:03:45.860229 46953292101440 run_miniworld.py:243] Data collection iteration 61.
+I1016 01:06:21.048661 46953292101440 run_miniworld.py:250] Evaluation iteration 61.
+I1016 01:06:30.621894 46953292101440 run_miniworld.py:267] iteration:  61
+ frame: 1525000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:06:34.499244 46953292101440 run_miniworld.py:243] Data collection iteration 62.
+I1016 01:09:10.352407 46953292101440 run_miniworld.py:250] Evaluation iteration 62.
+I1016 01:09:19.941522 46953292101440 run_miniworld.py:267] iteration:  62
+ frame: 1550000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  160
+I1016 01:09:23.117281 46953292101440 run_miniworld.py:243] Data collection iteration 63.
+I1016 01:11:58.224793 46953292101440 run_miniworld.py:250] Evaluation iteration 63.
+I1016 01:12:07.698449 46953292101440 run_miniworld.py:267] iteration:  63
+ frame: 1575000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:12:10.655938 46953292101440 run_miniworld.py:243] Data collection iteration 64.
+I1016 01:14:45.620284 46953292101440 run_miniworld.py:250] Evaluation iteration 64.
+I1016 01:14:56.220327 46953292101440 run_miniworld.py:267] iteration:  64
+ frame: 1600000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:14:59.154276 46953292101440 run_miniworld.py:243] Data collection iteration 65.
+I1016 01:17:34.795201 46953292101440 run_miniworld.py:250] Evaluation iteration 65.
+I1016 01:17:44.441770 46953292101440 run_miniworld.py:267] iteration:  65
+ frame: 1625000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:17:47.411015 46953292101440 run_miniworld.py:243] Data collection iteration 66.
+I1016 01:20:22.780444 46953292101440 run_miniworld.py:250] Evaluation iteration 66.
+I1016 01:20:32.237486 46953292101440 run_miniworld.py:267] iteration:  66
+ frame: 1650000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  161
+I1016 01:20:36.448076 46953292101440 run_miniworld.py:243] Data collection iteration 67.
+I1016 01:23:12.577057 46953292101440 run_miniworld.py:250] Evaluation iteration 67.
+I1016 01:23:22.378274 46953292101440 run_miniworld.py:267] iteration:  67
+ frame: 1675000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  160
+I1016 01:23:25.491691 46953292101440 run_miniworld.py:243] Data collection iteration 68.
+I1016 01:26:00.116451 46953292101440 run_miniworld.py:250] Evaluation iteration 68.
+I1016 01:26:09.675916 46953292101440 run_miniworld.py:267] iteration:  68
+ frame: 1700000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 01:26:12.848374 46953292101440 run_miniworld.py:243] Data collection iteration 69.
+I1016 01:28:59.765355 46953292101440 run_miniworld.py:250] Evaluation iteration 69.
+I1016 01:29:09.614877 46953292101440 run_miniworld.py:267] iteration:  69
+ frame: 1725000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  150
+I1016 01:29:13.023919 46953292101440 run_miniworld.py:243] Data collection iteration 70.
+I1016 01:32:08.048625 46953292101440 run_miniworld.py:250] Evaluation iteration 70.
+I1016 01:32:17.790827 46953292101440 run_miniworld.py:267] iteration:  70
+ frame: 1750000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 01:32:20.940078 46953292101440 run_miniworld.py:243] Data collection iteration 71.
+I1016 01:35:17.126542 46953292101440 run_miniworld.py:250] Evaluation iteration 71.
+I1016 01:35:26.806624 46953292101440 run_miniworld.py:267] iteration:  71
+ frame: 1775000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 01:35:30.939995 46953292101440 run_miniworld.py:243] Data collection iteration 72.
+I1016 01:38:26.911048 46953292101440 run_miniworld.py:250] Evaluation iteration 72.
+I1016 01:38:36.837911 46953292101440 run_miniworld.py:267] iteration:  72
+ frame: 1800000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 01:38:40.088276 46953292101440 run_miniworld.py:243] Data collection iteration 73.
+I1016 01:41:35.123023 46953292101440 run_miniworld.py:250] Evaluation iteration 73.
+I1016 01:41:44.672151 46953292101440 run_miniworld.py:267] iteration:  73
+ frame: 1825000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 01:41:49.172283 46953292101440 run_miniworld.py:243] Data collection iteration 74.
+I1016 01:44:46.274407 46953292101440 run_miniworld.py:250] Evaluation iteration 74.
+I1016 01:44:56.021755 46953292101440 run_miniworld.py:267] iteration:  74
+ frame: 1850000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 01:44:59.184222 46953292101440 run_miniworld.py:243] Data collection iteration 75.
+I1016 01:47:53.813796 46953292101440 run_miniworld.py:250] Evaluation iteration 75.
+I1016 01:48:03.417008 46953292101440 run_miniworld.py:267] iteration:  75
+ frame: 1875000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 01:48:06.464019 46953292101440 run_miniworld.py:243] Data collection iteration 76.
+I1016 01:51:01.821816 46953292101440 run_miniworld.py:250] Evaluation iteration 76.
+I1016 01:51:11.589804 46953292101440 run_miniworld.py:267] iteration:  76
+ frame: 1900000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 01:51:16.227149 46953292101440 run_miniworld.py:243] Data collection iteration 77.
+I1016 01:54:12.507146 46953292101440 run_miniworld.py:250] Evaluation iteration 77.
+I1016 01:54:22.053024 46953292101440 run_miniworld.py:267] iteration:  77
+ frame: 1925000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 01:54:25.044497 46953292101440 run_miniworld.py:243] Data collection iteration 78.
+I1016 01:57:21.610720 46953292101440 run_miniworld.py:250] Evaluation iteration 78.
+I1016 01:57:31.611935 46953292101440 run_miniworld.py:267] iteration:  78
+ frame: 1950000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 01:57:35.584058 46953292101440 run_miniworld.py:243] Data collection iteration 79.
+I1016 02:00:32.087842 46953292101440 run_miniworld.py:250] Evaluation iteration 79.
+I1016 02:00:41.854039 46953292101440 run_miniworld.py:267] iteration:  79
+ frame: 1975000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:00:45.073079 46953292101440 run_miniworld.py:243] Data collection iteration 80.
+I1016 02:03:40.633206 46953292101440 run_miniworld.py:250] Evaluation iteration 80.
+I1016 02:03:50.299983 46953292101440 run_miniworld.py:267] iteration:  80
+ frame: 2000000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:03:53.941093 46953292101440 run_miniworld.py:243] Data collection iteration 81.
+I1016 02:06:48.610956 46953292101440 run_miniworld.py:250] Evaluation iteration 81.
+I1016 02:06:58.340515 46953292101440 run_miniworld.py:267] iteration:  81
+ frame: 2025000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 02:07:02.542628 46953292101440 run_miniworld.py:243] Data collection iteration 82.
+I1016 02:09:57.822747 46953292101440 run_miniworld.py:250] Evaluation iteration 82.
+I1016 02:10:07.460462 46953292101440 run_miniworld.py:267] iteration:  82
+ frame: 2050000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 02:10:10.479787 46953292101440 run_miniworld.py:243] Data collection iteration 83.
+I1016 02:13:06.176870 46953292101440 run_miniworld.py:250] Evaluation iteration 83.
+I1016 02:13:15.907802 46953292101440 run_miniworld.py:267] iteration:  83
+ frame: 2075000
+ eval_episode_return:  0.00
+ train_episode_return:  0.08
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:13:20.087475 46953292101440 run_miniworld.py:243] Data collection iteration 84.
+I1016 02:16:16.545425 46953292101440 run_miniworld.py:250] Evaluation iteration 84.
+I1016 02:16:26.254685 46953292101440 run_miniworld.py:267] iteration:  84
+ frame: 2100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:16:29.502965 46953292101440 run_miniworld.py:243] Data collection iteration 85.
+I1016 02:19:25.810530 46953292101440 run_miniworld.py:250] Evaluation iteration 85.
+I1016 02:19:35.733807 46953292101440 run_miniworld.py:267] iteration:  85
+ frame: 2125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:19:38.733497 46953292101440 run_miniworld.py:243] Data collection iteration 86.
+I1016 02:22:34.659487 46953292101440 run_miniworld.py:250] Evaluation iteration 86.
+I1016 02:22:44.604905 46953292101440 run_miniworld.py:267] iteration:  86
+ frame: 2150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:22:48.804657 46953292101440 run_miniworld.py:243] Data collection iteration 87.
+I1016 02:25:45.249228 46953292101440 run_miniworld.py:250] Evaluation iteration 87.
+I1016 02:25:54.717180 46953292101440 run_miniworld.py:267] iteration:  87
+ frame: 2175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:25:57.718966 46953292101440 run_miniworld.py:243] Data collection iteration 88.
+I1016 02:28:53.884337 46953292101440 run_miniworld.py:250] Evaluation iteration 88.
+I1016 02:29:03.665288 46953292101440 run_miniworld.py:267] iteration:  88
+ frame: 2200000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:29:08.049802 46953292101440 run_miniworld.py:243] Data collection iteration 89.
+I1016 02:32:04.936848 46953292101440 run_miniworld.py:250] Evaluation iteration 89.
+I1016 02:32:15.145679 46953292101440 run_miniworld.py:267] iteration:  89
+ frame: 2225000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 02:32:18.414960 46953292101440 run_miniworld.py:243] Data collection iteration 90.
+I1016 02:35:15.729446 46953292101440 run_miniworld.py:250] Evaluation iteration 90.
+I1016 02:35:25.740284 46953292101440 run_miniworld.py:267] iteration:  90
+ frame: 2250000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 02:35:28.926437 46953292101440 run_miniworld.py:243] Data collection iteration 91.
+I1016 02:38:25.261159 46953292101440 run_miniworld.py:250] Evaluation iteration 91.
+I1016 02:38:35.102540 46953292101440 run_miniworld.py:267] iteration:  91
+ frame: 2275000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:38:39.644161 46953292101440 run_miniworld.py:243] Data collection iteration 92.
+I1016 02:41:35.746421 46953292101440 run_miniworld.py:250] Evaluation iteration 92.
+I1016 02:41:45.767343 46953292101440 run_miniworld.py:267] iteration:  92
+ frame: 2300000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:41:48.995130 46953292101440 run_miniworld.py:243] Data collection iteration 93.
+I1016 02:44:44.841952 46953292101440 run_miniworld.py:250] Evaluation iteration 93.
+I1016 02:44:54.305347 46953292101440 run_miniworld.py:267] iteration:  93
+ frame: 2325000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:44:58.587532 46953292101440 run_miniworld.py:243] Data collection iteration 94.
+I1016 02:47:56.330724 46953292101440 run_miniworld.py:250] Evaluation iteration 94.
+I1016 02:48:06.304945 46953292101440 run_miniworld.py:267] iteration:  94
+ frame: 2350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 02:48:09.360108 46953292101440 run_miniworld.py:243] Data collection iteration 95.
+I1016 02:51:05.632728 46953292101440 run_miniworld.py:250] Evaluation iteration 95.
+I1016 02:51:15.662446 46953292101440 run_miniworld.py:267] iteration:  95
+ frame: 2375000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:51:18.688924 46953292101440 run_miniworld.py:243] Data collection iteration 96.
+I1016 02:54:14.658622 46953292101440 run_miniworld.py:250] Evaluation iteration 96.
+I1016 02:54:24.327560 46953292101440 run_miniworld.py:267] iteration:  96
+ frame: 2400000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 02:54:28.492065 46953292101440 run_miniworld.py:243] Data collection iteration 97.
+I1016 02:57:25.419399 46953292101440 run_miniworld.py:250] Evaluation iteration 97.
+I1016 02:57:35.297055 46953292101440 run_miniworld.py:267] iteration:  97
+ frame: 2425000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 02:57:38.403880 46953292101440 run_miniworld.py:243] Data collection iteration 98.
+I1016 03:00:34.983425 46953292101440 run_miniworld.py:250] Evaluation iteration 98.
+I1016 03:00:44.978906 46953292101440 run_miniworld.py:267] iteration:  98
+ frame: 2450000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:00:49.173817 46953292101440 run_miniworld.py:243] Data collection iteration 99.
+I1016 03:03:46.858983 46953292101440 run_miniworld.py:250] Evaluation iteration 99.
+I1016 03:03:56.334537 46953292101440 run_miniworld.py:267] iteration:  99
+ frame: 2475000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 03:03:59.438584 46953292101440 run_miniworld.py:243] Data collection iteration 100.
+I1016 03:06:55.482125 46953292101440 run_miniworld.py:250] Evaluation iteration 100.
+I1016 03:07:05.659500 46953292101440 run_miniworld.py:267] iteration: 100
+ frame: 2500000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:07:08.767554 46953292101440 run_miniworld.py:243] Data collection iteration 101.
+I1016 03:10:05.175602 46953292101440 run_miniworld.py:250] Evaluation iteration 101.
+I1016 03:10:15.092841 46953292101440 run_miniworld.py:267] iteration: 101
+ frame: 2525000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:10:19.288217 46953292101440 run_miniworld.py:243] Data collection iteration 102.
+I1016 03:13:16.084632 46953292101440 run_miniworld.py:250] Evaluation iteration 102.
+I1016 03:13:26.045087 46953292101440 run_miniworld.py:267] iteration: 102
+ frame: 2550000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 03:13:29.486124 46953292101440 run_miniworld.py:243] Data collection iteration 103.
+I1016 03:16:26.162589 46953292101440 run_miniworld.py:250] Evaluation iteration 103.
+I1016 03:16:36.072387 46953292101440 run_miniworld.py:267] iteration: 103
+ frame: 2575000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:16:40.222061 46953292101440 run_miniworld.py:243] Data collection iteration 104.
+I1016 03:19:38.901557 46953292101440 run_miniworld.py:250] Evaluation iteration 104.
+I1016 03:19:48.893646 46953292101440 run_miniworld.py:267] iteration: 104
+ frame: 2600000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1016 03:19:51.866432 46953292101440 run_miniworld.py:243] Data collection iteration 105.
+I1016 03:22:35.312881 46953292101440 run_miniworld.py:250] Evaluation iteration 105.
+I1016 03:22:45.736668 46953292101440 run_miniworld.py:267] iteration: 105
+ frame: 2625000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  153
+I1016 03:22:48.623790 46953292101440 run_miniworld.py:243] Data collection iteration 106.
+I1016 03:25:38.562984 46953292101440 run_miniworld.py:250] Evaluation iteration 106.
+I1016 03:25:48.616988 46953292101440 run_miniworld.py:267] iteration: 106
+ frame: 2650000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  147
+I1016 03:25:52.831416 46953292101440 run_miniworld.py:243] Data collection iteration 107.
+I1016 03:28:48.565321 46953292101440 run_miniworld.py:250] Evaluation iteration 107.
+I1016 03:28:58.220136 46953292101440 run_miniworld.py:267] iteration: 107
+ frame: 2675000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:29:01.183783 46953292101440 run_miniworld.py:243] Data collection iteration 108.
+I1016 03:31:56.987817 46953292101440 run_miniworld.py:250] Evaluation iteration 108.
+I1016 03:32:06.715736 46953292101440 run_miniworld.py:267] iteration: 108
+ frame: 2700000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:32:10.933104 46953292101440 run_miniworld.py:243] Data collection iteration 109.
+I1016 03:35:08.259552 46953292101440 run_miniworld.py:250] Evaluation iteration 109.
+I1016 03:35:18.579936 46953292101440 run_miniworld.py:267] iteration: 109
+ frame: 2725000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 03:35:21.691076 46953292101440 run_miniworld.py:243] Data collection iteration 110.
+I1016 03:38:18.190855 46953292101440 run_miniworld.py:250] Evaluation iteration 110.
+I1016 03:38:28.093511 46953292101440 run_miniworld.py:267] iteration: 110
+ frame: 2750000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:38:31.155591 46953292101440 run_miniworld.py:243] Data collection iteration 111.
+I1016 03:41:27.544671 46953292101440 run_miniworld.py:250] Evaluation iteration 111.
+I1016 03:41:37.636361 46953292101440 run_miniworld.py:267] iteration: 111
+ frame: 2775000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:41:41.810193 46953292101440 run_miniworld.py:243] Data collection iteration 112.
+I1016 03:44:38.169524 46953292101440 run_miniworld.py:250] Evaluation iteration 112.
+I1016 03:44:47.894279 46953292101440 run_miniworld.py:267] iteration: 112
+ frame: 2800000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:44:50.889435 46953292101440 run_miniworld.py:243] Data collection iteration 113.
+I1016 03:47:47.782205 46953292101440 run_miniworld.py:250] Evaluation iteration 113.
+I1016 03:47:57.724766 46953292101440 run_miniworld.py:267] iteration: 113
+ frame: 2825000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 03:48:02.073028 46953292101440 run_miniworld.py:243] Data collection iteration 114.
+I1016 03:50:59.998808 46953292101440 run_miniworld.py:250] Evaluation iteration 114.
+I1016 03:51:09.691320 46953292101440 run_miniworld.py:267] iteration: 114
+ frame: 2850000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 03:51:12.673800 46953292101440 run_miniworld.py:243] Data collection iteration 115.
+I1016 03:54:08.946646 46953292101440 run_miniworld.py:250] Evaluation iteration 115.
+I1016 03:54:18.833694 46953292101440 run_miniworld.py:267] iteration: 115
+ frame: 2875000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 03:54:21.868229 46953292101440 run_miniworld.py:243] Data collection iteration 116.
+I1016 03:57:18.831062 46953292101440 run_miniworld.py:250] Evaluation iteration 116.
+I1016 03:57:28.708642 46953292101440 run_miniworld.py:267] iteration: 116
+ frame: 2900000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 03:57:32.970274 46953292101440 run_miniworld.py:243] Data collection iteration 117.
+I1016 04:00:30.607272 46953292101440 run_miniworld.py:250] Evaluation iteration 117.
+I1016 04:00:40.448146 46953292101440 run_miniworld.py:267] iteration: 117
+ frame: 2925000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:00:43.554461 46953292101440 run_miniworld.py:243] Data collection iteration 118.
+I1016 04:03:40.206585 46953292101440 run_miniworld.py:250] Evaluation iteration 118.
+I1016 04:03:49.920136 46953292101440 run_miniworld.py:267] iteration: 118
+ frame: 2950000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:03:54.019562 46953292101440 run_miniworld.py:243] Data collection iteration 119.
+I1016 04:06:52.326834 46953292101440 run_miniworld.py:250] Evaluation iteration 119.
+I1016 04:07:02.358383 46953292101440 run_miniworld.py:267] iteration: 119
+ frame: 2975000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1016 04:07:05.370058 46953292101440 run_miniworld.py:243] Data collection iteration 120.
+I1016 04:10:01.784584 46953292101440 run_miniworld.py:250] Evaluation iteration 120.
+I1016 04:10:11.388687 46953292101440 run_miniworld.py:267] iteration: 120
+ frame: 3000000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:10:14.354803 46953292101440 run_miniworld.py:243] Data collection iteration 121.
+I1016 04:13:10.411322 46953292101440 run_miniworld.py:250] Evaluation iteration 121.
+I1016 04:13:20.049854 46953292101440 run_miniworld.py:267] iteration: 121
+ frame: 3025000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:13:24.434463 46953292101440 run_miniworld.py:243] Data collection iteration 122.
+I1016 04:16:21.606605 46953292101440 run_miniworld.py:250] Evaluation iteration 122.
+I1016 04:16:31.374779 46953292101440 run_miniworld.py:267] iteration: 122
+ frame: 3050000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:16:34.369453 46953292101440 run_miniworld.py:243] Data collection iteration 123.
+I1016 04:19:31.037595 46953292101440 run_miniworld.py:250] Evaluation iteration 123.
+I1016 04:19:40.813042 46953292101440 run_miniworld.py:267] iteration: 123
+ frame: 3075000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:19:44.907315 46953292101440 run_miniworld.py:243] Data collection iteration 124.
+I1016 04:22:42.423101 46953292101440 run_miniworld.py:250] Evaluation iteration 124.
+I1016 04:22:52.194542 46953292101440 run_miniworld.py:267] iteration: 124
+ frame: 3100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:22:55.263265 46953292101440 run_miniworld.py:243] Data collection iteration 125.
+I1016 04:25:51.465153 46953292101440 run_miniworld.py:250] Evaluation iteration 125.
+I1016 04:26:01.159509 46953292101440 run_miniworld.py:267] iteration: 125
+ frame: 3125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:26:04.117148 46953292101440 run_miniworld.py:243] Data collection iteration 126.
+I1016 04:29:00.182772 46953292101440 run_miniworld.py:250] Evaluation iteration 126.
+I1016 04:29:10.235144 46953292101440 run_miniworld.py:267] iteration: 126
+ frame: 3150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:29:14.461084 46953292101440 run_miniworld.py:243] Data collection iteration 127.
+I1016 04:32:11.791103 46953292101440 run_miniworld.py:250] Evaluation iteration 127.
+I1016 04:32:21.693447 46953292101440 run_miniworld.py:267] iteration: 127
+ frame: 3175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:32:24.778186 46953292101440 run_miniworld.py:243] Data collection iteration 128.
+I1016 04:35:21.261276 46953292101440 run_miniworld.py:250] Evaluation iteration 128.
+I1016 04:35:31.050566 46953292101440 run_miniworld.py:267] iteration: 128
+ frame: 3200000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:35:35.170785 46953292101440 run_miniworld.py:243] Data collection iteration 129.
+I1016 04:38:33.198514 46953292101440 run_miniworld.py:250] Evaluation iteration 129.
+I1016 04:38:43.177573 46953292101440 run_miniworld.py:267] iteration: 129
+ frame: 3225000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1016 04:38:46.287786 46953292101440 run_miniworld.py:243] Data collection iteration 130.
+I1016 04:41:42.558194 46953292101440 run_miniworld.py:250] Evaluation iteration 130.
+I1016 04:41:52.311673 46953292101440 run_miniworld.py:267] iteration: 130
+ frame: 3250000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:41:55.251226 46953292101440 run_miniworld.py:243] Data collection iteration 131.
+I1016 04:44:53.132855 46953292101440 run_miniworld.py:250] Evaluation iteration 131.
+I1016 04:45:02.881364 46953292101440 run_miniworld.py:267] iteration: 131
+ frame: 3275000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:45:05.810987 46953292101440 run_miniworld.py:243] Data collection iteration 132.
+I1016 04:48:02.735681 46953292101440 run_miniworld.py:250] Evaluation iteration 132.
+I1016 04:48:12.458191 46953292101440 run_miniworld.py:267] iteration: 132
+ frame: 3300000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:48:15.474056 46953292101440 run_miniworld.py:243] Data collection iteration 133.
+I1016 04:51:11.677481 46953292101440 run_miniworld.py:250] Evaluation iteration 133.
+I1016 04:51:21.573216 46953292101440 run_miniworld.py:267] iteration: 133
+ frame: 3325000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 04:51:25.690068 46953292101440 run_miniworld.py:243] Data collection iteration 134.
+I1016 04:54:23.265416 46953292101440 run_miniworld.py:250] Evaluation iteration 134.
+I1016 04:54:32.997054 46953292101440 run_miniworld.py:267] iteration: 134
+ frame: 3350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 04:54:36.136360 46953292101440 run_miniworld.py:243] Data collection iteration 135.
+I1016 04:57:34.564286 46953292101440 run_miniworld.py:250] Evaluation iteration 135.
+I1016 04:57:44.477419 46953292101440 run_miniworld.py:267] iteration: 135
+ frame: 3375000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1016 04:57:47.448365 46953292101440 run_miniworld.py:243] Data collection iteration 136.
+I1016 05:00:45.874628 46953292101440 run_miniworld.py:250] Evaluation iteration 136.
+I1016 05:00:55.668042 46953292101440 run_miniworld.py:267] iteration: 136
+ frame: 3400000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1016 05:00:58.665760 46953292101440 run_miniworld.py:243] Data collection iteration 137.
+I1016 05:03:56.594494 46953292101440 run_miniworld.py:250] Evaluation iteration 137.
+I1016 05:04:06.779992 46953292101440 run_miniworld.py:267] iteration: 137
+ frame: 3425000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:04:09.775620 46953292101440 run_miniworld.py:243] Data collection iteration 138.
+I1016 05:07:06.986444 46953292101440 run_miniworld.py:250] Evaluation iteration 138.
+I1016 05:07:16.802752 46953292101440 run_miniworld.py:267] iteration: 138
+ frame: 3450000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:07:20.816668 46953292101440 run_miniworld.py:243] Data collection iteration 139.
+I1016 05:10:18.190748 46953292101440 run_miniworld.py:250] Evaluation iteration 139.
+I1016 05:10:27.825781 46953292101440 run_miniworld.py:267] iteration: 139
+ frame: 3475000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:10:30.820396 46953292101440 run_miniworld.py:243] Data collection iteration 140.
+I1016 05:13:28.040782 46953292101440 run_miniworld.py:250] Evaluation iteration 140.
+I1016 05:13:37.915479 46953292101440 run_miniworld.py:267] iteration: 140
+ frame: 3500000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:13:42.575807 46953292101440 run_miniworld.py:243] Data collection iteration 141.
+I1016 05:16:40.309138 46953292101440 run_miniworld.py:250] Evaluation iteration 141.
+I1016 05:16:50.087222 46953292101440 run_miniworld.py:267] iteration: 141
+ frame: 3525000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:16:53.029581 46953292101440 run_miniworld.py:243] Data collection iteration 142.
+I1016 05:19:33.287729 46953292101440 run_miniworld.py:250] Evaluation iteration 142.
+I1016 05:19:43.341078 46953292101440 run_miniworld.py:267] iteration: 142
+ frame: 3550000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  156
+I1016 05:19:48.431371 46953292101440 run_miniworld.py:243] Data collection iteration 143.
+I1016 05:22:41.633696 46953292101440 run_miniworld.py:250] Evaluation iteration 143.
+I1016 05:22:51.419093 46953292101440 run_miniworld.py:267] iteration: 143
+ frame: 3575000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1016 05:22:55.815550 46953292101440 run_miniworld.py:243] Data collection iteration 144.
+I1016 05:25:52.543838 46953292101440 run_miniworld.py:250] Evaluation iteration 144.
+I1016 05:26:02.601873 46953292101440 run_miniworld.py:267] iteration: 144
+ frame: 3600000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:26:05.557599 46953292101440 run_miniworld.py:243] Data collection iteration 145.
+I1016 05:29:01.498466 46953292101440 run_miniworld.py:250] Evaluation iteration 145.
+I1016 05:29:11.497310 46953292101440 run_miniworld.py:267] iteration: 145
+ frame: 3625000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:29:15.685867 46953292101440 run_miniworld.py:243] Data collection iteration 146.
+I1016 05:32:12.881634 46953292101440 run_miniworld.py:250] Evaluation iteration 146.
+I1016 05:32:22.824221 46953292101440 run_miniworld.py:267] iteration: 146
+ frame: 3650000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:32:25.836265 46953292101440 run_miniworld.py:243] Data collection iteration 147.
+I1016 05:35:22.125826 46953292101440 run_miniworld.py:250] Evaluation iteration 147.
+I1016 05:35:32.000425 46953292101440 run_miniworld.py:267] iteration: 147
+ frame: 3675000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:35:34.952941 46953292101440 run_miniworld.py:243] Data collection iteration 148.
+I1016 05:38:30.715096 46953292101440 run_miniworld.py:250] Evaluation iteration 148.
+I1016 05:38:40.611230 46953292101440 run_miniworld.py:267] iteration: 148
+ frame: 3700000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:38:45.134325 46953292101440 run_miniworld.py:243] Data collection iteration 149.
+I1016 05:41:41.912968 46953292101440 run_miniworld.py:250] Evaluation iteration 149.
+I1016 05:41:51.957789 46953292101440 run_miniworld.py:267] iteration: 149
+ frame: 3725000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:41:55.200102 46953292101440 run_miniworld.py:243] Data collection iteration 150.
+I1016 05:44:51.795671 46953292101440 run_miniworld.py:250] Evaluation iteration 150.
+I1016 05:45:01.583977 46953292101440 run_miniworld.py:267] iteration: 150
+ frame: 3750000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:45:05.851334 46953292101440 run_miniworld.py:243] Data collection iteration 151.
+I1016 05:48:03.051146 46953292101440 run_miniworld.py:250] Evaluation iteration 151.
+I1016 05:48:12.831047 46953292101440 run_miniworld.py:267] iteration: 151
+ frame: 3775000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 05:48:15.835369 46953292101440 run_miniworld.py:243] Data collection iteration 152.
+I1016 05:51:12.372487 46953292101440 run_miniworld.py:250] Evaluation iteration 152.
+I1016 05:51:22.235942 46953292101440 run_miniworld.py:267] iteration: 152
+ frame: 3800000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:51:25.531463 46953292101440 run_miniworld.py:243] Data collection iteration 153.
+I1016 05:54:21.403274 46953292101440 run_miniworld.py:250] Evaluation iteration 153.
+I1016 05:54:31.338180 46953292101440 run_miniworld.py:267] iteration: 153
+ frame: 3825000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:54:35.540061 46953292101440 run_miniworld.py:243] Data collection iteration 154.
+I1016 05:57:32.148031 46953292101440 run_miniworld.py:250] Evaluation iteration 154.
+I1016 05:57:42.007043 46953292101440 run_miniworld.py:267] iteration: 154
+ frame: 3850000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 05:57:45.096915 46953292101440 run_miniworld.py:243] Data collection iteration 155.
+I1016 06:00:41.057585 46953292101440 run_miniworld.py:250] Evaluation iteration 155.
+I1016 06:00:50.905004 46953292101440 run_miniworld.py:267] iteration: 155
+ frame: 3875000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:00:54.982250 46953292101440 run_miniworld.py:243] Data collection iteration 156.
+I1016 06:03:51.601443 46953292101440 run_miniworld.py:250] Evaluation iteration 156.
+I1016 06:04:01.108054 46953292101440 run_miniworld.py:267] iteration: 156
+ frame: 3900000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:04:04.089233 46953292101440 run_miniworld.py:243] Data collection iteration 157.
+I1016 06:07:00.018763 46953292101440 run_miniworld.py:250] Evaluation iteration 157.
+I1016 06:07:09.888407 46953292101440 run_miniworld.py:267] iteration: 157
+ frame: 3925000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:07:13.243208 46953292101440 run_miniworld.py:243] Data collection iteration 158.
+I1016 06:10:08.109109 46953292101440 run_miniworld.py:250] Evaluation iteration 158.
+I1016 06:10:18.126774 46953292101440 run_miniworld.py:267] iteration: 158
+ frame: 3950000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:10:22.517334 46953292101440 run_miniworld.py:243] Data collection iteration 159.
+I1016 06:13:18.740549 46953292101440 run_miniworld.py:250] Evaluation iteration 159.
+I1016 06:13:28.702521 46953292101440 run_miniworld.py:267] iteration: 159
+ frame: 3975000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:13:31.791199 46953292101440 run_miniworld.py:243] Data collection iteration 160.
+I1016 06:16:27.185731 46953292101440 run_miniworld.py:250] Evaluation iteration 160.
+I1016 06:16:36.867601 46953292101440 run_miniworld.py:267] iteration: 160
+ frame: 4000000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:16:41.031588 46953292101440 run_miniworld.py:243] Data collection iteration 161.
+I1016 06:19:36.527626 46953292101440 run_miniworld.py:250] Evaluation iteration 161.
+I1016 06:19:46.265856 46953292101440 run_miniworld.py:267] iteration: 161
+ frame: 4025000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:19:49.268314 46953292101440 run_miniworld.py:243] Data collection iteration 162.
+I1016 06:22:44.617139 46953292101440 run_miniworld.py:250] Evaluation iteration 162.
+I1016 06:22:54.847225 46953292101440 run_miniworld.py:267] iteration: 162
+ frame: 4050000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:22:57.864188 46953292101440 run_miniworld.py:243] Data collection iteration 163.
+I1016 06:25:53.060051 46953292101440 run_miniworld.py:250] Evaluation iteration 163.
+I1016 06:26:02.922148 46953292101440 run_miniworld.py:267] iteration: 163
+ frame: 4075000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:26:07.115447 46953292101440 run_miniworld.py:243] Data collection iteration 164.
+I1016 06:29:03.410369 46953292101440 run_miniworld.py:250] Evaluation iteration 164.
+I1016 06:29:13.434862 46953292101440 run_miniworld.py:267] iteration: 164
+ frame: 4100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:29:16.826517 46953292101440 run_miniworld.py:243] Data collection iteration 165.
+I1016 06:32:12.474892 46953292101440 run_miniworld.py:250] Evaluation iteration 165.
+I1016 06:32:22.293062 46953292101440 run_miniworld.py:267] iteration: 165
+ frame: 4125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:32:26.574886 46953292101440 run_miniworld.py:243] Data collection iteration 166.
+I1016 06:35:23.324709 46953292101440 run_miniworld.py:250] Evaluation iteration 166.
+I1016 06:35:33.242015 46953292101440 run_miniworld.py:267] iteration: 166
+ frame: 4150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 06:35:36.406260 46953292101440 run_miniworld.py:243] Data collection iteration 167.
+I1016 06:38:30.648529 46953292101440 run_miniworld.py:250] Evaluation iteration 167.
+I1016 06:38:40.117633 46953292101440 run_miniworld.py:267] iteration: 167
+ frame: 4175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:38:43.391058 46953292101440 run_miniworld.py:243] Data collection iteration 168.
+I1016 06:41:38.387887 46953292101440 run_miniworld.py:250] Evaluation iteration 168.
+I1016 06:41:48.223119 46953292101440 run_miniworld.py:267] iteration: 168
+ frame: 4200000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:41:52.376437 46953292101440 run_miniworld.py:243] Data collection iteration 169.
+I1016 06:44:48.610984 46953292101440 run_miniworld.py:250] Evaluation iteration 169.
+I1016 06:44:58.516123 46953292101440 run_miniworld.py:267] iteration: 169
+ frame: 4225000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:45:01.582215 46953292101440 run_miniworld.py:243] Data collection iteration 170.
+I1016 06:47:57.682045 46953292101440 run_miniworld.py:250] Evaluation iteration 170.
+I1016 06:48:07.666424 46953292101440 run_miniworld.py:267] iteration: 170
+ frame: 4250000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:48:11.770996 46953292101440 run_miniworld.py:243] Data collection iteration 171.
+I1016 06:51:08.509917 46953292101440 run_miniworld.py:250] Evaluation iteration 171.
+I1016 06:51:18.411384 46953292101440 run_miniworld.py:267] iteration: 171
+ frame: 4275000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1016 06:51:21.409866 46953292101440 run_miniworld.py:243] Data collection iteration 172.
+I1016 06:54:16.879198 46953292101440 run_miniworld.py:250] Evaluation iteration 172.
+I1016 06:54:26.812999 46953292101440 run_miniworld.py:267] iteration: 172
+ frame: 4300000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 06:54:29.727442 46953292101440 run_miniworld.py:243] Data collection iteration 173.
+I1016 06:57:24.664917 46953292101440 run_miniworld.py:250] Evaluation iteration 173.
+I1016 06:57:34.592667 46953292101440 run_miniworld.py:267] iteration: 173
+ frame: 4325000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1016 06:57:38.871518 46953292101440 run_miniworld.py:243] Data collection iteration 174.
+I1016 07:00:34.977262 46953292101440 run_miniworld.py:250] Evaluation iteration 174.
+I1016 07:00:44.891742 46953292101440 run_miniworld.py:267] iteration: 174
+ frame: 4350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 07:00:47.836644 46953292101440 run_miniworld.py:243] Data collection iteration 175.
+I1016 07:03:43.377865 46953292101440 run_miniworld.py:250] Evaluation iteration 175.
+I1016 07:03:53.162509 46953292101440 run_miniworld.py:267] iteration: 175
+ frame: 4375000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 07:03:57.303571 46953292101440 run_miniworld.py:243] Data collection iteration 176.
+I1016 07:06:53.576019 46953292101440 run_miniworld.py:250] Evaluation iteration 176.
+I1016 07:07:03.548895 46953292101440 run_miniworld.py:267] iteration: 176
+ frame: 4400000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 07:07:06.489547 46953292101440 run_miniworld.py:243] Data collection iteration 177.
+I1016 07:10:02.071035 46953292101440 run_miniworld.py:250] Evaluation iteration 177.
+I1016 07:10:12.049240 46953292101440 run_miniworld.py:267] iteration: 177
+ frame: 4425000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1016 07:10:15.080724 46953292101440 run_miniworld.py:243] Data collection iteration 178.
+I1016 07:13:08.853341 46953292101440 run_miniworld.py:250] Evaluation iteration 178.
+I1016 07:13:18.612433 46953292101440 run_miniworld.py:267] iteration: 178
+ frame: 4450000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1016 07:13:23.029477 46953292101440 run_miniworld.py:243] Data collection iteration 179.
+I1016 07:16:05.224472 46953292101440 run_miniworld.py:250] Evaluation iteration 179.
+I1016 07:16:14.915291 46953292101440 run_miniworld.py:267] iteration: 179
+ frame: 4475000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  154
+I1016 07:16:17.797566 46953292101440 run_miniworld.py:243] Data collection iteration 180.
+I1016 07:18:49.632920 46953292101440 run_miniworld.py:250] Evaluation iteration 180.
+I1016 07:18:59.388969 46953292101440 run_miniworld.py:267] iteration: 180
+ frame: 4500000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1016 07:19:03.407819 46953292101440 run_miniworld.py:243] Data collection iteration 181.
+I1016 07:21:35.828052 46953292101440 run_miniworld.py:250] Evaluation iteration 181.
+I1016 07:21:45.453942 46953292101440 run_miniworld.py:267] iteration: 181
+ frame: 4525000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:21:48.464898 46953292101440 run_miniworld.py:243] Data collection iteration 182.
+I1016 07:24:20.645315 46953292101440 run_miniworld.py:250] Evaluation iteration 182.
+I1016 07:24:30.412592 46953292101440 run_miniworld.py:267] iteration: 182
+ frame: 4550000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:24:33.309061 46953292101440 run_miniworld.py:243] Data collection iteration 183.
+I1016 07:27:04.881539 46953292101440 run_miniworld.py:250] Evaluation iteration 183.
+I1016 07:27:14.372419 46953292101440 run_miniworld.py:267] iteration: 183
+ frame: 4575000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1016 07:27:18.385215 46953292101440 run_miniworld.py:243] Data collection iteration 184.
+I1016 07:29:50.953699 46953292101440 run_miniworld.py:250] Evaluation iteration 184.
+I1016 07:30:00.753441 46953292101440 run_miniworld.py:267] iteration: 184
+ frame: 4600000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:30:03.629762 46953292101440 run_miniworld.py:243] Data collection iteration 185.
+I1016 07:32:35.721438 46953292101440 run_miniworld.py:250] Evaluation iteration 185.
+I1016 07:32:45.257947 46953292101440 run_miniworld.py:267] iteration: 185
+ frame: 4625000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:32:49.259112 46953292101440 run_miniworld.py:243] Data collection iteration 186.
+I1016 07:35:20.586684 46953292101440 run_miniworld.py:250] Evaluation iteration 186.
+I1016 07:35:30.356885 46953292101440 run_miniworld.py:267] iteration: 186
+ frame: 4650000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1016 07:35:33.253776 46953292101440 run_miniworld.py:243] Data collection iteration 187.
+I1016 07:38:05.795331 46953292101440 run_miniworld.py:250] Evaluation iteration 187.
+I1016 07:38:15.388514 46953292101440 run_miniworld.py:267] iteration: 187
+ frame: 4675000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:38:18.249817 46953292101440 run_miniworld.py:243] Data collection iteration 188.
+I1016 07:40:50.273360 46953292101440 run_miniworld.py:250] Evaluation iteration 188.
+I1016 07:40:59.996190 46953292101440 run_miniworld.py:267] iteration: 188
+ frame: 4700000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:41:05.690524 46953292101440 run_miniworld.py:243] Data collection iteration 189.
+I1016 07:43:36.572718 46953292101440 run_miniworld.py:250] Evaluation iteration 189.
+I1016 07:43:46.153449 46953292101440 run_miniworld.py:267] iteration: 189
+ frame: 4725000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  166
+I1016 07:43:49.026563 46953292101440 run_miniworld.py:243] Data collection iteration 190.
+I1016 07:46:21.244672 46953292101440 run_miniworld.py:250] Evaluation iteration 190.
+I1016 07:46:31.017428 46953292101440 run_miniworld.py:267] iteration: 190
+ frame: 4750000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:46:35.100253 46953292101440 run_miniworld.py:243] Data collection iteration 191.
+I1016 07:49:08.301225 46953292101440 run_miniworld.py:250] Evaluation iteration 191.
+I1016 07:49:18.023712 46953292101440 run_miniworld.py:267] iteration: 191
+ frame: 4775000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 07:49:20.885000 46953292101440 run_miniworld.py:243] Data collection iteration 192.
+I1016 07:51:53.303019 46953292101440 run_miniworld.py:250] Evaluation iteration 192.
+I1016 07:52:03.072523 46953292101440 run_miniworld.py:267] iteration: 192
+ frame: 4800000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 07:52:05.959604 46953292101440 run_miniworld.py:243] Data collection iteration 193.
+I1016 07:54:39.198959 46953292101440 run_miniworld.py:250] Evaluation iteration 193.
+I1016 07:54:48.890385 46953292101440 run_miniworld.py:267] iteration: 193
+ frame: 4825000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 07:54:51.719212 46953292101440 run_miniworld.py:243] Data collection iteration 194.
+I1016 07:57:23.532199 46953292101440 run_miniworld.py:250] Evaluation iteration 194.
+I1016 07:57:33.234699 46953292101440 run_miniworld.py:267] iteration: 194
+ frame: 4850000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  165
+I1016 07:57:36.122469 46953292101440 run_miniworld.py:243] Data collection iteration 195.
+I1016 08:00:08.524599 46953292101440 run_miniworld.py:250] Evaluation iteration 195.
+I1016 08:00:18.267032 46953292101440 run_miniworld.py:267] iteration: 195
+ frame: 4875000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 08:00:22.215552 46953292101440 run_miniworld.py:243] Data collection iteration 196.
+I1016 08:02:54.463657 46953292101440 run_miniworld.py:250] Evaluation iteration 196.
+I1016 08:03:04.036796 46953292101440 run_miniworld.py:267] iteration: 196
+ frame: 4900000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 08:03:06.910254 46953292101440 run_miniworld.py:243] Data collection iteration 197.
+I1016 08:05:39.669490 46953292101440 run_miniworld.py:250] Evaluation iteration 197.
+I1016 08:05:49.300413 46953292101440 run_miniworld.py:267] iteration: 197
+ frame: 4925000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  164
+I1016 08:05:52.173664 46953292101440 run_miniworld.py:243] Data collection iteration 198.
+I1016 08:08:26.750385 46953292101440 run_miniworld.py:250] Evaluation iteration 198.
+I1016 08:08:36.286575 46953292101440 run_miniworld.py:267] iteration: 198
+ frame: 4950000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  162
+I1016 08:08:39.142899 46953292101440 run_miniworld.py:243] Data collection iteration 199.
+I1016 08:11:12.539927 46953292101440 run_miniworld.py:250] Evaluation iteration 199.
+I1016 08:11:22.364442 46953292101440 run_miniworld.py:267] iteration: 199
+ frame: 4975000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+I1016 08:11:25.218537 46953292101440 run_miniworld.py:243] Data collection iteration 200.
+I1016 08:13:58.320813 46953292101440 run_miniworld.py:250] Evaluation iteration 200.
+I1016 08:14:07.974780 46953292101440 run_miniworld.py:267] iteration: 200
+ frame: 5000000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  163
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1

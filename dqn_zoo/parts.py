@@ -564,7 +564,7 @@ class CsvWriter:
     """
     dirname = os.path.dirname(fname)
     if not os.path.exists(dirname):
-      os.makedirs(dirname)
+      os.makedirs(dirname, exist_ok=True)
     self._fname = fname
     self._header_written = False
     self._fieldnames = None

@@ -200,8 +200,11 @@ class Agent(parts.Agent):
       u_norm_squared_sg = phi_u * phi_u_sg
       v_norm_squared_sg = phi_v * phi_v_sg
     
-      u_norm_squared_sg = u_norm_squared_sg / dim
-      v_norm_squared_sg = v_norm_squared_sg / dim
+      # u_norm = u_norm_squared_sg / dim
+      # v_norm = v_norm_squared_sg / dim
+
+      u_norm = jnp.log1p(jnp.sqrt(u_norm_squared_sg))
+      v_norm = jnp.log1p(jnp.sqrt(v_norm_squared_sg))
 
       tril_mat = jnp.tri(dim)
 
@@ -210,7 +213,7 @@ class Agent(parts.Agent):
 
       dot_product_sg = jnp.einsum("i,ij,i,ij->i", phi_u, phi_u_sg_matrix, phi_v, phi_v_sg_matrix)
 
-      repulsive = jnp.sum(dot_product_sg - u_norm_squared_sg - v_norm_squared_sg)
+      repulsive = jnp.sum(dot_product_sg - u_norm - v_norm)
 
       # Both should be scalars
       chex.assert_rank([attractive, repulsive], 0)

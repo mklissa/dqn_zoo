@@ -4,7 +4,7 @@
 seeds=($(seq 1 1 5))
 num_options=(5)
 option_probs=(0.9)
-envname="MiniWorld-FourRooms-v0"
+envname="MiniWorld-MyWayHomeSparse-v0"
 algo='dceo'
 base_folder="results/${envname}/${algo}"
 
@@ -44,7 +44,7 @@ do
             echo "#SBATCH --ntasks=1" >> temprun.sh
             echo "#SBATCH --cpus-per-task=10" >> temprun.sh
             echo "#SBATCH --mem=50G" >> temprun.sh
-            echo "#SBATCH --time=12:00:00" >> temprun.sh
+            echo "#SBATCH --time=54:00:00" >> temprun.sh
             echo "source $HOME/DCEO/bin/activate" >> temprun.sh
             echo "module load cuda/11.4" >> temprun.sh
             echo "module load cudnn/8.2" >> temprun.sh
@@ -56,7 +56,7 @@ do
             --num_options ${num_option} --lap_dim 20 --option_prob ${option_prob} --plot=${plot} \
             --results_csv_path ${base_folder}/weight_${option_prob}/num_options${num_option}/${date}_${rand_id}/seed${seed}.csv \
             --plot_path plots/${envname}/${algo}/weight_${option_prob}/${date}_${rand_id}/seed${seed}/ \
-            --uniform_restarts=True --stop_lap_gradient=False"
+            --uniform_restarts=False --stop_lap_gradient=False"
             echo $k >> temprun.sh
             echo $k
 

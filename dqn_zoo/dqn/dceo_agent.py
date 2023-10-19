@@ -315,35 +315,36 @@ class Agent(parts.Agent):
         phi_u = phis[2]
         phi_v = phis[3]
 
-        # # Compute primal loss
-        # graph_loss = compute_graph_drawing_loss(
-        #     phi_tm1, phi_t
-        # )
+        # Compute primal loss
+        graph_loss = compute_graph_drawing_loss(
+            phi_tm1, phi_t
+        )
 
-        # error_matrix_dict = compute_orthogonality_error_matrix(
-        #     phi_u, phi_v
-        # )
+        error_matrix_dict = compute_orthogonality_error_matrix(
+            phi_u, phi_v
+        )
 
-        # # Compute dual loss
-        # dual_loss, barrier_loss = compute_orthogonality_loss(
-        #     barrier, betas, error_matrix_dict)
+        # Compute dual loss
+        dual_loss, barrier_loss = compute_orthogonality_loss(
+            barrier, betas, error_matrix_dict)
         
-        # # Update error estimates
-        # new_error_estimates = update_error_estimates(
-        #     error_estimates, error_matrix_dict)
+        # Update error estimates
+        new_error_estimates = update_error_estimates(
+            error_estimates, error_matrix_dict)
 
-        # # Compute total loss
-        # loss = graph_loss + dual_loss + barrier_loss
+        # Compute total loss
+        loss = graph_loss + dual_loss + barrier_loss
         
-        # return loss, (graph_loss, barrier_loss, new_error_estimates)
-        pos_loss = ((phi_tm1 - phi_t)**2).dot(coeff_vector[:lap_dim])
-        neg_loss  = neg_loss_vmap(phi_u, phi_v)
-        loss = pos_loss + neg_loss
-        loss = rlax.clip_gradient(loss, -grad_error_bound, grad_error_bound)
-        chex.assert_shape(loss, (self._batch_size,))
-        loss = jnp.mean(loss)
-        new_error_estimates = error_estimates.copy()
-        return loss, (jnp.mean(pos_loss), jnp.mean(neg_loss), new_error_estimates)
+        return loss, (graph_loss, barrier_loss, new_error_estimates)
+
+        # pos_loss = ((phi_tm1 - phi_t)**2).dot(coeff_vector[:lap_dim])
+        # neg_loss  = neg_loss_vmap(phi_u, phi_v)
+        # loss = pos_loss + neg_loss
+        # loss = rlax.clip_gradient(loss, -grad_error_bound, grad_error_bound)
+        # chex.assert_shape(loss, (self._batch_size,))
+        # loss = jnp.mean(loss)
+        # new_error_estimates = error_estimates.copy()
+        # return loss, (jnp.mean(pos_loss), jnp.mean(neg_loss), new_error_estimates)
 
       # loss, (pos_loss, neg_loss, error_estimates) = lap_loss_fn(params, update_key)
       grads, (pos_loss, neg_loss, error_estimates) = jax.grad(

@@ -20,6 +20,7 @@ import time
 from typing import Any, Callable, Mapping, Text
 
 from absl import logging
+from itertools import product
 import chex
 import distrax
 import dm_env
@@ -219,8 +220,89 @@ class Agent(parts.Agent):
       chex.assert_rank([attractive, repulsive], 0)
       return (attractive + repulsive) / 2, attractive, repulsive
 
+    dim = lap_dim
+    coefficient_vector = jnp.ones(dim)
+    self.error_estimates = {
+            'errors': jnp.zeros((dim, dim)),
+            'quadratic_errors': jnp.zeros((1, 1)),}
+    self.betas = jnp.zeros((dim, dim))
+
+    def compute_graph_drawing_loss(curr_phi, next_phi):
+      '''Compute reprensetation distances between start and end states'''
+      
+      graph_induced_norms = ((curr_phi - next_phi)**2).mean(0)
+      loss = graph_induced_norms.dot(coefficient_vector)
+
+      return loss
+
+    def compute_orthogonality_error_matrix(neg_phi_u, neg_phi_v):
+      n = neg_phi_u.shape[0]
+
+      inner_product_matrix_1 = jnp.einsum(
+        'ij,ik->jk',
+        neg_phi_u,
+        jax.lax.stop_gradient(neg_phi_u),
+      ) / n
+
+      inner_product_matrix_2 = jnp.einsum(
+        'ij,ik->jk',
+        neg_phi_v,
+        jax.lax.stop_gradient(neg_phi_v),
+      ) / n
+
+      error_matrix_1 = jnp.tril(inner_product_matrix_1 - jnp.eye(dim))
+      error_matrix_2 = jnp.tril(inner_product_matrix_2 - jnp.eye(dim))
+      error_matrix = 0.5 * (error_matrix_1 + error_matrix_2)
+      quadratic_error_matrix = error_matrix_1 * error_matrix_2
+
+      error_matrix_dict = {
+        'errors': error_matrix,
+        'quadratic_errors': quadratic_error_matrix,
+      }
+
+      return error_matrix_dict
+
+    def compute_orthogonality_loss(barrier, betas, error_matrix_dict):
+      # Compute the losses
+      error_matrix = error_matrix_dict['errors']
+      quadratic_error_matrix = error_matrix_dict['quadratic_errors']
+
+      # Compute dual loss
+      dual_loss = (jax.lax.stop_gradient(betas) * error_matrix).sum()
+      
+      # Compute barrier loss
+      quadratic_error = quadratic_error_matrix.sum()
+      barrier_loss = jax.lax.stop_gradient(barrier[0, 0]) * quadratic_error
+
+      return dual_loss, barrier_loss 
+
+    def update_error_estimates(params, errors):
+      updates = {}
+      for error_type in ['errors', 'quadratic_errors']:
+        # Get old error estimates
+        old = params[error_type]
+        norm_old = jnp.linalg.norm(old)
+        
+        # Set update rate to 1 in the first iteration
+        init_coeff = jnp.isclose(norm_old, 0.0, rtol=1e-10, atol=1e-13) 
+        non_init_update_rate = 1. if error_type == 'errors' else 0.1
+        update_rate = init_coeff + (1 - init_coeff) * non_init_update_rate
+        
+        # Update error estimates
+        update = old + update_rate * (errors[error_type] - old)  # The first update might be too large
+        updates[error_type] = update
+        
+        # Generate dictionary with error estimates for logging
+        if error_type == 'errors':
+          error_dict = {
+            f'error({i},{j})': update[i,j]
+            for i, j in product(range(dim), range(dim))
+            if i >= j
+          }
+      return updates
+
     def _update_lap(
-      rng_key, opt_state, params, transitions):#, transitions_u, transitions_v):
+      rng_key, opt_state, params, transitions, barrier, betas, error_estimates):
       """Computes learning update from batch of replay transitions."""
       rng_key, update_key = jax.random.split(rng_key)
 
@@ -233,26 +315,41 @@ class Agent(parts.Agent):
         phi_u = phis[2]
         phi_v = phis[3]
 
-        loss, pos_loss, neg_loss = jax.vmap(loss_fn_on_sample)(
-            phi_tm1, phi_t, phi_u, phi_v)
+        # Compute primal loss
+        graph_loss = compute_graph_drawing_loss(
+            phi_tm1, phi_t
+        )
 
-        chex.assert_shape(loss, (self._batch_size,))
-        loss = jnp.mean(loss)
-        return loss, (jnp.mean(pos_loss), jnp.mean(neg_loss))
+        error_matrix_dict = compute_orthogonality_error_matrix(
+            phi_u, phi_v
+        )
 
-      grads, (pos_loss, neg_loss) = jax.grad(
+        # Compute dual loss
+        dual_loss, barrier_loss = compute_orthogonality_loss(
+            barrier, betas, error_matrix_dict)
+        
+        # Update error estimates
+        new_error_estimates = update_error_estimates(
+            error_estimates, error_matrix_dict)
+
+        # Compute total loss
+        loss = graph_loss + dual_loss + barrier_loss
+        
+        return loss, (graph_loss, barrier_loss, new_error_estimates)
+
+      # loss, (pos_loss, neg_loss, error_estimates) = lap_loss_fn(params, update_key)
+      grads, (pos_loss, neg_loss, error_estimates) = jax.grad(
           lap_loss_fn, has_aux=True)(params, update_key)
       updates, new_opt_state = rep_optimizer.update(grads, opt_state)
       new_params = optax.apply_updates(params, updates)
 
-      return rng_key, new_opt_state, new_params, pos_loss, neg_loss
-
+      return rng_key, new_opt_state, new_params, pos_loss, neg_loss, error_estimates
     self.update_lap = jax.jit(_update_lap)
+    # self.update_lap = _update_lap
 
     def _get_lap(rng_key, network_params, obs):
       rng_key, apply_key = jax.random.split(rng_key, 2)
       return rng_key, lap_network.apply(network_params, apply_key, obs).q_values
-
     self.get_lap = jax.jit(_get_lap)
 
   def step(self, timestep: dm_env.TimeStep) -> parts.Action:
@@ -300,6 +397,7 @@ class Agent(parts.Agent):
       self._learn()
 
     if self._frame_t % self._target_network_update_period == 0:
+      print(-1*np.diag(self.betas))
       self._target_params = self._online_params
       for option in self.options:
         option.target_params = option.online_params
@@ -327,6 +425,32 @@ class Agent(parts.Agent):
     self._statistics['state_value'] = v_t
     return parts.Action(a_t)
 
+
+  def update_duals(self, error_estimates, betas):
+    '''
+      Update dual variables using some approximation 
+      of the gradient of the lagrangian.
+    '''
+    error_matrix = error_estimates['errors']
+    dual_variables = betas
+    updates = jnp.tril(error_matrix)
+
+    # Calculate updated duals
+    lr = 0.0001
+    updated_duals = dual_variables + lr * updates
+
+    # Clip duals to be in the range [min_duals, max_duals]
+    updated_duals = jnp.clip(
+      updated_duals,
+      a_min=-100,
+      a_max=100,
+    )  # TODO: Cliping is probably not the best way to handle this
+
+    # Update params, making sure that the duals are lower triangular
+    betas = jnp.tril(updated_duals)
+    
+    return betas
+
   def _learn(self) -> None:
     logging.log_first_n(logging.INFO, 'Begin learning', 1)
 
@@ -347,13 +471,19 @@ class Agent(parts.Agent):
           self._lap_opt_state, 
           self._laplacian_params, 
           pos_loss, 
-          neg_loss
+          neg_loss,
+          self.error_estimates,
       ) = self.update_lap(
           self._rng_key,
           self._lap_opt_state,
           self._laplacian_params,
           all_transitions,
+          barrier=jnp.ones((1, 1)) * 1.0,
+          betas=self.betas,
+          error_estimates=self.error_estimates
       )
+
+      self.betas = self.update_duals(self.error_estimates, self.betas)
 
       # # Update option policies
       for o in np.random.choice(self._num_options, 3, replace=False):

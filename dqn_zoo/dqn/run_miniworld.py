@@ -288,7 +288,7 @@ def main(argv):
         plotter.plot(
             rep,
             state.iteration,
-            min(min(10, FLAGS.lap_dim),
+            min(min(20, FLAGS.lap_dim),
             len(rep[0])),
             name='rep')
 

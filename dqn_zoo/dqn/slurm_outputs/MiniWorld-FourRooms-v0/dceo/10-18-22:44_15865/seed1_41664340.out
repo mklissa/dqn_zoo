@@ -1,0 +1,2595 @@
+I1019 02:34:26.749420 47127023957824 xla_bridge.py:355] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+I1019 02:34:26.916259 47127023957824 xla_bridge.py:355] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Host Interpreter CUDA
+I1019 02:34:26.916771 47127023957824 xla_bridge.py:355] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I1019 02:34:26.916909 47127023957824 xla_bridge.py:355] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I1019 02:34:26.917040 47127023957824 run_miniworld.py:102] Collecting data on MiniWorld on gpu.
+I1019 02:34:35.545017 47127023957824 run_miniworld.py:138] Observation shape: (60, 80, 3)
+I1019 02:34:46.048966 47127023957824 run_miniworld.py:243] Data collection iteration 0.
+I1019 02:35:24.378141 47127023957824 run_miniworld.py:250] Evaluation iteration 0.
+/home/mklissa/DCEO/lib/python3.8/site-packages/distrax/_src/distributions/categorical.py:96: UserWarning: Explicitly requested dtype <class 'jax.numpy.int64'> requested in astype is not available, and will be truncated to dtype int32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/google/jax#current-gotchas for more.
+  return draws.astype(self._dtype)
+I1019 02:35:35.009463 47127023957824 run_miniworld.py:267] iteration:   0
+ frame:     0
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  652
+I1019 02:35:53.695345 47127023957824 run_miniworld.py:243] Data collection iteration 1.
+I1019 02:36:32.326081 47127023957824 run_miniworld.py:250] Evaluation iteration 1.
+I1019 02:36:42.374742 47127023957824 run_miniworld.py:267] iteration:   1
+ frame: 25000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 1.000
+ train_frame_rate:  647
+I1019 02:36:56.714286 47127023957824 run_miniworld.py:243] Data collection iteration 2.
+I1019 02:36:57.214044 47127023957824 dceo_agent.py:455] Begin learning
+I1019 02:39:32.496278 47127023957824 run_miniworld.py:250] Evaluation iteration 2.
+I1019 02:39:42.370457 47127023957824 run_miniworld.py:267] iteration:   2
+ frame: 50000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.955
+ train_frame_rate:  160
+I1019 02:39:56.726120 47127023957824 run_miniworld.py:243] Data collection iteration 3.
+I1019 02:42:44.585646 47127023957824 run_miniworld.py:250] Evaluation iteration 3.
+I1019 02:42:54.427317 47127023957824 run_miniworld.py:267] iteration:   3
+ frame: 75000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.910
+ train_frame_rate:  149
+I1019 02:43:08.477669 47127023957824 run_miniworld.py:243] Data collection iteration 4.
+I1019 02:45:59.441258 47127023957824 run_miniworld.py:250] Evaluation iteration 4.
+I1019 02:46:09.132311 47127023957824 run_miniworld.py:267] iteration:   4
+ frame: 100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.865
+ train_frame_rate:  146
+I1019 02:46:23.197828 47127023957824 run_miniworld.py:243] Data collection iteration 5.
+I1019 02:49:12.609744 47127023957824 run_miniworld.py:250] Evaluation iteration 5.
+I1019 02:49:22.065360 47127023957824 run_miniworld.py:267] iteration:   5
+ frame: 125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.820
+ train_frame_rate:  148
+I1019 02:49:36.661685 47127023957824 run_miniworld.py:243] Data collection iteration 6.
+I1019 02:52:28.041581 47127023957824 run_miniworld.py:250] Evaluation iteration 6.
+I1019 02:52:37.504788 47127023957824 run_miniworld.py:267] iteration:   6
+ frame: 150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.775
+ train_frame_rate:  146
+I1019 02:52:51.727628 47127023957824 run_miniworld.py:243] Data collection iteration 7.
+I1019 02:55:43.095154 47127023957824 run_miniworld.py:250] Evaluation iteration 7.
+I1019 02:55:52.977741 47127023957824 run_miniworld.py:267] iteration:   7
+ frame: 175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.730
+ train_frame_rate:  146
+I1019 02:56:07.125726 47127023957824 run_miniworld.py:243] Data collection iteration 8.
+I1019 02:58:57.643286 47127023957824 run_miniworld.py:250] Evaluation iteration 8.
+I1019 02:59:07.511403 47127023957824 run_miniworld.py:267] iteration:   8
+ frame: 200000
+ eval_episode_return:  0.00
+ train_episode_return:  0.00
+ train_exploration_epsilon: 0.685
+ train_frame_rate:  147
+I1019 02:59:21.864240 47127023957824 run_miniworld.py:243] Data collection iteration 9.
+I1019 03:02:13.736710 47127023957824 run_miniworld.py:250] Evaluation iteration 9.
+I1019 03:02:23.773604 47127023957824 run_miniworld.py:267] iteration:   9
+ frame: 225000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.640
+ train_frame_rate:  145
+I1019 03:02:38.110520 47127023957824 run_miniworld.py:243] Data collection iteration 10.
+I1019 03:05:32.399765 47127023957824 run_miniworld.py:250] Evaluation iteration 10.
+I1019 03:05:41.998133 47127023957824 run_miniworld.py:267] iteration:  10
+ frame: 250000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.595
+ train_frame_rate:  143
+I1019 03:05:55.728489 47127023957824 run_miniworld.py:243] Data collection iteration 11.
+I1019 03:08:48.936699 47127023957824 run_miniworld.py:250] Evaluation iteration 11.
+I1019 03:08:58.678193 47127023957824 run_miniworld.py:267] iteration:  11
+ frame: 275000
+ eval_episode_return:  0.00
+ train_episode_return:  0.12
+ train_exploration_epsilon: 0.550
+ train_frame_rate:  144
+I1019 03:09:13.311034 47127023957824 run_miniworld.py:243] Data collection iteration 12.
+I1019 03:12:07.304893 47127023957824 run_miniworld.py:250] Evaluation iteration 12.
+I1019 03:12:17.060014 47127023957824 run_miniworld.py:267] iteration:  12
+ frame: 300000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.505
+ train_frame_rate:  144
+I1019 03:12:31.839864 47127023957824 run_miniworld.py:243] Data collection iteration 13.
+I1019 03:15:26.216240 47127023957824 run_miniworld.py:250] Evaluation iteration 13.
+I1019 03:15:36.008992 47127023957824 run_miniworld.py:267] iteration:  13
+ frame: 325000
+ eval_episode_return:  0.00
+ train_episode_return:  0.22
+ train_exploration_epsilon: 0.460
+ train_frame_rate:  143
+I1019 03:15:50.775968 47127023957824 run_miniworld.py:243] Data collection iteration 14.
+I1019 03:18:46.308399 47127023957824 run_miniworld.py:250] Evaluation iteration 14.
+I1019 03:18:56.027241 47127023957824 run_miniworld.py:267] iteration:  14
+ frame: 350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.29
+ train_exploration_epsilon: 0.415
+ train_frame_rate:  142
+I1019 03:19:11.645351 47127023957824 run_miniworld.py:243] Data collection iteration 15.
+I1019 03:22:07.518127 47127023957824 run_miniworld.py:250] Evaluation iteration 15.
+I1019 03:22:16.754307 47127023957824 run_miniworld.py:267] iteration:  15
+ frame: 375000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.370
+ train_frame_rate:  142
+I1019 03:22:31.166209 47127023957824 run_miniworld.py:243] Data collection iteration 16.
+I1019 03:25:27.880584 47127023957824 run_miniworld.py:250] Evaluation iteration 16.
+I1019 03:25:37.589993 47127023957824 run_miniworld.py:267] iteration:  16
+ frame: 400000
+ eval_episode_return:  0.00
+ train_episode_return:  0.48
+ train_exploration_epsilon: 0.325
+ train_frame_rate:  141
+I1019 03:25:52.506217 47127023957824 run_miniworld.py:243] Data collection iteration 17.
+I1019 03:28:49.421222 47127023957824 run_miniworld.py:250] Evaluation iteration 17.
+I1019 03:28:59.127656 47127023957824 run_miniworld.py:267] iteration:  17
+ frame: 425000
+ eval_episode_return:  0.00
+ train_episode_return:  0.21
+ train_exploration_epsilon: 0.280
+ train_frame_rate:  141
+I1019 03:29:13.693631 47127023957824 run_miniworld.py:243] Data collection iteration 18.
+I1019 03:32:09.686874 47127023957824 run_miniworld.py:250] Evaluation iteration 18.
+I1019 03:32:19.593183 47127023957824 run_miniworld.py:267] iteration:  18
+ frame: 450000
+ eval_episode_return:  0.00
+ train_episode_return:  0.08
+ train_exploration_epsilon: 0.235
+ train_frame_rate:  142
+I1019 03:32:34.228730 47127023957824 run_miniworld.py:243] Data collection iteration 19.
+I1019 03:35:32.331747 47127023957824 run_miniworld.py:250] Evaluation iteration 19.
+I1019 03:35:42.446007 47127023957824 run_miniworld.py:267] iteration:  19
+ frame: 475000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.190
+ train_frame_rate:  140
+I1019 03:36:01.782473 47127023957824 run_miniworld.py:243] Data collection iteration 20.
+I1019 03:38:58.547878 47127023957824 run_miniworld.py:250] Evaluation iteration 20.
+I1019 03:39:08.460642 47127023957824 run_miniworld.py:267] iteration:  20
+ frame: 500000
+ eval_episode_return:  0.00
+ train_episode_return:  0.19
+ train_exploration_epsilon: 0.145
+ train_frame_rate:  141
+I1019 03:39:24.185165 47127023957824 run_miniworld.py:243] Data collection iteration 21.
+I1019 03:42:20.190867 47127023957824 run_miniworld.py:250] Evaluation iteration 21.
+I1019 03:42:29.917167 47127023957824 run_miniworld.py:267] iteration:  21
+ frame: 525000
+ eval_episode_return:  0.00
+ train_episode_return:  0.08
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  142
+I1019 03:42:44.728367 47127023957824 run_miniworld.py:243] Data collection iteration 22.
+I1019 03:45:42.088265 47127023957824 run_miniworld.py:250] Evaluation iteration 22.
+I1019 03:45:52.307009 47127023957824 run_miniworld.py:267] iteration:  22
+ frame: 550000
+ eval_episode_return:  0.00
+ train_episode_return:  0.12
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1019 03:46:07.077515 47127023957824 run_miniworld.py:243] Data collection iteration 23.
+I1019 03:49:04.964224 47127023957824 run_miniworld.py:250] Evaluation iteration 23.
+I1019 03:49:14.729718 47127023957824 run_miniworld.py:267] iteration:  23
+ frame: 575000
+ eval_episode_return:  0.00
+ train_episode_return:  0.04
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1019 03:49:30.175753 47127023957824 run_miniworld.py:243] Data collection iteration 24.
+I1019 03:52:28.712693 47127023957824 run_miniworld.py:250] Evaluation iteration 24.
+I1019 03:52:38.541805 47127023957824 run_miniworld.py:267] iteration:  24
+ frame: 600000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1019 03:52:52.868191 47127023957824 run_miniworld.py:243] Data collection iteration 25.
+I1019 03:55:53.220592 47127023957824 run_miniworld.py:250] Evaluation iteration 25.
+I1019 03:56:03.042610 47127023957824 run_miniworld.py:267] iteration:  25
+ frame: 625000
+ eval_episode_return:  0.00
+ train_episode_return:  0.19
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  139
+I1019 03:56:17.890571 47127023957824 run_miniworld.py:243] Data collection iteration 26.
+I1019 03:59:19.812872 47127023957824 run_miniworld.py:250] Evaluation iteration 26.
+I1019 03:59:29.925152 47127023957824 run_miniworld.py:267] iteration:  26
+ frame: 650000
+ eval_episode_return:  0.00
+ train_episode_return:  0.22
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 03:59:44.487954 47127023957824 run_miniworld.py:243] Data collection iteration 27.
+I1019 04:02:44.708781 47127023957824 run_miniworld.py:250] Evaluation iteration 27.
+I1019 04:02:54.853413 47127023957824 run_miniworld.py:267] iteration:  27
+ frame: 675000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  139
+I1019 04:03:09.156459 47127023957824 run_miniworld.py:243] Data collection iteration 28.
+I1019 04:06:10.046380 47127023957824 run_miniworld.py:250] Evaluation iteration 28.
+I1019 04:06:19.674523 47127023957824 run_miniworld.py:267] iteration:  28
+ frame: 700000
+ eval_episode_return:  0.00
+ train_episode_return:  0.26
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  138
+I1019 04:06:34.594360 47127023957824 run_miniworld.py:243] Data collection iteration 29.
+I1019 04:09:35.949772 47127023957824 run_miniworld.py:250] Evaluation iteration 29.
+I1019 04:09:46.110220 47127023957824 run_miniworld.py:267] iteration:  29
+ frame: 725000
+ eval_episode_return:  0.00
+ train_episode_return:  0.15
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  138
+I1019 04:10:01.024893 47127023957824 run_miniworld.py:243] Data collection iteration 30.
+I1019 04:13:03.756083 47127023957824 run_miniworld.py:250] Evaluation iteration 30.
+I1019 04:13:14.012245 47127023957824 run_miniworld.py:267] iteration:  30
+ frame: 750000
+ eval_episode_return:  0.00
+ train_episode_return:  0.33
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 04:13:29.018468 47127023957824 run_miniworld.py:243] Data collection iteration 31.
+I1019 04:16:31.728571 47127023957824 run_miniworld.py:250] Evaluation iteration 31.
+I1019 04:16:41.506514 47127023957824 run_miniworld.py:267] iteration:  31
+ frame: 775000
+ eval_episode_return:  0.00
+ train_episode_return:  0.40
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 04:16:56.626631 47127023957824 run_miniworld.py:243] Data collection iteration 32.
+I1019 04:20:00.733839 47127023957824 run_miniworld.py:250] Evaluation iteration 32.
+I1019 04:20:10.575603 47127023957824 run_miniworld.py:267] iteration:  32
+ frame: 800000
+ eval_episode_return:  0.00
+ train_episode_return:  0.38
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 04:20:25.391288 47127023957824 run_miniworld.py:243] Data collection iteration 33.
+I1019 04:23:29.413761 47127023957824 run_miniworld.py:250] Evaluation iteration 33.
+I1019 04:23:40.517550 47127023957824 run_miniworld.py:267] iteration:  33
+ frame: 825000
+ eval_episode_return:  0.00
+ train_episode_return:  0.48
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 04:23:54.227205 47127023957824 run_miniworld.py:243] Data collection iteration 34.
+I1019 04:26:57.050611 47127023957824 run_miniworld.py:250] Evaluation iteration 34.
+I1019 04:27:06.807276 47127023957824 run_miniworld.py:267] iteration:  34
+ frame: 850000
+ eval_episode_return:  0.00
+ train_episode_return:  0.50
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 04:27:21.855113 47127023957824 run_miniworld.py:243] Data collection iteration 35.
+I1019 04:30:26.327813 47127023957824 run_miniworld.py:250] Evaluation iteration 35.
+I1019 04:30:36.061776 47127023957824 run_miniworld.py:267] iteration:  35
+ frame: 875000
+ eval_episode_return:  0.00
+ train_episode_return:  0.76
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 04:30:51.608942 47127023957824 run_miniworld.py:243] Data collection iteration 36.
+I1019 04:33:56.630260 47127023957824 run_miniworld.py:250] Evaluation iteration 36.
+I1019 04:34:06.587101 47127023957824 run_miniworld.py:267] iteration:  36
+ frame: 900000
+ eval_episode_return:  0.00
+ train_episode_return:  0.68
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 04:34:21.959827 47127023957824 run_miniworld.py:243] Data collection iteration 37.
+I1019 04:37:28.078747 47127023957824 run_miniworld.py:250] Evaluation iteration 37.
+I1019 04:37:38.120213 47127023957824 run_miniworld.py:267] iteration:  37
+ frame: 925000
+ eval_episode_return:  0.00
+ train_episode_return:  0.85
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 04:37:52.697026 47127023957824 run_miniworld.py:243] Data collection iteration 38.
+I1019 04:40:58.047240 47127023957824 run_miniworld.py:250] Evaluation iteration 38.
+I1019 04:41:07.888330 47127023957824 run_miniworld.py:267] iteration:  38
+ frame: 950000
+ eval_episode_return:  0.00
+ train_episode_return:  0.82
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 04:41:23.531585 47127023957824 run_miniworld.py:243] Data collection iteration 39.
+I1019 04:44:30.138238 47127023957824 run_miniworld.py:250] Evaluation iteration 39.
+I1019 04:44:39.925657 47127023957824 run_miniworld.py:267] iteration:  39
+ frame: 975000
+ eval_episode_return:  0.00
+ train_episode_return:  0.88
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 04:44:54.656223 47127023957824 run_miniworld.py:243] Data collection iteration 40.
+I1019 04:48:00.310898 47127023957824 run_miniworld.py:250] Evaluation iteration 40.
+I1019 04:48:10.207641 47127023957824 run_miniworld.py:267] iteration:  40
+ frame: 1000000
+ eval_episode_return:  0.00
+ train_episode_return:  0.81
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 04:48:26.081585 47127023957824 run_miniworld.py:243] Data collection iteration 41.
+I1019 04:51:34.859847 47127023957824 run_miniworld.py:250] Evaluation iteration 41.
+I1019 04:51:44.845427 47127023957824 run_miniworld.py:267] iteration:  41
+ frame: 1025000
+ eval_episode_return:  0.00
+ train_episode_return:  0.92
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 04:51:58.897043 47127023957824 run_miniworld.py:243] Data collection iteration 42.
+I1019 04:54:58.786025 47127023957824 run_miniworld.py:250] Evaluation iteration 42.
+I1019 04:55:08.371401 47127023957824 run_miniworld.py:267] iteration:  42
+ frame: 1050000
+ eval_episode_return:  0.00
+ train_episode_return:  0.91
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  139
+I1019 04:55:22.996790 47127023957824 run_miniworld.py:243] Data collection iteration 43.
+I1019 04:58:13.260192 47127023957824 run_miniworld.py:250] Evaluation iteration 43.
+I1019 04:58:23.102845 47127023957824 run_miniworld.py:267] iteration:  43
+ frame: 1075000
+ eval_episode_return:  0.00
+ train_episode_return:  0.83
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  147
+I1019 04:58:38.869806 47127023957824 run_miniworld.py:243] Data collection iteration 44.
+I1019 05:01:47.704212 47127023957824 run_miniworld.py:250] Evaluation iteration 44.
+I1019 05:01:57.628542 47127023957824 run_miniworld.py:267] iteration:  44
+ frame: 1100000
+ eval_episode_return:  0.00
+ train_episode_return:  0.88
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 05:02:11.525923 47127023957824 run_miniworld.py:243] Data collection iteration 45.
+I1019 05:05:17.399499 47127023957824 run_miniworld.py:250] Evaluation iteration 45.
+I1019 05:05:27.357807 47127023957824 run_miniworld.py:267] iteration:  45
+ frame: 1125000
+ eval_episode_return:  0.00
+ train_episode_return:  0.98
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 05:05:42.655079 47127023957824 run_miniworld.py:243] Data collection iteration 46.
+I1019 05:08:48.739714 47127023957824 run_miniworld.py:250] Evaluation iteration 46.
+I1019 05:08:59.103912 47127023957824 run_miniworld.py:267] iteration:  46
+ frame: 1150000
+ eval_episode_return:  0.00
+ train_episode_return:  0.98
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 05:09:13.754968 47127023957824 run_miniworld.py:243] Data collection iteration 47.
+I1019 05:12:22.760263 47127023957824 run_miniworld.py:250] Evaluation iteration 47.
+I1019 05:12:32.856875 47127023957824 run_miniworld.py:267] iteration:  47
+ frame: 1175000
+ eval_episode_return:  0.00
+ train_episode_return:  0.95
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 05:12:46.866263 47127023957824 run_miniworld.py:243] Data collection iteration 48.
+I1019 05:15:54.875223 47127023957824 run_miniworld.py:250] Evaluation iteration 48.
+I1019 05:16:05.248227 47127023957824 run_miniworld.py:267] iteration:  48
+ frame: 1200000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 05:16:20.467124 47127023957824 run_miniworld.py:243] Data collection iteration 49.
+I1019 05:19:29.568807 47127023957824 run_miniworld.py:250] Evaluation iteration 49.
+I1019 05:19:39.812237 47127023957824 run_miniworld.py:267] iteration:  49
+ frame: 1225000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 05:19:54.160578 47127023957824 run_miniworld.py:243] Data collection iteration 50.
+I1019 05:23:04.429857 47127023957824 run_miniworld.py:250] Evaluation iteration 50.
+I1019 05:23:14.740867 47127023957824 run_miniworld.py:267] iteration:  50
+ frame: 1250000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 05:23:29.989844 47127023957824 run_miniworld.py:243] Data collection iteration 51.
+I1019 05:26:37.585806 47127023957824 run_miniworld.py:250] Evaluation iteration 51.
+I1019 05:26:47.462486 47127023957824 run_miniworld.py:267] iteration:  51
+ frame: 1275000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 05:27:03.002104 47127023957824 run_miniworld.py:243] Data collection iteration 52.
+I1019 05:30:13.646624 47127023957824 run_miniworld.py:250] Evaluation iteration 52.
+I1019 05:30:23.954075 47127023957824 run_miniworld.py:267] iteration:  52
+ frame: 1300000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 05:30:38.473075 47127023957824 run_miniworld.py:243] Data collection iteration 53.
+I1019 05:33:47.394366 47127023957824 run_miniworld.py:250] Evaluation iteration 53.
+I1019 05:33:57.197990 47127023957824 run_miniworld.py:267] iteration:  53
+ frame: 1325000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 05:34:12.426738 47127023957824 run_miniworld.py:243] Data collection iteration 54.
+I1019 05:37:20.484055 47127023957824 run_miniworld.py:250] Evaluation iteration 54.
+I1019 05:37:30.831089 47127023957824 run_miniworld.py:267] iteration:  54
+ frame: 1350000
+ eval_episode_return:  0.00
+ train_episode_return:  0.99
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 05:37:45.411583 47127023957824 run_miniworld.py:243] Data collection iteration 55.
+I1019 05:40:54.782067 47127023957824 run_miniworld.py:250] Evaluation iteration 55.
+I1019 05:41:05.125242 47127023957824 run_miniworld.py:267] iteration:  55
+ frame: 1375000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 05:41:20.577652 47127023957824 run_miniworld.py:243] Data collection iteration 56.
+I1019 05:44:27.453014 47127023957824 run_miniworld.py:250] Evaluation iteration 56.
+I1019 05:44:37.537295 47127023957824 run_miniworld.py:267] iteration:  56
+ frame: 1400000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 05:44:52.106987 47127023957824 run_miniworld.py:243] Data collection iteration 57.
+I1019 05:48:00.490143 47127023957824 run_miniworld.py:250] Evaluation iteration 57.
+I1019 05:48:10.646546 47127023957824 run_miniworld.py:267] iteration:  57
+ frame: 1425000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 05:48:26.032154 47127023957824 run_miniworld.py:243] Data collection iteration 58.
+I1019 05:51:34.347856 47127023957824 run_miniworld.py:250] Evaluation iteration 58.
+I1019 05:51:44.533920 47127023957824 run_miniworld.py:267] iteration:  58
+ frame: 1450000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 05:51:59.952747 47127023957824 run_miniworld.py:243] Data collection iteration 59.
+I1019 05:55:07.712837 47127023957824 run_miniworld.py:250] Evaluation iteration 59.
+I1019 05:55:18.106280 47127023957824 run_miniworld.py:267] iteration:  59
+ frame: 1475000
+ eval_episode_return:  0.20
+ train_episode_return:  0.99
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 05:55:32.830490 47127023957824 run_miniworld.py:243] Data collection iteration 60.
+I1019 05:58:42.378801 47127023957824 run_miniworld.py:250] Evaluation iteration 60.
+I1019 05:58:52.705458 47127023957824 run_miniworld.py:267] iteration:  60
+ frame: 1500000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 05:59:07.227070 47127023957824 run_miniworld.py:243] Data collection iteration 61.
+I1019 06:02:20.446187 47127023957824 run_miniworld.py:250] Evaluation iteration 61.
+I1019 06:02:30.369951 47127023957824 run_miniworld.py:267] iteration:  61
+ frame: 1525000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  129
+I1019 06:02:44.311301 47127023957824 run_miniworld.py:243] Data collection iteration 62.
+I1019 06:05:52.135680 47127023957824 run_miniworld.py:250] Evaluation iteration 62.
+I1019 06:06:02.317037 47127023957824 run_miniworld.py:267] iteration:  62
+ frame: 1550000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 06:06:17.472596 47127023957824 run_miniworld.py:243] Data collection iteration 63.
+I1019 06:09:26.025822 47127023957824 run_miniworld.py:250] Evaluation iteration 63.
+I1019 06:09:36.098032 47127023957824 run_miniworld.py:267] iteration:  63
+ frame: 1575000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 06:09:52.153833 47127023957824 run_miniworld.py:243] Data collection iteration 64.
+I1019 06:13:02.876066 47127023957824 run_miniworld.py:250] Evaluation iteration 64.
+I1019 06:13:13.165695 47127023957824 run_miniworld.py:267] iteration:  64
+ frame: 1600000
+ eval_episode_return:  0.67
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:13:29.531449 47127023957824 run_miniworld.py:243] Data collection iteration 65.
+I1019 06:16:39.220853 47127023957824 run_miniworld.py:250] Evaluation iteration 65.
+I1019 06:16:50.316076 47127023957824 run_miniworld.py:267] iteration:  65
+ frame: 1625000
+ eval_episode_return:  0.97
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 06:17:06.605898 47127023957824 run_miniworld.py:243] Data collection iteration 66.
+I1019 06:20:15.554392 47127023957824 run_miniworld.py:250] Evaluation iteration 66.
+I1019 06:20:25.601356 47127023957824 run_miniworld.py:267] iteration:  66
+ frame: 1650000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 06:20:40.138616 47127023957824 run_miniworld.py:243] Data collection iteration 67.
+I1019 06:23:51.406249 47127023957824 run_miniworld.py:250] Evaluation iteration 67.
+I1019 06:24:02.323645 47127023957824 run_miniworld.py:267] iteration:  67
+ frame: 1675000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:24:17.691419 47127023957824 run_miniworld.py:243] Data collection iteration 68.
+I1019 06:27:27.915022 47127023957824 run_miniworld.py:250] Evaluation iteration 68.
+I1019 06:27:38.732191 47127023957824 run_miniworld.py:267] iteration:  68
+ frame: 1700000
+ eval_episode_return:  0.97
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:27:53.190263 47127023957824 run_miniworld.py:243] Data collection iteration 69.
+I1019 06:31:03.466356 47127023957824 run_miniworld.py:250] Evaluation iteration 69.
+I1019 06:31:15.644599 47127023957824 run_miniworld.py:267] iteration:  69
+ frame: 1725000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:31:30.932827 47127023957824 run_miniworld.py:243] Data collection iteration 70.
+I1019 06:34:41.912386 47127023957824 run_miniworld.py:250] Evaluation iteration 70.
+I1019 06:34:54.353929 47127023957824 run_miniworld.py:267] iteration:  70
+ frame: 1750000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:35:09.858573 47127023957824 run_miniworld.py:243] Data collection iteration 71.
+I1019 06:38:20.133225 47127023957824 run_miniworld.py:250] Evaluation iteration 71.
+I1019 06:38:32.369392 47127023957824 run_miniworld.py:267] iteration:  71
+ frame: 1775000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:38:48.018593 47127023957824 run_miniworld.py:243] Data collection iteration 72.
+I1019 06:41:58.168912 47127023957824 run_miniworld.py:250] Evaluation iteration 72.
+I1019 06:42:09.841037 47127023957824 run_miniworld.py:267] iteration:  72
+ frame: 1800000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:42:26.259671 47127023957824 run_miniworld.py:243] Data collection iteration 73.
+I1019 06:45:35.767846 47127023957824 run_miniworld.py:250] Evaluation iteration 73.
+I1019 06:45:45.635146 47127023957824 run_miniworld.py:267] iteration:  73
+ frame: 1825000
+ eval_episode_return:  0.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 06:46:00.309183 47127023957824 run_miniworld.py:243] Data collection iteration 74.
+I1019 06:49:09.670347 47127023957824 run_miniworld.py:250] Evaluation iteration 74.
+I1019 06:49:21.653967 47127023957824 run_miniworld.py:267] iteration:  74
+ frame: 1850000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 06:49:37.115578 47127023957824 run_miniworld.py:243] Data collection iteration 75.
+I1019 06:52:46.707474 47127023957824 run_miniworld.py:250] Evaluation iteration 75.
+I1019 06:52:58.388302 47127023957824 run_miniworld.py:267] iteration:  75
+ frame: 1875000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 06:53:12.891875 47127023957824 run_miniworld.py:243] Data collection iteration 76.
+I1019 06:56:24.049072 47127023957824 run_miniworld.py:250] Evaluation iteration 76.
+I1019 06:56:36.357340 47127023957824 run_miniworld.py:267] iteration:  76
+ frame: 1900000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 06:56:51.771620 47127023957824 run_miniworld.py:243] Data collection iteration 77.
+I1019 07:00:01.158789 47127023957824 run_miniworld.py:250] Evaluation iteration 77.
+I1019 07:00:13.259119 47127023957824 run_miniworld.py:267] iteration:  77
+ frame: 1925000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:00:28.855031 47127023957824 run_miniworld.py:243] Data collection iteration 78.
+I1019 07:03:38.340946 47127023957824 run_miniworld.py:250] Evaluation iteration 78.
+I1019 07:03:50.454258 47127023957824 run_miniworld.py:267] iteration:  78
+ frame: 1950000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:04:05.085412 47127023957824 run_miniworld.py:243] Data collection iteration 79.
+I1019 07:07:14.947504 47127023957824 run_miniworld.py:250] Evaluation iteration 79.
+I1019 07:07:27.325410 47127023957824 run_miniworld.py:267] iteration:  79
+ frame: 1975000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:07:42.611199 47127023957824 run_miniworld.py:243] Data collection iteration 80.
+I1019 07:10:51.646832 47127023957824 run_miniworld.py:250] Evaluation iteration 80.
+I1019 07:11:03.332167 47127023957824 run_miniworld.py:267] iteration:  80
+ frame: 2000000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:11:17.537978 47127023957824 run_miniworld.py:243] Data collection iteration 81.
+I1019 07:14:04.912199 47127023957824 run_miniworld.py:250] Evaluation iteration 81.
+I1019 07:14:16.777534 47127023957824 run_miniworld.py:267] iteration:  81
+ frame: 2025000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  149
+I1019 07:14:32.344095 47127023957824 run_miniworld.py:243] Data collection iteration 82.
+I1019 07:17:40.689942 47127023957824 run_miniworld.py:250] Evaluation iteration 82.
+I1019 07:17:52.433638 47127023957824 run_miniworld.py:267] iteration:  82
+ frame: 2050000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 07:18:07.144137 47127023957824 run_miniworld.py:243] Data collection iteration 83.
+I1019 07:21:18.728096 47127023957824 run_miniworld.py:250] Evaluation iteration 83.
+I1019 07:21:31.033438 47127023957824 run_miniworld.py:267] iteration:  83
+ frame: 2075000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  130
+I1019 07:21:45.096317 47127023957824 run_miniworld.py:243] Data collection iteration 84.
+I1019 07:24:53.618551 47127023957824 run_miniworld.py:250] Evaluation iteration 84.
+I1019 07:25:05.743851 47127023957824 run_miniworld.py:267] iteration:  84
+ frame: 2100000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 07:25:21.490896 47127023957824 run_miniworld.py:243] Data collection iteration 85.
+I1019 07:28:29.538144 47127023957824 run_miniworld.py:250] Evaluation iteration 85.
+I1019 07:28:41.640179 47127023957824 run_miniworld.py:267] iteration:  85
+ frame: 2125000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 07:28:56.335286 47127023957824 run_miniworld.py:243] Data collection iteration 86.
+I1019 07:32:05.926928 47127023957824 run_miniworld.py:250] Evaluation iteration 86.
+I1019 07:32:17.781958 47127023957824 run_miniworld.py:267] iteration:  86
+ frame: 2150000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:32:33.082477 47127023957824 run_miniworld.py:243] Data collection iteration 87.
+I1019 07:35:42.570055 47127023957824 run_miniworld.py:250] Evaluation iteration 87.
+I1019 07:35:54.851990 47127023957824 run_miniworld.py:267] iteration:  87
+ frame: 2175000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:36:10.454979 47127023957824 run_miniworld.py:243] Data collection iteration 88.
+I1019 07:39:19.253098 47127023957824 run_miniworld.py:250] Evaluation iteration 88.
+I1019 07:39:31.684917 47127023957824 run_miniworld.py:267] iteration:  88
+ frame: 2200000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:39:46.453524 47127023957824 run_miniworld.py:243] Data collection iteration 89.
+I1019 07:42:56.297521 47127023957824 run_miniworld.py:250] Evaluation iteration 89.
+I1019 07:43:08.587291 47127023957824 run_miniworld.py:267] iteration:  89
+ frame: 2225000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:43:24.141480 47127023957824 run_miniworld.py:243] Data collection iteration 90.
+I1019 07:46:35.628340 47127023957824 run_miniworld.py:250] Evaluation iteration 90.
+I1019 07:46:47.540035 47127023957824 run_miniworld.py:267] iteration:  90
+ frame: 2250000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 07:47:02.138104 47127023957824 run_miniworld.py:243] Data collection iteration 91.
+I1019 07:50:12.481721 47127023957824 run_miniworld.py:250] Evaluation iteration 91.
+I1019 07:50:25.010239 47127023957824 run_miniworld.py:267] iteration:  91
+ frame: 2275000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  131
+I1019 07:50:39.813573 47127023957824 run_miniworld.py:243] Data collection iteration 92.
+I1019 07:53:49.542850 47127023957824 run_miniworld.py:250] Evaluation iteration 92.
+I1019 07:54:01.738195 47127023957824 run_miniworld.py:267] iteration:  92
+ frame: 2300000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  132
+I1019 07:54:17.203381 47127023957824 run_miniworld.py:243] Data collection iteration 93.
+I1019 07:57:25.521363 47127023957824 run_miniworld.py:250] Evaluation iteration 93.
+I1019 07:57:37.281566 47127023957824 run_miniworld.py:267] iteration:  93
+ frame: 2325000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 07:57:52.612795 47127023957824 run_miniworld.py:243] Data collection iteration 94.
+I1019 08:01:00.211358 47127023957824 run_miniworld.py:250] Evaluation iteration 94.
+I1019 08:01:12.407040 47127023957824 run_miniworld.py:267] iteration:  94
+ frame: 2350000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 08:01:27.030606 47127023957824 run_miniworld.py:243] Data collection iteration 95.
+I1019 08:04:34.450817 47127023957824 run_miniworld.py:250] Evaluation iteration 95.
+I1019 08:04:46.811241 47127023957824 run_miniworld.py:267] iteration:  95
+ frame: 2375000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  133
+I1019 08:05:02.480820 47127023957824 run_miniworld.py:243] Data collection iteration 96.
+I1019 08:08:09.421594 47127023957824 run_miniworld.py:250] Evaluation iteration 96.
+I1019 08:08:21.343335 47127023957824 run_miniworld.py:267] iteration:  96
+ frame: 2400000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 08:08:35.949400 47127023957824 run_miniworld.py:243] Data collection iteration 97.
+I1019 08:11:42.637630 47127023957824 run_miniworld.py:250] Evaluation iteration 97.
+I1019 08:11:54.685346 47127023957824 run_miniworld.py:267] iteration:  97
+ frame: 2425000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 08:12:09.987200 47127023957824 run_miniworld.py:243] Data collection iteration 98.
+I1019 08:15:15.903361 47127023957824 run_miniworld.py:250] Evaluation iteration 98.
+I1019 08:15:27.955962 47127023957824 run_miniworld.py:267] iteration:  98
+ frame: 2450000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  134
+I1019 08:15:43.544420 47127023957824 run_miniworld.py:243] Data collection iteration 99.
+I1019 08:18:48.254620 47127023957824 run_miniworld.py:250] Evaluation iteration 99.
+I1019 08:19:00.110067 47127023957824 run_miniworld.py:267] iteration:  99
+ frame: 2475000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 08:19:14.946940 47127023957824 run_miniworld.py:243] Data collection iteration 100.
+I1019 08:22:20.388417 47127023957824 run_miniworld.py:250] Evaluation iteration 100.
+I1019 08:22:32.515909 47127023957824 run_miniworld.py:267] iteration: 100
+ frame: 2500000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 08:22:47.857161 47127023957824 run_miniworld.py:243] Data collection iteration 101.
+I1019 08:25:51.961316 47127023957824 run_miniworld.py:250] Evaluation iteration 101.
+I1019 08:26:04.033691 47127023957824 run_miniworld.py:267] iteration: 101
+ frame: 2525000
+ eval_episode_return:  1.00
+ train_episode_return:  0.99
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 08:26:18.602935 47127023957824 run_miniworld.py:243] Data collection iteration 102.
+I1019 08:29:23.854537 47127023957824 run_miniworld.py:250] Evaluation iteration 102.
+I1019 08:29:36.102873 47127023957824 run_miniworld.py:267] iteration: 102
+ frame: 2550000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 08:29:51.568962 47127023957824 run_miniworld.py:243] Data collection iteration 103.
+I1019 08:32:55.662860 47127023957824 run_miniworld.py:250] Evaluation iteration 103.
+I1019 08:33:07.958903 47127023957824 run_miniworld.py:267] iteration: 103
+ frame: 2575000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 08:33:22.501429 47127023957824 run_miniworld.py:243] Data collection iteration 104.
+I1019 08:36:27.529663 47127023957824 run_miniworld.py:250] Evaluation iteration 104.
+I1019 08:36:39.423425 47127023957824 run_miniworld.py:267] iteration: 104
+ frame: 2600000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 08:36:54.547297 47127023957824 run_miniworld.py:243] Data collection iteration 105.
+I1019 08:39:59.121043 47127023957824 run_miniworld.py:250] Evaluation iteration 105.
+I1019 08:40:11.312003 47127023957824 run_miniworld.py:267] iteration: 105
+ frame: 2625000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  135
+I1019 08:40:26.765645 47127023957824 run_miniworld.py:243] Data collection iteration 106.
+I1019 08:43:31.020593 47127023957824 run_miniworld.py:250] Evaluation iteration 106.
+I1019 08:43:43.474509 47127023957824 run_miniworld.py:267] iteration: 106
+ frame: 2650000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 08:43:58.031189 47127023957824 run_miniworld.py:243] Data collection iteration 107.
+I1019 08:47:01.321367 47127023957824 run_miniworld.py:250] Evaluation iteration 107.
+I1019 08:47:13.022643 47127023957824 run_miniworld.py:267] iteration: 107
+ frame: 2675000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 08:47:28.505042 47127023957824 run_miniworld.py:243] Data collection iteration 108.
+I1019 08:50:31.461834 47127023957824 run_miniworld.py:250] Evaluation iteration 108.
+I1019 08:50:43.413102 47127023957824 run_miniworld.py:267] iteration: 108
+ frame: 2700000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 08:50:57.948932 47127023957824 run_miniworld.py:243] Data collection iteration 109.
+I1019 08:54:01.655232 47127023957824 run_miniworld.py:250] Evaluation iteration 109.
+I1019 08:54:13.813679 47127023957824 run_miniworld.py:267] iteration: 109
+ frame: 2725000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  136
+I1019 08:54:29.074142 47127023957824 run_miniworld.py:243] Data collection iteration 110.
+I1019 08:57:31.179775 47127023957824 run_miniworld.py:250] Evaluation iteration 110.
+I1019 08:57:43.439470 47127023957824 run_miniworld.py:267] iteration: 110
+ frame: 2750000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 08:57:57.853461 47127023957824 run_miniworld.py:243] Data collection iteration 111.
+I1019 09:01:00.308391 47127023957824 run_miniworld.py:250] Evaluation iteration 111.
+I1019 09:01:12.777408 47127023957824 run_miniworld.py:267] iteration: 111
+ frame: 2775000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  137
+I1019 09:01:28.056038 47127023957824 run_miniworld.py:243] Data collection iteration 112.
+I1019 09:04:29.651219 47127023957824 run_miniworld.py:250] Evaluation iteration 112.
+I1019 09:04:41.460420 47127023957824 run_miniworld.py:267] iteration: 112
+ frame: 2800000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  138
+I1019 09:04:56.897161 47127023957824 run_miniworld.py:243] Data collection iteration 113.
+I1019 09:07:57.733549 47127023957824 run_miniworld.py:250] Evaluation iteration 113.
+I1019 09:08:09.796764 47127023957824 run_miniworld.py:267] iteration: 113
+ frame: 2825000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  138
+I1019 09:08:25.315870 47127023957824 run_miniworld.py:243] Data collection iteration 114.
+I1019 09:11:25.942675 47127023957824 run_miniworld.py:250] Evaluation iteration 114.
+I1019 09:11:37.638625 47127023957824 run_miniworld.py:267] iteration: 114
+ frame: 2850000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  138
+I1019 09:11:53.170275 47127023957824 run_miniworld.py:243] Data collection iteration 115.
+I1019 09:14:52.327879 47127023957824 run_miniworld.py:250] Evaluation iteration 115.
+I1019 09:15:04.485557 47127023957824 run_miniworld.py:267] iteration: 115
+ frame: 2875000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1019 09:15:18.951728 47127023957824 run_miniworld.py:243] Data collection iteration 116.
+I1019 09:18:18.700381 47127023957824 run_miniworld.py:250] Evaluation iteration 116.
+I1019 09:18:31.013442 47127023957824 run_miniworld.py:267] iteration: 116
+ frame: 2900000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  139
+I1019 09:18:46.480110 47127023957824 run_miniworld.py:243] Data collection iteration 117.
+I1019 09:21:44.765578 47127023957824 run_miniworld.py:250] Evaluation iteration 117.
+I1019 09:21:56.980088 47127023957824 run_miniworld.py:267] iteration: 117
+ frame: 2925000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1019 09:22:11.494096 47127023957824 run_miniworld.py:243] Data collection iteration 118.
+I1019 09:25:09.823115 47127023957824 run_miniworld.py:250] Evaluation iteration 118.
+I1019 09:25:21.581868 47127023957824 run_miniworld.py:267] iteration: 118
+ frame: 2950000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1019 09:25:36.734625 47127023957824 run_miniworld.py:243] Data collection iteration 119.
+I1019 09:28:31.503640 47127023957824 run_miniworld.py:250] Evaluation iteration 119.
+I1019 09:28:43.354604 47127023957824 run_miniworld.py:267] iteration: 119
+ frame: 2975000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1019 09:28:59.085354 47127023957824 run_miniworld.py:243] Data collection iteration 120.
+I1019 09:31:39.078077 47127023957824 run_miniworld.py:250] Evaluation iteration 120.
+I1019 09:31:50.689232 47127023957824 run_miniworld.py:267] iteration: 120
+ frame: 3000000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  156
+I1019 09:32:05.044627 47127023957824 run_miniworld.py:243] Data collection iteration 121.
+I1019 09:35:01.965212 47127023957824 run_miniworld.py:250] Evaluation iteration 121.
+I1019 09:35:13.614502 47127023957824 run_miniworld.py:267] iteration: 121
+ frame: 3025000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  141
+I1019 09:35:28.890144 47127023957824 run_miniworld.py:243] Data collection iteration 122.
+I1019 09:38:24.303618 47127023957824 run_miniworld.py:250] Evaluation iteration 122.
+I1019 09:38:36.098796 47127023957824 run_miniworld.py:267] iteration: 122
+ frame: 3050000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1019 09:38:50.651499 47127023957824 run_miniworld.py:243] Data collection iteration 123.
+I1019 09:41:48.767287 47127023957824 run_miniworld.py:250] Evaluation iteration 123.
+I1019 09:42:00.635636 47127023957824 run_miniworld.py:267] iteration: 123
+ frame: 3075000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  140
+I1019 09:42:16.003252 47127023957824 run_miniworld.py:243] Data collection iteration 124.
+I1019 09:45:11.335169 47127023957824 run_miniworld.py:250] Evaluation iteration 124.
+I1019 09:45:23.014521 47127023957824 run_miniworld.py:267] iteration: 124
+ frame: 3100000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1019 09:45:37.330546 47127023957824 run_miniworld.py:243] Data collection iteration 125.
+I1019 09:48:32.524085 47127023957824 run_miniworld.py:250] Evaluation iteration 125.
+I1019 09:48:44.098773 47127023957824 run_miniworld.py:267] iteration: 125
+ frame: 3125000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1019 09:48:59.613497 47127023957824 run_miniworld.py:243] Data collection iteration 126.
+I1019 09:51:54.095016 47127023957824 run_miniworld.py:250] Evaluation iteration 126.
+I1019 09:52:05.764899 47127023957824 run_miniworld.py:267] iteration: 126
+ frame: 3150000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  143
+I1019 09:52:21.040940 47127023957824 run_miniworld.py:243] Data collection iteration 127.
+I1019 09:55:15.086477 47127023957824 run_miniworld.py:250] Evaluation iteration 127.
+I1019 09:55:27.029817 47127023957824 run_miniworld.py:267] iteration: 127
+ frame: 3175000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 09:55:41.550446 47127023957824 run_miniworld.py:243] Data collection iteration 128.
+I1019 09:58:35.568020 47127023957824 run_miniworld.py:250] Evaluation iteration 128.
+I1019 09:58:47.408808 47127023957824 run_miniworld.py:267] iteration: 128
+ frame: 3200000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 09:59:03.737508 47127023957824 run_miniworld.py:243] Data collection iteration 129.
+I1019 10:01:57.300040 47127023957824 run_miniworld.py:250] Evaluation iteration 129.
+I1019 10:02:09.595054 47127023957824 run_miniworld.py:267] iteration: 129
+ frame: 3225000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 10:02:23.889589 47127023957824 run_miniworld.py:243] Data collection iteration 130.
+I1019 10:05:15.917057 47127023957824 run_miniworld.py:250] Evaluation iteration 130.
+I1019 10:05:27.693154 47127023957824 run_miniworld.py:267] iteration: 130
+ frame: 3250000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 10:05:42.827224 47127023957824 run_miniworld.py:243] Data collection iteration 131.
+I1019 10:08:35.023228 47127023957824 run_miniworld.py:250] Evaluation iteration 131.
+I1019 10:08:46.883234 47127023957824 run_miniworld.py:267] iteration: 131
+ frame: 3275000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 10:09:01.105477 47127023957824 run_miniworld.py:243] Data collection iteration 132.
+I1019 10:11:52.760191 47127023957824 run_miniworld.py:250] Evaluation iteration 132.
+I1019 10:12:04.328415 47127023957824 run_miniworld.py:267] iteration: 132
+ frame: 3300000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:12:19.360935 47127023957824 run_miniworld.py:243] Data collection iteration 133.
+I1019 10:15:10.468440 47127023957824 run_miniworld.py:250] Evaluation iteration 133.
+I1019 10:15:22.387967 47127023957824 run_miniworld.py:267] iteration: 133
+ frame: 3325000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:15:37.570627 47127023957824 run_miniworld.py:243] Data collection iteration 134.
+I1019 10:18:28.708330 47127023957824 run_miniworld.py:250] Evaluation iteration 134.
+I1019 10:18:40.374060 47127023957824 run_miniworld.py:267] iteration: 134
+ frame: 3350000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:18:54.740581 47127023957824 run_miniworld.py:243] Data collection iteration 135.
+I1019 10:21:47.933026 47127023957824 run_miniworld.py:250] Evaluation iteration 135.
+I1019 10:22:00.389528 47127023957824 run_miniworld.py:267] iteration: 135
+ frame: 3375000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 10:22:15.533617 47127023957824 run_miniworld.py:243] Data collection iteration 136.
+I1019 10:25:06.877046 47127023957824 run_miniworld.py:250] Evaluation iteration 136.
+I1019 10:25:18.940167 47127023957824 run_miniworld.py:267] iteration: 136
+ frame: 3400000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:25:33.262819 47127023957824 run_miniworld.py:243] Data collection iteration 137.
+I1019 10:28:25.038480 47127023957824 run_miniworld.py:250] Evaluation iteration 137.
+I1019 10:28:37.139072 47127023957824 run_miniworld.py:267] iteration: 137
+ frame: 3425000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:28:52.309460 47127023957824 run_miniworld.py:243] Data collection iteration 138.
+I1019 10:31:44.431339 47127023957824 run_miniworld.py:250] Evaluation iteration 138.
+I1019 10:31:56.719013 47127023957824 run_miniworld.py:267] iteration: 138
+ frame: 3450000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 10:32:10.992640 47127023957824 run_miniworld.py:243] Data collection iteration 139.
+I1019 10:35:01.797291 47127023957824 run_miniworld.py:250] Evaluation iteration 139.
+I1019 10:35:13.344114 47127023957824 run_miniworld.py:267] iteration: 139
+ frame: 3475000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:35:28.430072 47127023957824 run_miniworld.py:243] Data collection iteration 140.
+I1019 10:38:19.977693 47127023957824 run_miniworld.py:250] Evaluation iteration 140.
+I1019 10:38:32.062239 47127023957824 run_miniworld.py:267] iteration: 140
+ frame: 3500000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:38:47.352878 47127023957824 run_miniworld.py:243] Data collection iteration 141.
+I1019 10:41:38.128413 47127023957824 run_miniworld.py:250] Evaluation iteration 141.
+I1019 10:41:49.936295 47127023957824 run_miniworld.py:267] iteration: 141
+ frame: 3525000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:42:04.174468 47127023957824 run_miniworld.py:243] Data collection iteration 142.
+I1019 10:44:57.317235 47127023957824 run_miniworld.py:250] Evaluation iteration 142.
+I1019 10:45:09.746442 47127023957824 run_miniworld.py:267] iteration: 142
+ frame: 3550000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 10:45:24.894598 47127023957824 run_miniworld.py:243] Data collection iteration 143.
+I1019 10:48:15.768580 47127023957824 run_miniworld.py:250] Evaluation iteration 143.
+I1019 10:48:27.850258 47127023957824 run_miniworld.py:267] iteration: 143
+ frame: 3575000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:48:42.342128 47127023957824 run_miniworld.py:243] Data collection iteration 144.
+I1019 10:51:34.124584 47127023957824 run_miniworld.py:250] Evaluation iteration 144.
+I1019 10:51:45.897644 47127023957824 run_miniworld.py:267] iteration: 144
+ frame: 3600000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:52:01.095844 47127023957824 run_miniworld.py:243] Data collection iteration 145.
+I1019 10:54:53.084753 47127023957824 run_miniworld.py:250] Evaluation iteration 145.
+I1019 10:55:05.330648 47127023957824 run_miniworld.py:267] iteration: 145
+ frame: 3625000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 10:55:19.648563 47127023957824 run_miniworld.py:243] Data collection iteration 146.
+I1019 10:58:10.838840 47127023957824 run_miniworld.py:250] Evaluation iteration 146.
+I1019 10:58:22.999052 47127023957824 run_miniworld.py:267] iteration: 146
+ frame: 3650000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 10:58:38.054693 47127023957824 run_miniworld.py:243] Data collection iteration 147.
+I1019 11:01:30.312769 47127023957824 run_miniworld.py:250] Evaluation iteration 147.
+I1019 11:01:42.547917 47127023957824 run_miniworld.py:267] iteration: 147
+ frame: 3675000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:01:57.611149 47127023957824 run_miniworld.py:243] Data collection iteration 148.
+I1019 11:04:49.779385 47127023957824 run_miniworld.py:250] Evaluation iteration 148.
+I1019 11:05:01.975771 47127023957824 run_miniworld.py:267] iteration: 148
+ frame: 3700000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:05:16.149271 47127023957824 run_miniworld.py:243] Data collection iteration 149.
+I1019 11:08:07.569335 47127023957824 run_miniworld.py:250] Evaluation iteration 149.
+I1019 11:08:19.525466 47127023957824 run_miniworld.py:267] iteration: 149
+ frame: 3725000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 11:08:34.625909 47127023957824 run_miniworld.py:243] Data collection iteration 150.
+I1019 11:11:24.792579 47127023957824 run_miniworld.py:250] Evaluation iteration 150.
+I1019 11:11:36.822294 47127023957824 run_miniworld.py:267] iteration: 150
+ frame: 3750000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  147
+I1019 11:11:51.049019 47127023957824 run_miniworld.py:243] Data collection iteration 151.
+I1019 11:14:42.980613 47127023957824 run_miniworld.py:250] Evaluation iteration 151.
+I1019 11:14:54.993996 47127023957824 run_miniworld.py:267] iteration: 151
+ frame: 3775000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:15:10.131208 47127023957824 run_miniworld.py:243] Data collection iteration 152.
+I1019 11:18:00.938847 47127023957824 run_miniworld.py:250] Evaluation iteration 152.
+I1019 11:18:13.009331 47127023957824 run_miniworld.py:267] iteration: 152
+ frame: 3800000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 11:18:27.385868 47127023957824 run_miniworld.py:243] Data collection iteration 153.
+I1019 11:21:19.940365 47127023957824 run_miniworld.py:250] Evaluation iteration 153.
+I1019 11:21:32.355990 47127023957824 run_miniworld.py:267] iteration: 153
+ frame: 3825000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:21:47.461668 47127023957824 run_miniworld.py:243] Data collection iteration 154.
+I1019 11:24:38.466295 47127023957824 run_miniworld.py:250] Evaluation iteration 154.
+I1019 11:24:48.867007 47127023957824 run_miniworld.py:267] iteration: 154
+ frame: 3850000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 11:25:04.125287 47127023957824 run_miniworld.py:243] Data collection iteration 155.
+I1019 11:27:57.386401 47127023957824 run_miniworld.py:250] Evaluation iteration 155.
+I1019 11:28:09.898987 47127023957824 run_miniworld.py:267] iteration: 155
+ frame: 3875000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 11:28:24.264387 47127023957824 run_miniworld.py:243] Data collection iteration 156.
+I1019 11:31:16.959349 47127023957824 run_miniworld.py:250] Evaluation iteration 156.
+I1019 11:31:29.290358 47127023957824 run_miniworld.py:267] iteration: 156
+ frame: 3900000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:31:44.532432 47127023957824 run_miniworld.py:243] Data collection iteration 157.
+I1019 11:34:37.158689 47127023957824 run_miniworld.py:250] Evaluation iteration 157.
+I1019 11:34:49.319588 47127023957824 run_miniworld.py:267] iteration: 157
+ frame: 3925000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:35:03.587142 47127023957824 run_miniworld.py:243] Data collection iteration 158.
+I1019 11:37:54.607053 47127023957824 run_miniworld.py:250] Evaluation iteration 158.
+I1019 11:38:06.283975 47127023957824 run_miniworld.py:267] iteration: 158
+ frame: 3950000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 11:38:21.488780 47127023957824 run_miniworld.py:243] Data collection iteration 159.
+I1019 11:41:13.633297 47127023957824 run_miniworld.py:250] Evaluation iteration 159.
+I1019 11:41:25.950140 47127023957824 run_miniworld.py:267] iteration: 159
+ frame: 3975000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:41:40.274151 47127023957824 run_miniworld.py:243] Data collection iteration 160.
+I1019 11:44:31.495065 47127023957824 run_miniworld.py:250] Evaluation iteration 160.
+I1019 11:44:43.498954 47127023957824 run_miniworld.py:267] iteration: 160
+ frame: 4000000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 11:44:58.556859 47127023957824 run_miniworld.py:243] Data collection iteration 161.
+I1019 11:47:25.021172 47127023957824 run_miniworld.py:250] Evaluation iteration 161.
+I1019 11:47:36.685521 47127023957824 run_miniworld.py:267] iteration: 161
+ frame: 4025000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  171
+I1019 11:47:51.365814 47127023957824 run_miniworld.py:243] Data collection iteration 162.
+I1019 11:50:19.057541 47127023957824 run_miniworld.py:250] Evaluation iteration 162.
+I1019 11:50:31.093851 47127023957824 run_miniworld.py:267] iteration: 162
+ frame: 4050000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  169
+I1019 11:50:44.936473 47127023957824 run_miniworld.py:243] Data collection iteration 163.
+I1019 11:53:32.601946 47127023957824 run_miniworld.py:250] Evaluation iteration 163.
+I1019 11:53:44.643012 47127023957824 run_miniworld.py:267] iteration: 163
+ frame: 4075000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  149
+I1019 11:53:59.800181 47127023957824 run_miniworld.py:243] Data collection iteration 164.
+I1019 11:56:52.320751 47127023957824 run_miniworld.py:250] Evaluation iteration 164.
+I1019 11:57:04.716203 47127023957824 run_miniworld.py:267] iteration: 164
+ frame: 4100000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 11:57:18.925885 47127023957824 run_miniworld.py:243] Data collection iteration 165.
+I1019 12:00:11.165109 47127023957824 run_miniworld.py:250] Evaluation iteration 165.
+I1019 12:00:23.231209 47127023957824 run_miniworld.py:267] iteration: 165
+ frame: 4125000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:00:38.427332 47127023957824 run_miniworld.py:243] Data collection iteration 166.
+I1019 12:03:30.144863 47127023957824 run_miniworld.py:250] Evaluation iteration 166.
+I1019 12:03:41.865967 47127023957824 run_miniworld.py:267] iteration: 166
+ frame: 4150000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 12:03:57.292897 47127023957824 run_miniworld.py:243] Data collection iteration 167.
+I1019 12:06:49.594967 47127023957824 run_miniworld.py:250] Evaluation iteration 167.
+I1019 12:07:01.664898 47127023957824 run_miniworld.py:267] iteration: 167
+ frame: 4175000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:07:15.690630 47127023957824 run_miniworld.py:243] Data collection iteration 168.
+I1019 12:10:07.455285 47127023957824 run_miniworld.py:250] Evaluation iteration 168.
+I1019 12:10:19.212064 47127023957824 run_miniworld.py:267] iteration: 168
+ frame: 4200000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 12:10:34.360913 47127023957824 run_miniworld.py:243] Data collection iteration 169.
+I1019 12:13:24.747281 47127023957824 run_miniworld.py:250] Evaluation iteration 169.
+I1019 12:13:36.503548 47127023957824 run_miniworld.py:267] iteration: 169
+ frame: 4225000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  147
+I1019 12:13:50.939200 47127023957824 run_miniworld.py:243] Data collection iteration 170.
+I1019 12:16:43.241174 47127023957824 run_miniworld.py:250] Evaluation iteration 170.
+I1019 12:16:55.388674 47127023957824 run_miniworld.py:267] iteration: 170
+ frame: 4250000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:17:10.785094 47127023957824 run_miniworld.py:243] Data collection iteration 171.
+I1019 12:20:02.847226 47127023957824 run_miniworld.py:250] Evaluation iteration 171.
+I1019 12:20:14.569792 47127023957824 run_miniworld.py:267] iteration: 171
+ frame: 4275000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:20:29.950225 47127023957824 run_miniworld.py:243] Data collection iteration 172.
+I1019 12:23:21.964371 47127023957824 run_miniworld.py:250] Evaluation iteration 172.
+I1019 12:23:34.134869 47127023957824 run_miniworld.py:267] iteration: 172
+ frame: 4300000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:23:48.538773 47127023957824 run_miniworld.py:243] Data collection iteration 173.
+I1019 12:26:41.881217 47127023957824 run_miniworld.py:250] Evaluation iteration 173.
+I1019 12:26:54.151840 47127023957824 run_miniworld.py:267] iteration: 173
+ frame: 4325000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 12:27:08.459593 47127023957824 run_miniworld.py:243] Data collection iteration 174.
+I1019 12:30:00.170043 47127023957824 run_miniworld.py:250] Evaluation iteration 174.
+I1019 12:30:12.432806 47127023957824 run_miniworld.py:267] iteration: 174
+ frame: 4350000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 12:30:27.665322 47127023957824 run_miniworld.py:243] Data collection iteration 175.
+I1019 12:33:19.298417 47127023957824 run_miniworld.py:250] Evaluation iteration 175.
+I1019 12:33:31.375280 47127023957824 run_miniworld.py:267] iteration: 175
+ frame: 4375000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 12:33:46.636289 47127023957824 run_miniworld.py:243] Data collection iteration 176.
+I1019 12:36:39.278727 47127023957824 run_miniworld.py:250] Evaluation iteration 176.
+I1019 12:36:51.527033 47127023957824 run_miniworld.py:267] iteration: 176
+ frame: 4400000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:37:05.854353 47127023957824 run_miniworld.py:243] Data collection iteration 177.
+I1019 12:39:58.698730 47127023957824 run_miniworld.py:250] Evaluation iteration 177.
+I1019 12:40:11.391024 47127023957824 run_miniworld.py:267] iteration: 177
+ frame: 4425000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:40:26.521495 47127023957824 run_miniworld.py:243] Data collection iteration 178.
+I1019 12:43:19.659576 47127023957824 run_miniworld.py:250] Evaluation iteration 178.
+I1019 12:43:32.172530 47127023957824 run_miniworld.py:267] iteration: 178
+ frame: 4450000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 12:43:46.614467 47127023957824 run_miniworld.py:243] Data collection iteration 179.
+I1019 12:46:38.755487 47127023957824 run_miniworld.py:250] Evaluation iteration 179.
+I1019 12:46:50.988749 47127023957824 run_miniworld.py:267] iteration: 179
+ frame: 4475000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:47:06.255622 47127023957824 run_miniworld.py:243] Data collection iteration 180.
+I1019 12:49:57.959411 47127023957824 run_miniworld.py:250] Evaluation iteration 180.
+I1019 12:50:10.126409 47127023957824 run_miniworld.py:267] iteration: 180
+ frame: 4500000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 12:50:24.431972 47127023957824 run_miniworld.py:243] Data collection iteration 181.
+I1019 12:53:15.703301 47127023957824 run_miniworld.py:250] Evaluation iteration 181.
+I1019 12:53:27.301676 47127023957824 run_miniworld.py:267] iteration: 181
+ frame: 4525000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 12:53:42.615908 47127023957824 run_miniworld.py:243] Data collection iteration 182.
+I1019 12:56:35.356333 47127023957824 run_miniworld.py:250] Evaluation iteration 182.
+I1019 12:56:47.592295 47127023957824 run_miniworld.py:267] iteration: 182
+ frame: 4550000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 12:57:01.887390 47127023957824 run_miniworld.py:243] Data collection iteration 183.
+I1019 12:59:54.475114 47127023957824 run_miniworld.py:250] Evaluation iteration 183.
+I1019 13:00:06.370322 47127023957824 run_miniworld.py:267] iteration: 183
+ frame: 4575000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:00:21.479429 47127023957824 run_miniworld.py:243] Data collection iteration 184.
+I1019 13:03:13.685582 47127023957824 run_miniworld.py:250] Evaluation iteration 184.
+I1019 13:03:26.044047 47127023957824 run_miniworld.py:267] iteration: 184
+ frame: 4600000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:03:41.330935 47127023957824 run_miniworld.py:243] Data collection iteration 185.
+I1019 13:06:33.126388 47127023957824 run_miniworld.py:250] Evaluation iteration 185.
+I1019 13:06:45.016424 47127023957824 run_miniworld.py:267] iteration: 185
+ frame: 4625000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 13:06:59.324103 47127023957824 run_miniworld.py:243] Data collection iteration 186.
+I1019 13:09:50.986534 47127023957824 run_miniworld.py:250] Evaluation iteration 186.
+I1019 13:10:03.121018 47127023957824 run_miniworld.py:267] iteration: 186
+ frame: 4650000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 13:10:18.396237 47127023957824 run_miniworld.py:243] Data collection iteration 187.
+I1019 13:13:10.250764 47127023957824 run_miniworld.py:250] Evaluation iteration 187.
+I1019 13:13:22.514835 47127023957824 run_miniworld.py:267] iteration: 187
+ frame: 4675000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:13:38.037872 47127023957824 run_miniworld.py:243] Data collection iteration 188.
+I1019 13:16:31.025274 47127023957824 run_miniworld.py:250] Evaluation iteration 188.
+I1019 13:16:43.396881 47127023957824 run_miniworld.py:267] iteration: 188
+ frame: 4700000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:16:58.656113 47127023957824 run_miniworld.py:243] Data collection iteration 189.
+I1019 13:19:50.833337 47127023957824 run_miniworld.py:250] Evaluation iteration 189.
+I1019 13:20:03.090231 47127023957824 run_miniworld.py:267] iteration: 189
+ frame: 4725000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:20:18.385349 47127023957824 run_miniworld.py:243] Data collection iteration 190.
+I1019 13:23:11.187812 47127023957824 run_miniworld.py:250] Evaluation iteration 190.
+I1019 13:23:23.322943 47127023957824 run_miniworld.py:267] iteration: 190
+ frame: 4750000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:23:37.749673 47127023957824 run_miniworld.py:243] Data collection iteration 191.
+I1019 13:26:31.821485 47127023957824 run_miniworld.py:250] Evaluation iteration 191.
+I1019 13:26:44.295689 47127023957824 run_miniworld.py:267] iteration: 191
+ frame: 4775000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 13:26:58.540606 47127023957824 run_miniworld.py:243] Data collection iteration 192.
+I1019 13:29:50.633972 47127023957824 run_miniworld.py:250] Evaluation iteration 192.
+I1019 13:30:02.358794 47127023957824 run_miniworld.py:267] iteration: 192
+ frame: 4800000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:30:17.569726 47127023957824 run_miniworld.py:243] Data collection iteration 193.
+I1019 13:33:08.513969 47127023957824 run_miniworld.py:250] Evaluation iteration 193.
+I1019 13:33:20.618735 47127023957824 run_miniworld.py:267] iteration: 193
+ frame: 4825000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 13:33:35.792199 47127023957824 run_miniworld.py:243] Data collection iteration 194.
+I1019 13:36:26.373659 47127023957824 run_miniworld.py:250] Evaluation iteration 194.
+I1019 13:36:38.197362 47127023957824 run_miniworld.py:267] iteration: 194
+ frame: 4850000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  147
+I1019 13:36:52.761186 47127023957824 run_miniworld.py:243] Data collection iteration 195.
+I1019 13:39:45.837098 47127023957824 run_miniworld.py:250] Evaluation iteration 195.
+I1019 13:39:58.063420 47127023957824 run_miniworld.py:267] iteration: 195
+ frame: 4875000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 13:40:13.379750 47127023957824 run_miniworld.py:243] Data collection iteration 196.
+I1019 13:43:04.728984 47127023957824 run_miniworld.py:250] Evaluation iteration 196.
+I1019 13:43:16.403568 47127023957824 run_miniworld.py:267] iteration: 196
+ frame: 4900000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 13:43:31.583994 47127023957824 run_miniworld.py:243] Data collection iteration 197.
+I1019 13:46:24.364094 47127023957824 run_miniworld.py:250] Evaluation iteration 197.
+I1019 13:46:36.630824 47127023957824 run_miniworld.py:267] iteration: 197
+ frame: 4925000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+I1019 13:46:52.038833 47127023957824 run_miniworld.py:243] Data collection iteration 198.
+I1019 13:49:43.560991 47127023957824 run_miniworld.py:250] Evaluation iteration 198.
+I1019 13:49:55.557862 47127023957824 run_miniworld.py:267] iteration: 198
+ frame: 4950000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  146
+I1019 13:50:11.003369 47127023957824 run_miniworld.py:243] Data collection iteration 199.
+I1019 13:53:04.523922 47127023957824 run_miniworld.py:250] Evaluation iteration 199.
+I1019 13:53:17.038771 47127023957824 run_miniworld.py:267] iteration: 199
+ frame: 4975000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  144
+I1019 13:53:32.275583 47127023957824 run_miniworld.py:243] Data collection iteration 200.
+I1019 13:56:24.653134 47127023957824 run_miniworld.py:250] Evaluation iteration 200.
+I1019 13:56:36.741148 47127023957824 run_miniworld.py:267] iteration: 200
+ frame: 5000000
+ eval_episode_return:  1.00
+ train_episode_return:  1.00
+ train_exploration_epsilon: 0.100
+ train_frame_rate:  145
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[0.00166072 0.0805987  0.2543589  0.3596775  0.44713387 0.5657538
+ 0.5993419  0.6502638  0.6752799  0.683207   0.72054356 0.7329938
+ 0.727438   0.7331744  0.73897964 0.736966   0.7410589  0.7409798
+ 0.7453029  0.74137795]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[0.00113303 0.03917515 0.073895   0.14314887 0.21525694 0.24810073
+ 0.3018022  0.3339565  0.40086922 0.4614115  0.48935986 0.536124
+ 0.6069627  0.6655018  0.7121756  0.73663497 0.8217402  0.913449
+ 0.99082464 1.0237648 ]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.83984244e-04 2.16431618e-02 3.02870665e-02 1.05496265e-01
+ 1.10823385e-01 2.08356678e-01 2.09430441e-01 2.38136679e-01
+ 2.43654817e-01 2.63053507e-01 3.46356571e-01 2.81103432e-01
+ 3.45536143e-01 4.03450042e-01 4.17020559e-01 4.39268053e-01
+ 3.83333564e-01 5.01041353e-01 5.21313608e-01 5.33963740e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[0.00052764 0.01895374 0.02742763 0.05586149 0.09459149 0.1175313
+ 0.19985825 0.22053578 0.23190312 0.22872618 0.25008145 0.27316633
+ 0.32338262 0.33507535 0.32608834 0.3480873  0.3835471  0.40249428
+ 0.42400837 0.45932275]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[0.00053888 0.01532891 0.02519305 0.0440126  0.10719258 0.11346757
+ 0.18465678 0.18280333 0.19548729 0.22484894 0.2516975  0.24291444
+ 0.24416207 0.30047473 0.34210408 0.3643146  0.3714163  0.34373093
+ 0.4178916  0.44761485]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[0.00046458 0.01479401 0.02504084 0.0385031  0.12781279 0.11623219
+ 0.16382675 0.17292345 0.19417346 0.2187158  0.23724851 0.23428923
+ 0.23413065 0.28130817 0.2938097  0.3423191  0.36243257 0.3851571
+ 0.3659157  0.39378917]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.29037866e-04 1.43654225e-02 2.21277848e-02 4.25530337e-02
+ 1.14477135e-01 1.39593914e-01 1.22611918e-01 1.61899433e-01
+ 1.67510167e-01 1.96439266e-01 2.14705884e-01 2.20594302e-01
+ 2.41488561e-01 2.51419187e-01 2.45333552e-01 2.90055513e-01
+ 3.22342247e-01 3.36807311e-01 3.56969833e-01 3.74223232e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.2415105e-04 1.5293689e-02 2.1945745e-02 4.3698590e-02 9.8902911e-02
+ 1.2270874e-01 1.2444762e-01 1.4275256e-01 1.3999704e-01 1.5294911e-01
+ 1.8119375e-01 2.2075713e-01 1.9958119e-01 2.4070434e-01 2.2531775e-01
+ 2.5112653e-01 2.8105113e-01 2.7575156e-01 3.4036118e-01 3.5698116e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[6.83421677e-05 1.49011295e-02 2.22710520e-02 4.68113236e-02
+ 7.93583170e-02 1.13963328e-01 1.29569829e-01 1.32685512e-01
+ 1.30308032e-01 1.62773505e-01 1.50135592e-01 1.97494805e-01
+ 2.20746607e-01 2.24242136e-01 2.43958443e-01 2.40508422e-01
+ 2.53500611e-01 2.69597828e-01 3.16897660e-01 3.32008749e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.31452389e-05 1.45001942e-02 2.15972960e-02 5.32355681e-02
+ 7.78088123e-02 1.07323907e-01 1.14105225e-01 1.33279786e-01
+ 1.26818851e-01 1.46968871e-01 1.77870229e-01 1.91032887e-01
+ 2.21804455e-01 2.15750292e-01 2.26686820e-01 2.31663659e-01
+ 2.60961115e-01 2.58684069e-01 2.94582069e-01 3.06828439e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.3216371e-06 1.5139930e-02 2.3320233e-02 5.6320447e-02 7.3586099e-02
+ 8.9345321e-02 9.2970125e-02 1.1085555e-01 1.4146124e-01 1.4394850e-01
+ 1.5904872e-01 1.4780234e-01 1.8064363e-01 1.6746287e-01 1.9539939e-01
+ 2.2860722e-01 2.4604242e-01 2.5101948e-01 2.8315413e-01 2.7548525e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.73406737e-07 1.45566836e-02 2.16120593e-02 5.93166277e-02
+ 7.26599470e-02 7.76996166e-02 8.04426074e-02 1.18139960e-01
+ 1.02624275e-01 1.31419435e-01 1.41345531e-01 1.45670250e-01
+ 1.54873550e-01 1.89373553e-01 1.75264150e-01 1.64152265e-01
+ 2.21202374e-01 2.47218177e-01 2.53472984e-01 2.70628154e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.2604728e-08 1.2814899e-02 2.1038542e-02 6.1109483e-02 6.3116483e-02
+ 7.1664661e-02 6.6390499e-02 9.5073812e-02 9.6094050e-02 1.0758990e-01
+ 1.3358817e-01 1.4989975e-01 1.2651274e-01 1.8427466e-01 1.9109598e-01
+ 1.8550539e-01 2.2267061e-01 2.3637556e-01 2.3811541e-01 2.4703825e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.1114411e-07 1.3596461e-02 2.1044828e-02 5.6661919e-02 6.0444195e-02
+ 6.7394622e-02 7.0241041e-02 8.7038472e-02 8.0739468e-02 1.1472401e-01
+ 1.2713070e-01 1.2694168e-01 1.4541927e-01 1.6039735e-01 1.4002720e-01
+ 1.6893439e-01 1.8478717e-01 2.1608126e-01 2.4291766e-01 2.4229389e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.37588517e-07 1.32603189e-02 2.04156525e-02 5.51765114e-02
+ 5.90317510e-02 6.21769391e-02 6.79801553e-02 7.72585645e-02
+ 7.57577792e-02 1.06015630e-01 1.11159615e-01 1.03033252e-01
+ 9.96229127e-02 1.48291111e-01 1.57100841e-01 1.58128142e-01
+ 1.66835114e-01 2.15169519e-01 2.16054410e-01 2.24822477e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.04971846e-07 1.29683446e-02 2.13029236e-02 6.20462224e-02
+ 6.55694604e-02 6.38098866e-02 7.19259381e-02 7.36228377e-02
+ 7.34228566e-02 9.75279808e-02 9.30095315e-02 1.02145679e-01
+ 1.10511042e-01 1.44900799e-01 1.52171448e-01 1.61543950e-01
+ 1.69591308e-01 2.15083629e-01 1.98494047e-01 2.33752489e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.8943052e-07 1.3293338e-02 2.2250978e-02 6.2242214e-02 6.0756203e-02
+ 6.1469410e-02 5.9579458e-02 6.5079920e-02 7.2591133e-02 8.5720927e-02
+ 8.6487219e-02 9.4643749e-02 1.1385722e-01 1.3641864e-01 1.3654765e-01
+ 1.4748530e-01 1.5317832e-01 1.6689716e-01 1.6147946e-01 2.2303396e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.17476463e-07 1.19653353e-02 2.22429819e-02 5.75677231e-02
+ 5.75755127e-02 5.83495982e-02 6.68360665e-02 6.67702332e-02
+ 6.86270893e-02 7.81815574e-02 7.91539103e-02 8.72597396e-02
+ 1.08552404e-01 1.33503795e-01 1.34047747e-01 1.32355109e-01
+ 1.36075914e-01 1.58740699e-01 1.61861926e-01 1.71387970e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.50405662e-07 1.15149124e-02 2.16657929e-02 5.05347215e-02
+ 5.89037016e-02 4.69922759e-02 6.02163002e-02 6.66477904e-02
+ 6.23652376e-02 7.52876624e-02 7.67461658e-02 8.77907872e-02
+ 1.04004405e-01 1.24064758e-01 1.21546388e-01 1.34916708e-01
+ 1.18442431e-01 1.63331106e-01 1.57181904e-01 1.53551549e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.26455825e-07 1.23239821e-02 2.30676085e-02 4.89675775e-02
+ 6.01073466e-02 5.66847548e-02 6.06403574e-02 6.62893727e-02
+ 6.96887150e-02 7.32673183e-02 7.26328418e-02 8.61741677e-02
+ 1.00425243e-01 1.13954008e-01 1.06088586e-01 1.30173594e-01
+ 1.21032357e-01 1.55147418e-01 1.49955988e-01 1.55768484e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.57969776e-07 1.20234005e-02 2.35767961e-02 4.09560688e-02
+ 5.83819747e-02 4.89034764e-02 5.52092120e-02 6.21320270e-02
+ 5.94415925e-02 6.54538199e-02 6.77409694e-02 8.33195150e-02
+ 9.42889750e-02 1.16091877e-01 1.13745198e-01 1.29721075e-01
+ 1.15578391e-01 1.48295879e-01 1.58627108e-01 1.45120472e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.0705202e-06 1.2694270e-02 2.5069457e-02 3.7456740e-02 5.5150770e-02
+ 6.3040748e-02 6.3516535e-02 6.2282268e-02 6.5903574e-02 6.9672190e-02
+ 7.1991786e-02 7.8126848e-02 9.3281567e-02 1.1120698e-01 1.1348279e-01
+ 1.2742710e-01 1.1885924e-01 1.3477434e-01 1.5641913e-01 1.4875758e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.27771935e-07 1.25446655e-02 2.46555675e-02 3.47220935e-02
+ 5.12456261e-02 7.00726435e-02 6.09234422e-02 6.48400560e-02
+ 7.36130327e-02 6.91877604e-02 7.21281916e-02 7.82235339e-02
+ 9.44374502e-02 9.98127982e-02 1.14838354e-01 1.22675531e-01
+ 1.17450871e-01 1.32704914e-01 1.54215991e-01 1.44510999e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.51852890e-07 1.31076584e-02 2.41327155e-02 3.13319042e-02
+ 4.91484068e-02 5.83653338e-02 5.84519282e-02 6.38700426e-02
+ 6.32753894e-02 6.53662011e-02 7.03398138e-02 7.37909973e-02
+ 9.10486281e-02 9.59087685e-02 1.17111519e-01 1.22065321e-01
+ 1.24513954e-01 1.25594974e-01 1.48231372e-01 1.42863706e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.64825693e-07 1.30536323e-02 2.45055519e-02 2.92702466e-02
+ 4.70253862e-02 6.05850518e-02 5.66223189e-02 6.22410886e-02
+ 6.68459162e-02 6.60549551e-02 7.08060637e-02 7.77896419e-02
+ 9.02843922e-02 9.66290608e-02 1.12086274e-01 1.15550168e-01
+ 1.20704561e-01 1.26100183e-01 1.48696586e-01 1.40818670e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.30270530e-07 1.33727193e-02 2.48985253e-02 2.88309865e-02
+ 3.91056128e-02 5.53658009e-02 5.51281013e-02 6.11969046e-02
+ 6.66251257e-02 6.77569732e-02 7.29497150e-02 7.18130916e-02
+ 8.48154649e-02 9.07513797e-02 1.10092185e-01 1.03257857e-01
+ 1.22034445e-01 1.28684759e-01 1.44610256e-01 1.39967620e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.0166474e-08 1.4445449e-02 2.5837328e-02 2.7332650e-02 4.0199887e-02
+ 5.8552813e-02 5.8760438e-02 5.9959162e-02 9.1806605e-02 6.2035590e-02
+ 7.4711360e-02 7.4235268e-02 9.6775644e-02 9.5587648e-02 1.0811036e-01
+ 1.0541161e-01 1.2395102e-01 1.2918150e-01 1.2913853e-01 1.3219960e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.49592989e-07 1.45632774e-02 2.52267253e-02 2.69853678e-02
+ 3.82023789e-02 5.79262190e-02 5.99665344e-02 6.18484057e-02
+ 8.11712071e-02 7.91801587e-02 7.86133930e-02 7.92695060e-02
+ 1.09384201e-01 9.82239321e-02 1.24329686e-01 1.18911967e-01
+ 1.43020272e-01 1.51266113e-01 2.13217422e-01 1.34408176e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.67883671e-08 1.46012483e-02 2.51586214e-02 2.75207702e-02
+ 3.64344567e-02 5.67437485e-02 6.17572479e-02 6.75305128e-02
+ 7.65902996e-02 7.98080489e-02 7.52190351e-02 8.49285573e-02
+ 1.08800098e-01 8.99624452e-02 1.06122054e-01 1.06026426e-01
+ 1.36606887e-01 1.34059682e-01 1.75174758e-01 1.38571203e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.9324512e-07 1.4841468e-02 2.5475299e-02 2.6409093e-02 3.7671547e-02
+ 6.2209927e-02 6.5953232e-02 7.1392566e-02 6.1686825e-02 8.7334640e-02
+ 7.5036727e-02 8.7498195e-02 1.1058579e-01 9.4986103e-02 9.1122210e-02
+ 1.1994672e-01 1.3496064e-01 1.3633767e-01 1.6071855e-01 1.7379689e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.6793473e-07 1.5621458e-02 2.6639849e-02 2.7085451e-02 3.6966257e-02
+ 6.0659703e-02 6.7243077e-02 7.2749063e-02 6.9082603e-02 8.1725381e-02
+ 7.6538704e-02 8.4119938e-02 1.0668311e-01 8.7704942e-02 9.2193030e-02
+ 1.1836661e-01 1.3498676e-01 1.3486291e-01 1.3791782e-01 1.7032972e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.8268464e-07 1.5746262e-02 2.7162202e-02 2.6467314e-02 3.5813566e-02
+ 5.4531287e-02 6.6283330e-02 6.9469534e-02 6.4267352e-02 8.0540009e-02
+ 7.6988503e-02 8.2448564e-02 9.7216368e-02 9.7692661e-02 9.9309683e-02
+ 1.2116091e-01 1.3865623e-01 1.2921152e-01 1.3539773e-01 1.6517514e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.56776730e-07 1.55154606e-02 2.83015445e-02 2.54824180e-02
+ 3.42142731e-02 4.73088548e-02 6.56597316e-02 6.25695959e-02
+ 5.30470125e-02 7.24679902e-02 7.80335143e-02 7.91023001e-02
+ 8.55446607e-02 8.83116797e-02 1.07717745e-01 1.31875426e-01
+ 1.35548040e-01 1.30134448e-01 1.53143719e-01 1.62463561e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.72436072e-08 1.58985611e-02 2.86495425e-02 2.54476313e-02
+ 3.30923721e-02 4.94814701e-02 6.54230639e-02 6.88131675e-02
+ 5.42949066e-02 7.62166977e-02 7.95050561e-02 8.26529860e-02
+ 8.53083879e-02 9.05115157e-02 1.04660824e-01 1.52640015e-01
+ 1.35587528e-01 1.35262460e-01 1.68217480e-01 1.76653579e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-2.18209721e-07  1.69995278e-02  2.90034860e-02  2.71288622e-02
+  3.11205406e-02  4.76052985e-02  5.76569103e-02  7.55135939e-02
+  5.67677803e-02  8.26638862e-02  7.17865601e-02  8.56218934e-02
+  1.06444456e-01  1.09195396e-01  1.26704857e-01  1.52729362e-01
+  1.47325382e-01  1.48608074e-01  1.63590908e-01  1.70353696e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.8112613e-07 1.8423669e-02 3.2711845e-02 3.4207091e-02 3.3229358e-02
+ 4.6084721e-02 6.7893624e-02 7.2751604e-02 1.3902774e-01 8.6093172e-02
+ 6.8754777e-02 8.6959556e-02 1.0018613e-01 1.0467981e-01 1.0237160e-01
+ 1.4000069e-01 1.4770454e-01 1.5390761e-01 1.6541368e-01 1.6938260e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.01129267e-07 1.97162088e-02 3.28855775e-02 4.09742072e-02
+ 4.34442014e-02 7.40759000e-02 8.77476484e-02 9.54201221e-02
+ 9.58981737e-02 1.30678356e-01 1.03984386e-01 1.42726555e-01
+ 1.13146596e-01 1.13413155e-01 1.24779880e-01 1.62377954e-01
+ 2.00225145e-01 2.33055547e-01 1.84661701e-01 1.85666665e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-2.9407883e-07  2.1399548e-02  3.4358487e-02  5.2082587e-02
+  4.2230528e-02  9.2810072e-02  8.5987978e-02  7.6641180e-02
+  1.0436761e-01  9.8541483e-02  1.2109201e-01  1.5876999e-01
+  1.1660592e-01  1.0211713e-01  1.3726509e-01  1.4979361e-01
+  1.4809133e-01  1.9064006e-01  2.1745323e-01  1.9673568e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-7.85593784e-07  2.32711267e-02  3.73390988e-02  7.08511621e-02
+  4.41857651e-02  1.04201518e-01  9.68775302e-02  1.03225395e-01
+  1.31444320e-01  1.36965781e-01  1.56270295e-01  1.58223033e-01
+  1.44566312e-01  1.35157794e-01  1.63872048e-01  1.51080564e-01
+  2.32358277e-01  1.88916519e-01  2.11763784e-01  2.05218464e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.63673115e-07 2.56393086e-02 3.82291377e-02 5.60882501e-02
+ 5.70831969e-02 1.02421954e-01 1.01437375e-01 1.15939587e-01
+ 1.23670064e-01 1.52218074e-01 1.39105856e-01 1.56108156e-01
+ 1.63585782e-01 1.31169200e-01 1.66220039e-01 2.26301536e-01
+ 2.46349692e-01 1.72098443e-01 2.33400345e-01 2.00350389e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-5.05491471e-07  2.86462866e-02  4.03337367e-02  5.76577783e-02
+  8.31377581e-02  1.01477794e-01  1.02427788e-01  1.17580146e-01
+  1.42812923e-01  1.58320963e-01  1.48271188e-01  1.55045643e-01
+  1.39191926e-01  1.71833828e-01  2.40501314e-01  2.05986276e-01
+  2.36161068e-01  2.40135550e-01  2.54061759e-01  2.65698105e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-6.2482854e-09  3.0611906e-02  4.2747833e-02  6.4769238e-02
+  9.7834781e-02  1.0938592e-01  1.1611022e-01  1.2397350e-01
+  1.5154377e-01  1.2455143e-01  1.3017698e-01  1.7140365e-01
+  1.6015619e-01  1.7060843e-01  2.3093195e-01  1.9119219e-01
+  2.2202843e-01  2.3351716e-01  2.7707639e-01  3.0064231e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[6.43816861e-07 3.36152911e-02 4.57831994e-02 8.42053369e-02
+ 1.03489794e-01 1.45976573e-01 2.10686132e-01 1.86570004e-01
+ 1.57548890e-01 1.40497684e-01 2.18069643e-01 1.68215662e-01
+ 1.72598869e-01 2.11877540e-01 2.31540725e-01 2.72848994e-01
+ 2.43488267e-01 2.48361394e-01 3.06834787e-01 3.21445853e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[9.0533952e-08 3.5812300e-02 4.5404218e-02 9.2697032e-02 9.7343318e-02
+ 1.3174298e-01 1.4128791e-01 1.4438307e-01 1.9699919e-01 1.8656173e-01
+ 2.2234415e-01 2.1988377e-01 2.4328780e-01 2.8775862e-01 2.7976850e-01
+ 2.7068216e-01 2.9329318e-01 2.9404101e-01 3.1229132e-01 3.0729654e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-4.7139860e-08  3.8032766e-02  5.0956354e-02  9.2610992e-02
+  1.2320305e-01  1.4235564e-01  1.6989619e-01  1.7828695e-01
+  1.7886893e-01  1.8794103e-01  2.1147674e-01  2.3623633e-01
+  2.1273336e-01  2.5098526e-01  2.6225635e-01  2.7409303e-01
+  2.9597557e-01  3.1849828e-01  3.2153010e-01  3.1892461e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.20775473e-07 4.04147431e-02 5.52649237e-02 1.12411894e-01
+ 1.11279465e-01 1.48163751e-01 1.63487852e-01 1.64379701e-01
+ 2.00440198e-01 2.01266244e-01 2.17088729e-01 2.42438480e-01
+ 2.50573188e-01 2.42191911e-01 2.97038078e-01 2.86148727e-01
+ 2.88219303e-01 3.42822880e-01 3.32713753e-01 3.15161109e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.5191619e-07 4.3365899e-02 6.0058706e-02 1.0179686e-01 1.2995678e-01
+ 1.6024472e-01 1.2794332e-01 1.4108364e-01 1.8095273e-01 2.2947249e-01
+ 2.5131229e-01 2.5273386e-01 2.7919552e-01 2.7225104e-01 2.8502095e-01
+ 3.3001229e-01 3.4417555e-01 3.5290542e-01 3.5578495e-01 2.6616094e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-3.7970432e-07  4.4902362e-02  6.1671950e-02  1.1747704e-01
+  1.3127193e-01  1.7659904e-01  1.4524277e-01  1.3516936e-01
+  2.2356506e-01  2.5113511e-01  2.5458524e-01  2.5390187e-01
+  2.7970371e-01  2.5496095e-01  3.0904493e-01  2.8721976e-01
+  3.9478332e-01  3.4966990e-01  3.3349711e-01  3.5947272e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.5475050e-06 4.7446787e-02 6.4455062e-02 1.3877669e-01 1.3770394e-01
+ 1.8729149e-01 1.5955763e-01 2.0835456e-01 2.4483681e-01 2.6599830e-01
+ 2.6998067e-01 2.7890903e-01 2.4468559e-01 3.0663553e-01 2.9200757e-01
+ 3.3515745e-01 3.5663757e-01 3.6404029e-01 3.7262756e-01 4.0340072e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.6067067e-08 4.8522480e-02 6.1972607e-02 1.4359263e-01 1.2659094e-01
+ 1.8717082e-01 1.3524798e-01 2.4326463e-01 2.5681454e-01 2.5643423e-01
+ 2.7058700e-01 2.8684321e-01 1.9108932e-01 3.4372449e-01 2.9841107e-01
+ 3.5146910e-01 3.7735200e-01 3.6762708e-01 4.2701498e-01 3.6893272e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-7.7469770e-07  5.4432571e-02  7.0208021e-02  1.4066499e-01
+  1.4402212e-01  1.9748646e-01  1.3131461e-01  2.4274687e-01
+  2.4004100e-01  2.7281281e-01  2.4608156e-01  2.7442265e-01
+  1.8992223e-01  3.4754127e-01  3.5441229e-01  3.8161266e-01
+  3.8214493e-01  3.9680400e-01  3.8288161e-01  4.3676180e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.66798827e-07 5.41033074e-02 6.16476722e-02 1.07071228e-01
+ 1.23861015e-01 2.01344028e-01 1.25476032e-01 2.56143838e-01
+ 2.22195387e-01 2.74702132e-01 2.44496867e-01 2.59172320e-01
+ 2.76551694e-01 2.92606324e-01 2.99227059e-01 3.16663504e-01
+ 3.44721556e-01 3.97624165e-01 3.49588633e-01 3.82350892e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[6.01403258e-07 5.65443709e-02 6.27785772e-02 9.42765027e-02
+ 1.25823095e-01 2.02855632e-01 1.24742344e-01 2.21728727e-01
+ 1.39615759e-01 2.57338166e-01 2.76349097e-01 2.55246609e-01
+ 2.87480801e-01 2.92999625e-01 3.30503434e-01 2.86410779e-01
+ 3.61000091e-01 3.80942553e-01 3.58495206e-01 3.60974789e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-3.0222895e-07  5.9419330e-02  6.1650794e-02  1.1131871e-01
+  1.2960765e-01  2.1167861e-01  1.4416716e-01  2.7069870e-01
+  1.6773210e-01  2.7143261e-01  2.7741429e-01  2.7711332e-01
+  2.9700842e-01  3.1699014e-01  3.3121657e-01  2.7766058e-01
+  3.8611394e-01  3.8348836e-01  3.7640393e-01  3.5663402e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.20518467e-07 6.06961437e-02 5.97824529e-02 9.49862227e-02
+ 1.14514664e-01 1.84580043e-01 1.75330490e-01 1.84243664e-01
+ 2.19657674e-01 2.50401527e-01 2.63718367e-01 3.32651496e-01
+ 2.73963511e-01 3.28242719e-01 3.46756309e-01 3.23610455e-01
+ 3.72570693e-01 3.83588314e-01 3.88725102e-01 3.59373480e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-2.8869401e-06  5.8552675e-02  6.3028365e-02  8.6563937e-02
+  1.0153259e-01  1.2608187e-01  2.0672940e-01  1.3216235e-01
+  2.3076142e-01  2.4697749e-01  2.6929745e-01  3.0751517e-01
+  2.5075537e-01  3.1335387e-01  3.4338644e-01  3.6633715e-01
+  3.4030068e-01  3.2378596e-01  3.4258795e-01  3.6413187e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.6113303e-08 5.5165496e-02 6.7250095e-02 7.3841542e-02 8.3640985e-02
+ 1.1123699e-01 1.8414205e-01 1.2979059e-01 2.0381838e-01 2.2074892e-01
+ 2.6649809e-01 1.6024326e-01 2.4550070e-01 3.2028472e-01 2.6860732e-01
+ 2.5780812e-01 3.4984601e-01 3.4932411e-01 2.8374109e-01 3.3232638e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-2.6749696e-09  5.3126719e-02  7.0996605e-02  8.1338108e-02
+  1.0219000e-01  1.1054295e-01  1.5870035e-01  1.9745266e-01
+  2.2446933e-01  2.2068048e-01  2.4996206e-01  2.5402087e-01
+  2.5319806e-01  2.9847416e-01  3.2863459e-01  2.3642986e-01
+  3.4686464e-01  3.5745978e-01  3.2688785e-01  3.1494686e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[8.76738159e-06 5.19639030e-02 7.50346482e-02 9.13536623e-02
+ 1.08833745e-01 1.32752255e-01 1.46505103e-01 1.99372947e-01
+ 1.52822182e-01 2.14536265e-01 2.51603544e-01 2.65447408e-01
+ 2.84441441e-01 3.11743885e-01 3.24171424e-01 2.44711444e-01
+ 2.91009009e-01 3.98439348e-01 3.56166482e-01 3.45227480e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.5137808e-05 4.9331229e-02 7.6727502e-02 6.6950612e-02 8.6384483e-02
+ 9.7770914e-02 1.0702312e-01 1.7000277e-01 2.3136742e-01 2.0526424e-01
+ 2.6972669e-01 2.7087882e-01 2.5551450e-01 3.0387479e-01 3.2666978e-01
+ 2.5980937e-01 2.7385065e-01 3.3150473e-01 3.1453592e-01 3.8786644e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.5811486e-07 4.7645099e-02 7.9385154e-02 6.9060043e-02 8.4358267e-02
+ 9.2921153e-02 1.3234009e-01 1.8892381e-01 2.1271543e-01 1.9855858e-01
+ 2.2792292e-01 2.6684633e-01 2.2021045e-01 3.0700541e-01 2.9173905e-01
+ 3.1377599e-01 3.0994722e-01 3.1422237e-01 3.6565304e-01 3.3016956e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.1242835e-08 4.4317648e-02 7.7488132e-02 5.5633754e-02 7.2929330e-02
+ 8.1477657e-02 1.1121157e-01 2.2374503e-01 2.2665007e-01 1.8551284e-01
+ 2.2084650e-01 2.5316474e-01 2.3025073e-01 2.7292752e-01 2.9306972e-01
+ 2.8802270e-01 3.4713981e-01 2.7666506e-01 3.7502456e-01 2.6894122e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-8.5241346e-08  4.2979289e-02  7.3764235e-02  6.3537635e-02
+  6.6561028e-02  7.8510456e-02  1.0136529e-01  2.1023205e-01
+  2.2421904e-01  1.9864920e-01  2.0278122e-01  1.7625973e-01
+  2.5768024e-01  2.7013990e-01  3.0210721e-01  2.9524666e-01
+  3.2413492e-01  2.8957051e-01  3.0865613e-01  2.5978848e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.8604917e-07 4.2230640e-02 6.1279744e-02 8.0801770e-02 6.2539980e-02
+ 7.2453506e-02 9.6016079e-02 1.9865388e-01 2.1203305e-01 1.7313804e-01
+ 1.6313376e-01 2.3945744e-01 2.0851392e-01 2.6740560e-01 2.5998446e-01
+ 2.8232953e-01 2.8088066e-01 2.7041253e-01 3.6100802e-01 3.1849071e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.6311495e-08 4.0407594e-02 5.0125714e-02 8.2410030e-02 5.8069557e-02
+ 7.8273058e-02 9.0152740e-02 1.8022615e-01 1.9136374e-01 1.5030552e-01
+ 1.9459453e-01 2.4786438e-01 1.7430870e-01 2.3736420e-01 2.5753173e-01
+ 2.9437798e-01 2.8330058e-01 2.8640777e-01 3.4940809e-01 3.1851009e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-8.4199385e-08  4.1123718e-02  4.5753166e-02  6.9726966e-02
+  5.4705925e-02  9.0548716e-02  8.7824978e-02  1.5915377e-01
+  1.2954453e-01  1.9505502e-01  2.0996852e-01  2.0972261e-01
+  1.8125312e-01  2.1377514e-01  2.3518868e-01  2.8727084e-01
+  3.0893609e-01  2.7684453e-01  3.4278414e-01  3.2168648e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.7007076e-07 3.8753837e-02 4.3593548e-02 6.8421036e-02 5.2990112e-02
+ 9.0698920e-02 8.5826352e-02 1.3625081e-01 1.1811802e-01 1.9158991e-01
+ 1.6808294e-01 2.1094438e-01 1.9165568e-01 2.5058994e-01 2.3345652e-01
+ 2.7424407e-01 2.9501668e-01 2.6160201e-01 2.9686329e-01 3.2963493e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.14893254e-07  3.73686403e-02  4.36254516e-02  6.11622706e-02
+  5.33793718e-02  9.04264376e-02  8.45603943e-02  1.24607012e-01
+  1.21388398e-01  1.29168883e-01  2.01919496e-01  1.85348675e-01
+  2.26298243e-01  2.48751029e-01  2.24893346e-01  2.82099873e-01
+  3.01520407e-01  2.57035911e-01  2.81083286e-01  3.13861430e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[8.39239789e-08 4.01010104e-02 4.09323126e-02 5.85244410e-02
+ 5.38298488e-02 9.16224048e-02 7.97280967e-02 1.13590054e-01
+ 1.15988359e-01 1.18994668e-01 2.05291182e-01 1.57293826e-01
+ 2.25596622e-01 2.36375228e-01 2.25391164e-01 2.60555863e-01
+ 3.07012916e-01 2.96234816e-01 2.87046522e-01 3.50259334e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-5.90473732e-08  3.97413559e-02  3.76751646e-02  5.55742942e-02
+  5.63861243e-02  9.01566297e-02  7.96790719e-02  1.00213684e-01
+  1.18341453e-01  1.11670330e-01  2.02431709e-01  1.58776611e-01
+  2.22742647e-01  2.35397831e-01  2.18790933e-01  2.52058625e-01
+  2.88020641e-01  3.26338470e-01  2.88401008e-01  3.24871570e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.52658790e-08 3.98197584e-02 3.86295952e-02 5.31451777e-02
+ 5.63947782e-02 8.99430886e-02 7.84532875e-02 9.55597982e-02
+ 1.17561586e-01 1.12218194e-01 1.65987417e-01 1.91380322e-01
+ 2.21059635e-01 2.40534052e-01 2.03297138e-01 2.74872750e-01
+ 2.70050675e-01 3.03688139e-01 2.81031907e-01 3.30832958e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.2255388e-09 3.9022632e-02 3.9817512e-02 4.9884707e-02 5.6342360e-02
+ 8.8346228e-02 8.6576559e-02 8.8213086e-02 1.1902202e-01 1.2348031e-01
+ 1.4066017e-01 2.0224300e-01 2.2173592e-01 2.3011856e-01 2.0854087e-01
+ 2.7450058e-01 2.5166285e-01 2.8541180e-01 2.5966167e-01 3.0789682e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.3548812e-07 3.5797175e-02 4.3367743e-02 4.9904130e-02 5.7149548e-02
+ 8.8386677e-02 9.0142794e-02 9.6476339e-02 1.0317002e-01 1.1747242e-01
+ 1.3780008e-01 2.0258026e-01 2.2169684e-01 2.2462684e-01 2.1368471e-01
+ 2.7164644e-01 2.4131140e-01 2.9736963e-01 2.7179012e-01 3.0327642e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.3176752e-07  3.3946276e-02  4.4914994e-02  4.6387080e-02
+  5.8008298e-02  9.0750515e-02  8.1088707e-02  9.0166613e-02
+  9.6867755e-02  1.2273165e-01  1.3032508e-01  1.9912863e-01
+  2.0085235e-01  2.3259406e-01  2.2877058e-01  2.6355228e-01
+  2.5985399e-01  2.8137344e-01  2.8888920e-01  2.9683101e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[6.19685210e-08 3.31383273e-02 4.64698374e-02 4.21181992e-02
+ 5.64905740e-02 8.89695063e-02 8.23280364e-02 8.75019208e-02
+ 9.22253504e-02 1.19333953e-01 1.24693215e-01 1.98349774e-01
+ 1.67556182e-01 2.18672231e-01 2.28294969e-01 2.39242300e-01
+ 2.75145710e-01 2.88425684e-01 2.70296216e-01 2.92065710e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.5535878e-08 3.2565609e-02 4.8852094e-02 4.2960934e-02 5.8114849e-02
+ 8.5732602e-02 7.5543188e-02 8.1444144e-02 9.3239628e-02 1.2568773e-01
+ 1.2334636e-01 1.9405450e-01 1.4727068e-01 2.2826609e-01 2.4433647e-01
+ 2.2077526e-01 2.7326348e-01 2.7944627e-01 3.2998672e-01 2.5808820e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.0487321e-08 3.4715995e-02 4.9186256e-02 4.0586293e-02 5.4937981e-02
+ 8.4804207e-02 7.6705731e-02 8.2462750e-02 9.7630039e-02 1.2771222e-01
+ 1.2158113e-01 1.8805651e-01 1.4043328e-01 2.2452639e-01 2.3580021e-01
+ 2.2306152e-01 2.7358076e-01 2.7434623e-01 2.7676639e-01 2.4866155e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.3735533e-07 3.4674045e-02 4.6213347e-02 3.8537897e-02 5.1126942e-02
+ 8.5337289e-02 7.1680777e-02 7.2185121e-02 8.8554561e-02 1.1811266e-01
+ 1.1921041e-01 1.7827742e-01 1.4292522e-01 2.2120927e-01 2.3029587e-01
+ 2.0262469e-01 2.5880754e-01 2.7566439e-01 2.6117381e-01 2.4745689e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.25016854e-07 3.49583104e-02 4.60176542e-02 3.94228324e-02
+ 5.70188425e-02 8.43228474e-02 7.10524619e-02 7.83882886e-02
+ 9.64410827e-02 1.18824326e-01 1.21708773e-01 1.63349226e-01
+ 1.53728217e-01 2.31217757e-01 2.55762011e-01 2.20113635e-01
+ 2.76164353e-01 2.88060606e-01 2.48024061e-01 2.15254188e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[6.9036091e-08 3.3554431e-02 4.3595649e-02 4.0436566e-02 6.3542403e-02
+ 9.1121361e-02 7.2539166e-02 7.8831740e-02 8.3706588e-02 1.1836816e-01
+ 1.0986718e-01 1.3379836e-01 1.7535128e-01 2.1588854e-01 2.3605856e-01
+ 2.1890970e-01 2.6437116e-01 2.6343936e-01 2.5549820e-01 2.2668865e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-4.9686879e-08  3.1139076e-02  4.5947161e-02  4.6751156e-02
+  6.5126173e-02  7.8658946e-02  7.8626633e-02  7.6169901e-02
+  8.8211872e-02  1.1267848e-01  1.1676183e-01  1.3151380e-01
+  1.6630767e-01  2.1979341e-01  2.4368542e-01  2.3319259e-01
+  2.2800086e-01  2.6086748e-01  2.7190119e-01  2.9839411e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.7901934e-07 3.3246659e-02 4.3262836e-02 4.6358112e-02 6.9856972e-02
+ 7.4277051e-02 7.6567836e-02 7.7984609e-02 8.5864723e-02 1.0907777e-01
+ 1.1381466e-01 1.2808335e-01 1.2729424e-01 2.1642207e-01 2.4001658e-01
+ 2.3877157e-01 2.0983747e-01 2.4661615e-01 2.9494107e-01 2.8052172e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.50229393e-08 3.25479843e-02 3.95975783e-02 5.15199043e-02
+ 6.79996163e-02 7.33287036e-02 7.44520947e-02 7.60504231e-02
+ 7.82304406e-02 1.06475368e-01 1.18008651e-01 1.25932217e-01
+ 1.19451396e-01 2.16717094e-01 2.34706566e-01 2.42487684e-01
+ 2.12938055e-01 2.37635672e-01 2.77428538e-01 2.92692840e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.85690929e-08 3.25535722e-02 3.98570895e-02 5.39881177e-02
+ 6.83008730e-02 7.22958595e-02 7.28480145e-02 7.61135817e-02
+ 9.17876586e-02 1.09822206e-01 1.18775137e-01 1.27600446e-01
+ 1.25623807e-01 2.12934330e-01 2.29373068e-01 2.18286037e-01
+ 2.17086002e-01 2.36285254e-01 2.46501178e-01 2.84412593e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.66695262e-08  3.23953778e-02  3.68380584e-02  5.45987450e-02
+  6.76042065e-02  7.08628818e-02  7.50224069e-02  8.44539404e-02
+  9.17060226e-02  1.04766361e-01  1.17247298e-01  1.23769961e-01
+  1.20237276e-01  2.10970536e-01  2.23136142e-01  2.08145767e-01
+  2.22450525e-01  2.40883484e-01  2.33150944e-01  2.80785769e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.33060884e-08 3.28046158e-02 3.73235047e-02 5.36794551e-02
+ 6.44690841e-02 6.39766529e-02 7.95634389e-02 7.80404508e-02
+ 8.95093530e-02 1.05761126e-01 1.19299240e-01 1.28868937e-01
+ 1.14080340e-01 2.07847282e-01 2.09124848e-01 2.08043918e-01
+ 2.22959206e-01 2.50371873e-01 2.27049723e-01 2.80900478e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.31158458e-07  3.50597017e-02  3.66616696e-02  5.42860813e-02
+  6.35788441e-02  5.89249022e-02  8.17786083e-02  7.69540966e-02
+  8.68100673e-02  1.12422392e-01  1.20487206e-01  1.27762690e-01
+  1.10675141e-01  2.12565720e-01  1.90102994e-01  2.17319444e-01
+  2.34034434e-01  2.54348934e-01  2.29095787e-01  2.83361495e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.6347125e-08 3.6790535e-02 3.6085069e-02 5.2122720e-02 6.2052395e-02
+ 5.5642001e-02 8.2312003e-02 7.5259149e-02 8.1985429e-02 1.1294120e-01
+ 1.1891392e-01 1.2860009e-01 1.1870082e-01 2.0693973e-01 1.6184811e-01
+ 2.2167718e-01 2.2906940e-01 2.5533587e-01 2.2100455e-01 2.7909699e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.34513783e-07 3.61663215e-02 3.33464108e-02 5.65052629e-02
+ 6.39837608e-02 5.57980314e-02 8.44818130e-02 7.37768486e-02
+ 8.31393823e-02 1.01833522e-01 1.17305860e-01 1.20939307e-01
+ 1.16391264e-01 1.94188684e-01 1.57107592e-01 2.30483130e-01
+ 2.29087070e-01 2.53780365e-01 2.18972400e-01 2.76372135e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.66407554e-08 3.62540558e-02 3.41033749e-02 5.47442548e-02
+ 6.02217130e-02 5.38489297e-02 7.96105713e-02 7.46596903e-02
+ 8.34270194e-02 1.03388235e-01 1.23860389e-01 1.23865023e-01
+ 1.17494017e-01 1.76726788e-01 1.77189901e-01 2.28697181e-01
+ 2.25649834e-01 2.53353089e-01 2.13353336e-01 2.76004583e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[6.1312790e-08 3.7042901e-02 3.2666378e-02 5.8175724e-02 6.2309638e-02
+ 5.5951301e-02 8.1108913e-02 7.8218117e-02 7.7473022e-02 9.8069057e-02
+ 1.1956659e-01 1.2891597e-01 1.2042647e-01 1.4214177e-01 2.0159101e-01
+ 2.2420278e-01 2.2274072e-01 2.5677934e-01 2.1283710e-01 2.7435923e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[5.8860103e-08 3.5167962e-02 3.4376964e-02 5.6461968e-02 6.1513443e-02
+ 5.4327097e-02 7.7354595e-02 7.6282255e-02 7.9733059e-02 9.8471373e-02
+ 1.2376684e-01 1.2422575e-01 1.2301061e-01 1.2323811e-01 2.0376365e-01
+ 2.2559644e-01 2.2637002e-01 2.5615007e-01 2.1086782e-01 2.7383730e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-4.80856208e-08  3.50221768e-02  3.43643092e-02  5.74187674e-02
+  6.03828318e-02  5.30525967e-02  7.82529488e-02  7.29322582e-02
+  7.73527771e-02  9.76422057e-02  1.26834303e-01  1.23808652e-01
+  1.16285846e-01  1.15729555e-01  2.08803564e-01  2.22152606e-01
+  2.30954677e-01  2.55609989e-01  2.10676521e-01  2.77189672e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.75827804e-08 3.38615514e-02 3.75606939e-02 5.52884378e-02
+ 6.05961829e-02 5.26503287e-02 7.75233731e-02 7.51599520e-02
+ 7.49254003e-02 9.45951045e-02 1.19772963e-01 1.12367392e-01
+ 1.21933796e-01 1.23700365e-01 2.03927994e-01 2.19521686e-01
+ 2.24688843e-01 2.48608217e-01 2.09502861e-01 2.75229335e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.73980660e-08 3.31723280e-02 3.66613828e-02 5.55268675e-02
+ 6.17735796e-02 5.25750928e-02 7.95809776e-02 7.54052848e-02
+ 7.68373311e-02 9.54310074e-02 1.20814055e-01 1.13263421e-01
+ 1.24152906e-01 1.19317442e-01 2.03623712e-01 2.18453869e-01
+ 2.44369298e-01 2.49600127e-01 2.17948675e-01 2.75547147e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[9.0612019e-08 3.2131456e-02 3.5762861e-02 5.7198726e-02 6.1166503e-02
+ 5.0190587e-02 7.7003457e-02 7.1413100e-02 7.4719191e-02 9.7575761e-02
+ 1.1534951e-01 1.1645462e-01 1.2552461e-01 1.1478924e-01 2.0803198e-01
+ 2.1914960e-01 2.3230352e-01 2.4426030e-01 2.1915451e-01 2.7567017e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.69071253e-08 3.22206691e-02 3.56512815e-02 5.39684370e-02
+ 6.14487045e-02 5.31928912e-02 7.60653466e-02 7.04408884e-02
+ 7.50426874e-02 9.94300395e-02 1.12481721e-01 1.07856125e-01
+ 1.24677815e-01 1.11507654e-01 2.03558594e-01 2.18145907e-01
+ 2.28142142e-01 2.35417396e-01 2.29055464e-01 2.75536418e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.6485432e-08 3.2210983e-02 3.5028674e-02 5.1985797e-02 6.1734054e-02
+ 4.9483061e-02 7.6512620e-02 6.9545485e-02 7.6621540e-02 9.3636103e-02
+ 1.1667273e-01 1.1231992e-01 1.2754728e-01 1.0481089e-01 2.0566317e-01
+ 2.1407303e-01 2.2438082e-01 2.2904313e-01 2.3416635e-01 2.7557796e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.26279730e-07 3.30648609e-02 3.68894190e-02 5.07880636e-02
+ 5.96702434e-02 5.10217100e-02 7.85490051e-02 6.97464570e-02
+ 9.53209326e-02 9.54123586e-02 1.13087706e-01 1.18339777e-01
+ 1.17361456e-01 1.06936209e-01 2.06162915e-01 2.05272973e-01
+ 2.21690953e-01 2.24388525e-01 2.42914394e-01 2.73659199e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-7.7848185e-08  3.3222608e-02  3.4179952e-02  5.0436988e-02
+  6.1340630e-02  4.9454052e-02  7.6989487e-02  6.9102250e-02
+  8.7515071e-02  8.9687154e-02  1.1230062e-01  1.1495672e-01
+  1.1707270e-01  1.0710580e-01  2.0426828e-01  2.0130578e-01
+  2.1788093e-01  2.3218337e-01  2.3990639e-01  2.6825684e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.1745399e-07 3.3557750e-02 3.3265714e-02 5.1006019e-02 6.0333423e-02
+ 5.0564121e-02 7.6075234e-02 6.8087421e-02 9.2754327e-02 9.9306069e-02
+ 1.0976548e-01 1.1854779e-01 1.2064778e-01 1.1186255e-01 2.0653640e-01
+ 2.0423329e-01 2.1850616e-01 2.3120847e-01 2.3531936e-01 2.2522144e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.18971311e-08 3.20714861e-02 3.41744833e-02 5.24377562e-02
+ 5.96977510e-02 5.10380156e-02 7.74143338e-02 7.66382590e-02
+ 8.85128155e-02 9.95306149e-02 1.10065363e-01 1.21066876e-01
+ 1.20889239e-01 1.08870283e-01 2.04820275e-01 2.01164082e-01
+ 2.25600794e-01 2.28750393e-01 2.38590851e-01 2.01073155e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.0595081e-07 3.3062454e-02 3.3644237e-02 5.1778756e-02 5.9897318e-02
+ 5.3182468e-02 7.6442741e-02 7.3681012e-02 8.6400621e-02 9.2905439e-02
+ 1.0345550e-01 1.2098547e-01 1.1737050e-01 1.1079393e-01 2.0784743e-01
+ 1.8641227e-01 2.1835373e-01 2.3228081e-01 2.3901725e-01 2.0119303e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.1047234e-08  3.3032436e-02  3.2796420e-02  5.1869094e-02
+  6.0103014e-02  5.1713180e-02  7.7380322e-02  6.2253166e-02
+  8.4317893e-02  9.7770534e-02  9.6257977e-02  1.1798212e-01
+  1.2472278e-01  1.1622325e-01  2.0263323e-01  1.6570546e-01
+  2.2228211e-01  2.2466309e-01  2.2701800e-01  1.9100377e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[8.10147824e-08 3.35937701e-02 3.43834609e-02 5.01195900e-02
+ 5.95738664e-02 5.36945350e-02 7.64688328e-02 6.73505068e-02
+ 1.02254517e-01 9.52167213e-02 9.68878344e-02 1.21029325e-01
+ 1.22594498e-01 1.28957868e-01 2.01618791e-01 1.45343170e-01
+ 2.12388918e-01 2.23031208e-01 2.29299143e-01 2.13058338e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[7.83893768e-08 3.35665792e-02 3.33849415e-02 5.15375473e-02
+ 5.85965849e-02 5.30358888e-02 7.46542588e-02 6.81779236e-02
+ 9.51260626e-02 1.01101205e-01 1.11860938e-01 1.18811414e-01
+ 1.26541823e-01 1.18478991e-01 1.70160532e-01 1.66103244e-01
+ 2.10244477e-01 2.20841616e-01 2.24262252e-01 2.21521020e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[3.2159427e-08 3.1495102e-02 3.2892909e-02 5.1818021e-02 5.8319494e-02
+ 5.2141406e-02 7.2447412e-02 7.0906326e-02 9.2345908e-02 9.4149888e-02
+ 9.9485986e-02 1.2240838e-01 1.2205688e-01 1.1991767e-01 1.3449930e-01
+ 1.8804501e-01 2.0901333e-01 2.2183950e-01 2.2404954e-01 2.1233922e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-5.54531461e-08  3.04586813e-02  3.29743363e-02  5.09082600e-02
+  5.91546409e-02  5.11173345e-02  7.04333112e-02  7.12436289e-02
+  9.37306359e-02  9.31828916e-02  1.10920310e-01  1.14548974e-01
+  1.21072903e-01  1.12971045e-01  1.24610141e-01  1.76310614e-01
+  2.06867740e-01  2.12517619e-01  2.23572403e-01  2.18549803e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.52126177e-07 3.05948034e-02 2.85652708e-02 5.22507243e-02
+ 5.96839599e-02 4.75909822e-02 7.08404481e-02 7.03943297e-02
+ 8.45634043e-02 1.12824284e-01 1.01363860e-01 1.24007784e-01
+ 1.19351290e-01 1.11402795e-01 1.24275230e-01 1.63994417e-01
+ 2.03076765e-01 2.19281524e-01 2.31096730e-01 2.15754390e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.4447201e-08 2.8175831e-02 2.9935913e-02 4.8768044e-02 5.7058599e-02
+ 5.0045803e-02 6.5893479e-02 7.0471764e-02 9.2538416e-02 1.0633186e-01
+ 1.1341237e-01 1.1288275e-01 1.1246871e-01 1.2221851e-01 1.1461407e-01
+ 1.4503232e-01 2.0789260e-01 2.1780148e-01 2.3193237e-01 2.1704733e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.2807821e-07 2.5242640e-02 2.9702459e-02 4.8911195e-02 5.6788705e-02
+ 4.8090011e-02 6.4288579e-02 7.4349180e-02 7.2493419e-02 1.0311348e-01
+ 9.8288722e-02 1.0699384e-01 1.0941584e-01 1.3160752e-01 1.1695431e-01
+ 1.4605419e-01 2.0945969e-01 2.1103156e-01 2.3867816e-01 2.1271676e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-6.8998429e-09  2.4427963e-02  2.7751287e-02  4.9819425e-02
+  5.6760840e-02  4.8804827e-02  6.5906309e-02  7.3414452e-02
+  7.1756072e-02  9.7219512e-02  1.0601611e-01  1.1433339e-01
+  1.1080901e-01  1.0400102e-01  1.1885929e-01  1.4166719e-01
+  2.0871609e-01  2.0933998e-01  2.2504137e-01  2.1127968e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.9017444e-08 2.6060993e-02 3.0730942e-02 4.9366180e-02 5.7246491e-02
+ 5.2821744e-02 6.3824527e-02 7.2463267e-02 6.9096953e-02 9.8128952e-02
+ 9.5644429e-02 1.0671708e-01 1.1494005e-01 1.1296492e-01 1.2600806e-01
+ 1.3659808e-01 2.1023443e-01 2.0538515e-01 2.2491455e-01 2.0915554e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.99269067e-07 2.76539810e-02 2.56786663e-02 4.80343886e-02
+ 5.75721636e-02 4.67458703e-02 6.40417486e-02 7.24090487e-02
+ 6.68144301e-02 9.44976881e-02 9.69124809e-02 9.92530733e-02
+ 1.13476388e-01 1.11830644e-01 1.21435046e-01 1.30644932e-01
+ 2.08419919e-01 2.02834263e-01 2.28967413e-01 2.10433662e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.16981170e-07  2.85704173e-02  2.59168316e-02  4.80006710e-02
+  5.80225475e-02  4.94140908e-02  6.47198185e-02  7.24993199e-02
+  6.85865283e-02  8.99610594e-02  9.13189352e-02  9.27186832e-02
+  1.18271202e-01  1.07102163e-01  1.19280785e-01  1.30825013e-01
+  2.10439473e-01  2.05389425e-01  2.18348607e-01  2.05272332e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-1.2699783e-08  2.7130907e-02  2.7142966e-02  4.8943680e-02
+  5.5706874e-02  5.0758809e-02  6.0708117e-02  7.0108250e-02
+  7.5755119e-02  8.9497648e-02  8.2589895e-02  9.5669605e-02
+  1.1751125e-01  9.7589597e-02  1.1230301e-01  1.2386378e-01
+  2.1105243e-01  1.9796009e-01  2.1532817e-01  2.0634997e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[8.14843446e-08 2.55301557e-02 2.74595320e-02 4.68552932e-02
+ 5.34629449e-02 4.80233245e-02 5.92370182e-02 7.01806992e-02
+ 7.15823844e-02 8.56511518e-02 8.40880945e-02 9.63667929e-02
+ 1.12188637e-01 1.06753580e-01 1.12606026e-01 1.28697947e-01
+ 2.08397165e-01 1.91028476e-01 2.18963772e-01 2.14108452e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[2.36502586e-08 2.44329497e-02 2.35790871e-02 4.67509106e-02
+ 4.96194214e-02 4.98930365e-02 6.50607049e-02 7.30026662e-02
+ 6.76992834e-02 8.44099224e-02 8.36147740e-02 8.77953246e-02
+ 1.10572636e-01 1.09968081e-01 1.14080146e-01 1.19812287e-01
+ 2.03317285e-01 1.92728072e-01 2.17217505e-01 2.21381694e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.6627445e-08 2.5067354e-02 2.3013383e-02 4.7827113e-02 4.6950597e-02
+ 5.3559471e-02 6.3822463e-02 6.8504319e-02 6.2758677e-02 8.1368096e-02
+ 8.0419876e-02 8.7868176e-02 1.1268625e-01 1.0769473e-01 1.1340705e-01
+ 1.2387017e-01 2.0449503e-01 1.8595320e-01 2.0552827e-01 2.1228983e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-3.00210807e-08  2.48606317e-02  2.31597405e-02  4.92673405e-02
+  4.66745719e-02  5.57524152e-02  5.91420643e-02  7.06913546e-02
+  6.53174743e-02  8.09454098e-02  7.99521953e-02  9.18334723e-02
+  1.12094477e-01  9.81877446e-02  1.15067035e-01  1.26669452e-01
+  2.03510448e-01  1.86065003e-01  1.98584110e-01  2.11895093e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[4.32897593e-08 2.48677116e-02 2.21351665e-02 4.84340899e-02
+ 4.40098606e-02 5.50822802e-02 5.67931868e-02 7.22825006e-02
+ 6.66936785e-02 7.23073110e-02 9.29478630e-02 9.57391560e-02
+ 1.13353446e-01 9.79490504e-02 1.12384945e-01 1.23850308e-01
+ 1.97547853e-01 1.61297902e-01 1.81630969e-01 2.11589515e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+[1.19753636e-07 2.49067917e-02 2.28994694e-02 4.66844514e-02
+ 4.37448919e-02 5.29090390e-02 5.67795485e-02 7.09364191e-02
+ 6.55733198e-02 7.04530030e-02 8.16228166e-02 8.50500241e-02
+ 1.10307381e-01 9.81017277e-02 1.21759176e-01 1.24189608e-01
+ 2.02807754e-01 1.50503516e-01 1.81897357e-01 2.04547137e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-3.6032308e-08  2.4443600e-02  2.3642024e-02  4.4839174e-02
+  4.3669112e-02  5.3368889e-02  5.4068506e-02  7.1774125e-02
+  7.0433788e-02  7.2763652e-02  8.2786947e-02  9.1824472e-02
+  1.1149370e-01  1.0452106e-01  1.1536358e-01  1.1966407e-01
+  1.9150332e-01  1.4657241e-01  1.7987353e-01  1.9915454e-01]
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+Falling back to num_samples=1
+[-3.4396038e-08  2.3015996e-02  2.2304067e-02  4.3840166e-02
+  4.3956086e-02  5.1080592e-02  5.5641141e-02  7.1056962e-02
+  7.7763550e-02  6.8579242e-02  8.1395552e-02  9.4669238e-02
+  1.1336576e-01  1.0886804e-01  1.1700144e-01  1.2195506e-01
+  1.9026251e-01  1.4187275e-01  1.8360975e-01  1.9101170e-01]

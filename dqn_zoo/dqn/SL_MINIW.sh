@@ -56,7 +56,7 @@ do
             --num_options ${num_option} --lap_dim 20 --option_prob ${option_prob} --plot=${plot} \
             --results_csv_path ${base_folder}/weight_${option_prob}/num_options${num_option}/${date}_${rand_id}/seed${seed}.csv \
             --plot_path plots/${envname}/${algo}/weight_${option_prob}/${date}_${rand_id}/seed${seed}/ \
-            --uniform_restarts=False --stop_lap_gradient=False"
+            --uniform_restarts=True --stop_lap_gradient=False"
             echo $k >> temprun.sh
             echo $k
 

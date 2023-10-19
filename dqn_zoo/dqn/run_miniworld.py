@@ -232,7 +232,7 @@ def main(argv):
         'datasets/4r_actions_1st_person.pkl', FLAGS.plot_path)
     else:
       plotter = plot_mwh.Plot(
-        'datasets/4r_again_plotting_1st_person.pkl', FLAGS.plot_path)
+        'datasets/4r_finer_1st_person.pkl', FLAGS.plot_path)
   agent_pos_track = None
   eval_pos_track = None
 

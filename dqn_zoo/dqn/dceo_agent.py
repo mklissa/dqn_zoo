@@ -478,7 +478,7 @@ class Agent(parts.Agent):
           self._lap_opt_state,
           self._laplacian_params,
           all_transitions,
-          barrier=jnp.ones((1, 1)) * 1.0,
+          barrier=jnp.ones((1, 1)) * 0.1,
           betas=self.betas,
           error_estimates=self.error_estimates
       )
